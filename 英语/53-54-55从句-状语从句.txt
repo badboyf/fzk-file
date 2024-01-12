@@ -1,0 +1,187 @@
+053  从句-状语从句（1）====================================================
+状语从句：
+时间、地点、原因、方式、条件、比较、让步、结果、目的
+时间： when、while、as、whenver、before、after、since、once、till、 until、as soon as、
+	on doing、immediately、instantly、directly、the moment、the minute、the instant、the second、hardly/scarcely...when、no sooner...than、
+	every time、each time、next time、any time、all the time、by the time、the first/second/third/last time
+地点： where，whenever，everywhere
+原因： because as,since, for, seeing that, now that, considering that, given that
+方式： as, the way, as if/as though
+条件： if, unless, as long as, oncondition that, suppose/supposeing that, provided/providing that, in case
+比较： as...as, the same as, 比较级+than, the more...the more
+让步: though, although, while, as, even if, even though, no matter+疑问句=疑问词+ever, whether
+结果： so...that, such...that
+目的： so(that), in order that, in case, for fear that
+
+主将从现	you will get up late if you sleep late
+主祈从现	don't tell him if he comes
+主情从现	i won't tell him if he comes
+
+when while as
+主短从长	他逛商场时我看到他了(when while as)			i saw him when he was shopping/when he was shopping i saw him
+主长从长	我睡觉时他在看电视(while)(过去进行时)			he was watching tv while i was sleeping
+主长从短	他进来时我在吃饭(when, as)(caome 不可延续)	i was eating when/as he came in
+主短从短	我看到他时他就跑了(when, as)				he run away when i saw him
+只能用when的情况
+	1主从句动作时间有先后时
+	2表习惯时		每次下雪的时候都很冷，他焦虑时经常抽烟
+差别
+	1表趁机时多用while，也可用when
+	2as和when后可直接跟名词，构成省略
+	3when、while可接分词，构成省略
+
+过去完成时： 	1两个过去的时间有先后就用过去完成时
+			2‘就已经’加上是否通顺
+	
+我以前住那儿的时候，我经常去附近的公园	when i lived there, i used to the park nearby
+我到机场的时候，飞机已经起飞了（有先后）（过去完成时）	the plane had taken off when i got to the airpot
+他焦虑时经常抽烟(表习惯)				he smokes when gets anxious
+请不要再别人工作的时候讲话那么大声(都可延续)
+趁热打铁（趁机）
+
+sb was doing sth/was about to do sth...when
+我们正在游泳，就在这时开始下雨了		we were swimming when it started to rain
+他正要告诉我这个秘密，就在这时有人敲门	be about to do 
+while虽然、而
+	我喜欢咖啡而他喜欢茶
+	虽然我承认他不完美，但是我喜欢这个人
+as边、随着
+	这小孩边走边唱
+	随着时间的流逝，我们都知道了很多
+whenever		不管你什么时候来，我们都欢迎	whenver you come, we welcome you.
+before after	你回来之前我就已经完成作业了（过去完成时）
+
+两个过去的事紧接着发生，就不用过去完成时：
+	他完成作业后就走了
+	我们到了以后就离开的
+还没来记得急：	我还没来得及说他就冲出了房间	he rushed out of the room before i could say anything	一般加could，could do sth before
+以免：		赶紧做以免你忘了			do it before you forget
+it would(not) be + 时间段 + before	还没发生
+	他还得3天才能到	it would be 3 days before he arrives
+it was(not) + 时间段 + before	已经发生
+	5年后他完成了他的研究	it was 5 years before he finished his research
+时间段+pass/go by + before sb know/realize
+	过了一年我们才知道他是这种人	one year has passed before we realize he was this kind of person
+since 自从	once 一旦
+	自从你走后，我一直在北京	i have been in beijing since you left  since主句是一般完成时，从句是一般过去时
+	一旦你见了他，你就会喜欢他的
+	我认识他五年了（三种说法）
+until till
+	我一直工作到他回来 i worked till he came back
+	我得学到明年		till后加名词
+	他爸爸回来他才睡	he didn't sleep until his father came back
+					not until his father came back, did he sleep 倒装
+					I was not unitl his father came back that he slept 强调句
+	你同意了我才会走	i won't leave until you agree
+					it not untill you agree that i will leave
+					not until you agree, i will leave
+as soon as on doing, immediately, instantly, directly, the moment , the minute, the instant, the second
+	他一到家就给我打电话	he called me the moment/immediately/instantly he got home
+	一到家就给我打电话		called me on his getting home
+hardly/scarcely...when    no sooner...than  过去完成时
+	我刚到家电话铃就响了	i had hardly got home when the phone rang
+						i had no sooner got home than the phone rang
+				倒装		hardly had i got home when the phone rang 
+every time,each time, next time, any time, all the time, by the time, the first/second/last time
+	每次我已有困难他就会来帮我	every time i am in trouble he comes to help me
+	他回来的时候，天已经黑了（过去完成时）	it had got dark by the time he came back
+
+054  从句-状语从句（2）====================================================
+地点状语从句：where wherever anywhere
+you should put the key where it was
+
+where there be...there be..
+有水的地方就有船			where there is water there is a boat 
+不管你在哪，我都会在这等你	i will be here waiting for you  非谓语动词做伴随状语
+
+原因状语从句，
+because, for(不能句首),  as(大家都知道的), since(既然), 
+seeing that(看到), now that, considering that, given that
+for不能放前面
+既然大家都到了，那我们开始吧	since everyone is here, let's start
+因为天气太冷，我就呆在家里了	as it was cold yesterday, i stayed at home
+他看到她不高兴了，就不说话了	seeing that she was unhappy, he stoped talking
+现在你把所有东西都准备好了，我们就可以开始了		now that you have got everything ready
+考虑到他不会回来了，我就把门锁了	considering that he wouldn't come back, i locked the door
+在他没有什么动作经验的情况下，他做的已经很不错了	given that he doesn't have much working experince, he has done it well
+
+方式状语从句	as, the way, as if, as though
+按照我教你的方式画一只猫		draw a cat as i taught you 
+他说英语好像外国人			he speaks english as if he ware a foreigner 虚拟语气
+他把行李拿来好像今天不会走了	he brought his luggage as if he will not leave today 不是虚拟语气
+
+
+条件状语从句	if, unless, as long as, on condition that, suppose/supposeing that
+			provided/providing that, in case
+如果你不快点，我们就会错过飞机		if you don't hurry, we will miss the plane
+如果明天下雨，航班就会被取消
+	if it were to rain/should rain/rained tomorrow, the flight would be cancled	虚拟语气
+	if it rains		主将从现
+可能的话，明天来	if it (possible), come here tomorrow	if it，it可省略
+需要的话，我就买辆车
+
+除非我们定最早的航班，不然我们不能按时到那	
+	unless we book the earlest flight, we cann't get there on time
+	if we don't book the earlest flight, 
+只要你有颗热爱生活的新，每天都有惊喜	as long as you love life, everyday is a surprise
+他会来，条件是没人要他喝酒	he will come, on condition that no asks him to drink
+假设他愿意带你出国， 你会去吗	
+		supposing that he were to take you abroad, would you like to go? 虚拟语气
+		suppose/supposing that he will take you abroad, will you go?
+		providing that he would like take you abroad,
+万一你有困难，打给我		call me in case you are in trouble
+万一我们失败了，我们不会失去信心
+
+
+055  从句-状语从句（3）====================================================
+比较状语从句：(not)as...as, the same as, 比较级+than, the+比较级...the+比较级
+他和他一样高		he is as tall as he is    he is句子，he做主语。
+	he is as tall as her	he is tall主系表, as her介词短语，as介词，her宾格
+这件事和我想象的一样简单			the thing is as simple as i think
+他娶得了和我想象的一样高的进步	he make as much progress as i thought
+这件事不如你想象的name简单		this thing is not as/so simple as you thought(否定可以用so)
+这跟我想的一样					this is the same as i thought
+电脑比电视有意思				比较级+than
+这件事比我想象的简单			this thing is simpler than i thought
+你学的越多就越想多学			the more you learn the more you would
+他的房子比我的房子大三倍			their house is three times bigger than ours
+							their house is four times as big as ours
+							
+让步状语从句: though, although, as, while, even if, even though, no matter+疑问词=疑问词+ever, whether
+no matter who = whoever
+no matter who comes, we welcome = whoever comes, we welcome
+although能放前边,更正式一点
+though/although he is rich, yet he is unhappy
+尽管我一句话都没懂，我还是保持微笑		though i understand anything, i kept smiling
+i am jealous(形容词) of him, i envy(动词) him
+as必须部分倒装，though可倒装可不倒装
+	as he is rich, he is unhappy = rich as he is
+	though he is rich, he is unhappy
+	rich though he is 
+	he isn't happy, he is rich though
+even if, even though 虚拟语气也有他，这里说的是正常的句子(主将从现，其实就是两种不同的时态)
+	even if he knows, he won't tell you
+	even if he knew, he wouldn't tell you
+no matter + 疑问词 = 疑问词+ever
+	不管别人说什么，做你想做的	no matter what others say, do what you want to do
+		whatever others say, ...
+	no matter which one you choose, it's up to you
+	whichever one you choose..
+	
+目的状语从句： so(that), in order that, in case
+so (that)
+	我会慢慢跑，那样你就能赶上我		i will run slowly, so(that) you can catch up with me
+in order that 为了
+	为了能早点到那，我们做的飞机	in order that i can get there early, we took the plane
+	为了能让所有人听到我，我提高了声音	in order that everyone can hear me, i raised my voice
+in order to 非谓语动词，主从句主语一样可以用to,不一样就必须用that
+in case 以免
+	请你明天再提醒我下，以免我忘了
+结果状语从句： so...that, such...that
+so...that  形容词或副词
+	他太小还不能上学		he is so young that he he cann't go to school	
+such...that  such后只能加名词
+	他太小还不能上学		he is such a little boy that he cann't go to school
+	the dog is so cute , this is such a cute dog
+	这个女孩很外向也很随和，大家都喜欢他	she is such an outgoing girl that everyone likes her
+	

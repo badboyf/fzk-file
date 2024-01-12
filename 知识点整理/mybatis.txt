@@ -1,0 +1,2 @@
+一级缓存： @Transactional SqlSession级别 PerpetualCache executorType不会变
+二级缓存： 

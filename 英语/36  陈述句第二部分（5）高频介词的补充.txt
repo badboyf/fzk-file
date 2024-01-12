@@ -1,0 +1,56 @@
+序号	中文	主	谓/系	宾/表	副词/介词短语		
+in on to（east west south north）							
+1	广州在中国的南部	GZ	is	in the south of china			
+2	广西在广东的西部	GX	is	on the west of GD			
+3	日本在中国的东部	Japan	is	to the east of China
+4	往东走200米		go	east	for 200 meters
+5	出地铁，你就能看到七天酒店，往东走到十字路口，右拐，再往前走500米，你能看到小区入口，过街，进去，走到头，就到了
+	get out of the subway,you can see the hotel,go east to the crossroad,turn right,go forward for 500 meters,you can see the entrance of the community,get across of the sreet,get in,walk to the end,there it is over under/above below/on beneath
+6	飞机在你正上方	the plane	is	over you			
+7	把这表挂在电视的正上方		hang	the clock	over the TV		
+8	河上边有座桥	there	is	a bridge	over the river		
+9	他们在树下玩	they	are playing		under the tree		
+10	桌子下有部手机	there	is	a phone	under the desk		
+11	他用手捂住了脸	he	put	his hands	over his face		
+12	他给孩子盖上了毛毯	he	put	the blanket	over the kid		
+							
+13	我们将要飞过中国	we	will fly		above China		
+14	他住的比我高6层楼	he	lives		six floors above me		
+15	飞机在地面高空200米处	the plane	is		200 meters above the ground		
+16	他住我们6层楼下	he	lives		six floors below us		
+17	别写到线下面去了		don't write		below the line		
+							
+18	桌上有一部手机	there	is	a phone	on the desk		
+19	把画挂到墙上去（hang）		hang	the picture	on the wall		
+20	他在沙发上睡了	he	fell	asleep	on the sofa		
+21	他把钱埋在了地下（bury）	he	buried	the money	beneath the ground		
+22	钱在地下不深处	the money	is	not deep	beneath the ground		
+23	屏住呼吸，把脸埋进水里	hold your breath	bury	your face	beneath the water		
+in front of  before/in the front of/at the back of/behind							
+24	他站在车前	he	is standing		in front of the car		
+25	房子前面有棵树	there	is	a tree	in front of the house		
+26	别在我面前提他		don't mention	him	in front of me		
+27	我就在那幢建筑面前	I	am	in front of the building			
+28	教室前面有块黑板	there	is	a blackboard	in the front of the classroom		
+29	他坐在公车的前面	he	is sitting		in the front of the bus		
+							
+30	他坐在我身后	he	is sitting		behind me		
+31	他把车停在了那栋楼后面	he	parked	the car	at back of the building		
+32	我的小区就在那栋楼后面	my commuity	is 	behind that building			
+33	他跑到了我身后	he	ran		behind me		
+34	别再别人背后说别人坏话  		don't speak	ill of others	behind them		
+35	老师坐在教室的后面	the teacher	is sitting		at the back of the calssroom		
+36	我那个单元在小区的后面	my unit	is	at the back of the community			
+near/around							
+37	我家附近有很多餐馆	there	are	many restaurants	near my home		
+38	我就住这公园附近	I	lives		near the park		
+39	我就是在这附近找到的它	I	found	it	around here		
+40	他在地铁附近买了套房子	he	bought	a house	near the subway		
+by/next to/beside							
+41	他坐在我旁边	he	is sitting		by/beside/next to me		
+42	他挨着门站着	he	is standing		by the door		
+43	站我旁边		stand		next to me		
+44	电视挨着窗户呢	the TV	is	beside the window			
+45	他就住我们家隔壁	he	lives		next to us		
+46	椅子就在门旁边	the chair	is	by the door			
+47	他在我旁边躺下了	he	lied		beside me		

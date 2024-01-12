@@ -1,0 +1,159 @@
+  create table tbl(id int, age int);
+create table psn (
+  id int,
+  name string,
+  likes array<string>,
+  address map<string, string>
+)
+row format delimited
+fields terminated by ','
+collection items terminated by '-'
+map keys terminated by ';';
+
+load data local inpath '/data' into table psn;
+select * from psn;
+dfs -put /data2 /user/hive_remote/warehouse/psn/
+desc formatted psn;  显示信息
+
+--创建默认分隔符的hive表（^A、^B、^C）
+create table psn3
+(
+id int,
+name string,
+likes array<string>,
+address map<string,string>
+)
+row format delimited
+fields terminated by '\001'
+collection items terminated by '\002'
+map keys terminated by '\003';
+--或者
+create table psn3
+(
+id int,
+name string,
+likes array<string>,
+address map<string,string>
+)
+
+--外部表
+create external table psn4 (
+id int,
+name string,
+likes array<string>,
+address map<string,string>)
+row format delimited
+fields terminated by ','
+collection items terminated by '-'
+map keys terminated by ':'
+location '/data';
+在之前创建的表都属于hive的内部表（psn,psn2,psn3）,而psn4属于hive的外部表，
+内部表跟外部表的区别：
+	1、hive内部表创建的时候数据存储在hive的默认存储目录中，外部表在创建的时候需要制定额外的目录
+	2、hive内部表删除的时候，会将元数据和数据都删除，而外部表只会删除元数据，不会删除数据
+应用场景:
+	内部表:需要先创建表，然后向表中添加数据，适合做中间表的存储
+	外部表：可以先创建表，再添加数据，也可以先有数据，再创建表，本质上是将hdfs的某一个目录的数据跟				hive的表关联映射起来，因此适合原始数据的存储，不会因为误操作将数据给删除掉
+
+-- 分区表
+create table psn6(
+id int,
+name string,
+likes array<string>,
+address map<string,string>)
+partitioned by(gender string,age int)
+row format delimited
+fields terminated by ','
+collection items terminated by '-'
+map keys terminated by ':';	
+1、当创建完分区表之后，在保存数据的时候，会在hdfs目录中看到分区列会成为一个目录，以多级目录的形式存在
+2、当创建多分区表之后，插入数据的时候不可以只添加一个分区列，需要将所有的分区列都添加值
+3、多分区表在添加分区列的值得时候，与顺序无关，与分区表的分区列的名称相关，按照名称就行匹配
+--给分区表添加分区列的值
+	alter table table_name add partition(col_name=col_value)
+--删除分区列的值
+	alter table table_name drop partition(col_name=col_value)
+1、添加分区列的值的时候，如果定义的是多分区表，那么必须给所有的分区列都赋值
+2、删除分区列的值的时候，无论是单分区表还是多分区表，都可以将指定的分区进行删除
+
+修复分区:
+在使用hive外部表的时候，可以先将数据上传到hdfs的某一个目录中，然后再创建外部表建立映射关系，如果在上传数据的时候，参考分区表的形式也创建了多级目录，那么此时创建完表之后，是查询不到数据的，原因是分区的元数据没有保存在mysql中，因此需要修复分区，将元数据同步更新到mysql中，此时才可以查询到元数据。具体操作如下：
+--在hdfs创建目录并上传文件
+hdfs dfs -mkdir /fzk
+hdfs dfs -mkdir /fzk/age=10
+hdfs dfs -mkdir /fzk/age=20
+hdfs dfs -put /root/data/data /fzk/age=10
+hdfs dfs -put /root/data/data /fzk/age=20
+create external table psn7(
+id int,
+name string,
+likes array<string>,
+address map<string,string>)
+partitioned by(age int)
+row format delimited
+fields terminated by ','
+collection items terminated by '-'
+map keys terminated by ':'
+location '/fzk';
+--查询结果（没有数据）
+	select * from psn7;
+--修复分区
+	msck repair table psn7;
+--查询结果（有数据）
+	select * from psn7;
+
+插入方式
+insert into table values();
+load data local inpath '' into table <>;  没有local就是从hdfs找
+INSERT OVERWRITE TABLE psn9 SELECT id,name FROM psn;
+--从表中获取部分列插入到新表中
+	from psn insert overwrite table psn9
+	select id,name insert into table psn10 select id
+查询结果导入
+insert overwrite directory '/result' select * from psn;
+insert overwrite local directory '/result' select * from psn;
+
+hdfs数据一般不支持事务、删除、修改，如果需要，需要修改很多其他的配置
+
+
+beeline
+! connect jdbc:hive2://hadoopsingle:10000/default root root
+报错：
+	Could not open connection to the HS2 server. Please check the server URI and if the URI is correct, then ask the administrator to check the server status.
+	Error: Could not open client transport with JDBC Uri: jdbc:hive2://hadoopsingle:10000/default: java.net.ConnectException: Connection refused (Connection refused) (state=08S01,code=0)
+解决：
+	修改core-site.xml
+	<property>
+		<name>hadoop.proxyuser.root.groups</name>	
+		<value>*</value>
+    </property>
+    <property>
+		<name>hadoop.proxyuser.root.hosts</name>	
+		<value>*</value>
+    </property>
+	--配置完成之后重新启动集群，或者在namenode的节点上执行如下命令
+	hdfs dfsadmin -fs hdfs://node01:8020 -refreshSuperUserGroupsConfiguration
+	hdfs dfsadmin -fs hdfs://node02:8020 -refreshSuperUserGroupsConfiguration
+
+	
+word count实现
+create external table wc(line string);
+dfs -mkdir /wc;
+dfs -put data /wc;
+create table wc_result(word string, ct int);
+from (select explode(split(line, ' ')) word from wc) t insert into wc_result select word,count(word) group by t.word;
+
+正则匹配
+
+hiveserver2 
+	10000   10002
+	
+hive Beeline
+hadoop的core-site.xml，root用户伪装
+
+行转列
+	join
+	unionall
+	case when
+	decode
+	

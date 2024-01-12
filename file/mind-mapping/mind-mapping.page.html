@@ -1,0 +1,40 @@
+<ion-header class="border-b">
+  <ion-toolbar class="pr-14">
+    <ion-row>
+      <ion-col class="p-0">
+        <ion-buttons>
+          <ion-button (click)="goBack()" class="color-back">
+            <ion-icon class="back-btn" name="arrow-back"></ion-icon>
+            <span>返回</span>
+          </ion-button>
+        </ion-buttons>
+      </ion-col>
+      <ion-col class="p-0">
+        <ion-buttons style="float: right">
+          <ion-button>
+            <span (click)="save()">保存</span>
+          </ion-button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div style="background: white;" class="pr-20 pl-20">
+    <div class="tree" [ngStyle]="{'min-height': height}" style="margin-top: -14px;overflow-x: scroll;">
+      <app-tree-level [trees]="trees" [operateNode]="operateNode" (selectNode)="selectNode($event)"></app-tree-level>
+    </div>
+    <ion-row class="func-fixed">
+      <ion-col>
+        <ion-icon (click)="toggleEditable()" [ngClass]="{active: operateNode.editable}" class="icon-edit-round"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <ion-icon (click)="delete()" class="icon-trashcan-roung"></ion-icon>
+        <ion-icon (click)="clickSub()" [ngClass]="{active: operateNode.type==='sub'}" class="icon-add-node ml-16"></ion-icon>
+        <ion-icon (click)="clickSibling()" [ngClass]="{active: operateNode.type==='sibling'}" class="icon-add-comment ml-16"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

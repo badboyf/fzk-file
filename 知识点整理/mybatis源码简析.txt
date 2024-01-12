@@ -1,0 +1,242 @@
+mybatis 源码分析：
+----------------SqlSession----------------
+----------------------------------------------------
+	|                        ↑
+	|                        |
+	|                        |
+	↓                        |
+----------------------------------------------------
+----------------Executor------------------
+----------------------------------------------------
+	|                        ↑
+	|                        |
+	|                        |
+	↓                        |
+----------------------------------------------------
+----------------StatementHandler----------
+----------------------------------------------------
+	|                        ↑
+	|                        |
+	|                        |
+	↓                        |
+----------------------------------------------------
+--ParammeterHandler-----ResultSetHandler--
+----------------------------------------------------
+	|	|					↑		↑
+	|	|					|	    |
+	|	|					|	    |
+	↓	↓					|	    |
+----------------------------------------------------
+----------------TypeHandler<T>------------
+----------------------------------------------------
+	|	|					↑		↑
+	|	|					|	    |
+	|	|					|	    |
+	|	|					|		|
+	|	|					ResultSet
+	↓	↓							↑
+----------------------------------------------------
+PreparedStatuement SimpleStatement CallableStatement
+----------------------------------------------------
+
+重要的类： MybatisAutoConfiguration 
+		MapperScannerRegistrar   扫描类
+		SqlSession
+		SqlSessionFactory 实现类 DefaultSqlSessionFactory
+		SqlSessionTemplate implements SqlSession (spring-mybatis)所有的处理方法如 selectList selectOne select insert update
+		AutoConfiguredMapperScannerRegistrar 
+		MapperFactoryBean (SqlSessionDaoSupport DaoSupport FactoryBean InitializingBean)
+		MapperProxyFactory
+		MapperProxy
+		Configuration
+		Executor    最终的执行类 query update flushStatements commit rollback close
+		CachingExecutor implements Executor
+		MapperBuilderAssistant 
+		TransactionInterceptor  对回话拦截，如果org.springframework.transaction.annotation.Transactional 会走一级缓存
+		@CacheNamespace   二级缓存注解
+		MapperBuilderAssistant   useNewCache方法处理二级缓存使用的Cache类
+		
+		
+configuration - mapperRegistry - getMapper(Class<T>,SqlSession)   通过代理类工厂生成代理类
+							   - Configuration config
+							   - Map<Class<?>, MapperProxyFactory<?>> knownMappers
+
+MapperProxy
+	SqlSession sqlSession		?
+	Class<T> mapperInterface
+
+MapperMethod
+	SqlCommand command
+	MethodSignature method
+
+SqlSessionTemplate implements SqlSession
+	SqlSessionFactory sqlSessionFactory
+	ExecutorType executorType
+	SqlSession sqlSessionProxy
+	PersistenceExceptionTranslator exceptionTranslator
+
+DefaultSqlSession implements SqlSession
+	Configuration configuration;
+	Executor executor;
+
+CachingExecutor
+	Executor delegate;	(SimpleExceutor)
+	TransactionalCacheManager tcm = new TransactionalCacheManager();
+
+	
+MybatisAutoConfiguration: 定义 SqlSessionFactory SqlSessionTemplate AutoConfiguredMapperScannerRegistrar
+	AutoConfiguredMapperScannerRegistrar 实现了ImportBeanDefinitionRegistrar，启动后扫描@Mapper,注册时beanClass为对应接口类，
+	  经过ClassPathMapperScanner.processBeanDefinitions后beanclass重置为 MapperFactoryBean
+	  
+	实例化 MapperFactoryBean ：
+	MapperFactoryBean(Class<T> mapperInterface)	
+	DelegatingConstructorAccessorImpl.newInstance(Object[]) line: 45	
+	Constructor<T>.newInstance(Object...) line: 423	
+	BeanUtils.instantiateClass(Constructor<T>, Object...) line: 142	
+	CglibSubclassingInstantiationStrategy(SimpleInstantiationStrategy).instantiate(RootBeanDefinition, String, BeanFactory, Constructor<?>, Object...) line: 122	
+	ConstructorResolver.autowireConstructor(String, RootBeanDefinition, Constructor<?>[], Object[]) line: 271	
+	DefaultListableBeanFactory(AbstractAutowireCapableBeanFactory).autowireConstructor(String, RootBeanDefinition, Constructor<?>[], Object[]) line: 1193
+		构造器都取出来，取出参数最多的构造器，实例化。如果@Configuration，这里是instantiateUsingFactoryMethod
+	DefaultListableBeanFactory(AbstractAutowireCapableBeanFactory).createBeanInstance(String, RootBeanDefinition, Object[]) line: 1095	
+	DefaultListableBeanFactory(AbstractAutowireCapableBeanFactory).getSingletonFactoryBeanForTypeCheck(String, RootBeanDefinition) line: 923	
+	DefaultListableBeanFactory(AbstractAutowireCapableBeanFactory).getTypeForFactoryBean(String, RootBeanDefinition) line: 804	
+	DefaultListableBeanFactory(AbstractBeanFactory).isTypeMatch(String, ResolvableType) line: 558	
+	DefaultListableBeanFactory.doGetBeanNamesForType(ResolvableType, boolean, boolean) line: 432	
+		处理到扫描到的 Mapper时
+	DefaultListableBeanFactory.getBeanNamesForType(Class<?>, boolean, boolean) line: 395	
+	BeanFactoryUtils.beanNamesForTypeIncludingAncestors(ListableBeanFactory, Class<?>, boolean, boolean) line: 220	
+	DefaultListableBeanFactory.findAutowireCandidates(String, Class<?>, DependencyDescriptor) line: 1267	
+	DefaultListableBeanFactory.doResolveDependency(DependencyDescriptor, String, Set<String>, TypeConverter) line: 1101	
+	DefaultListableBeanFactory.resolveDependency(DependencyDescriptor, String, Set<String>, TypeConverter) line: 1066	
+	ConstructorResolver.resolveAutowiredArgument(MethodParameter, String, Set<String>, TypeConverter) line: 835	
+	ConstructorResolver.createArgumentArray(String, RootBeanDefinition, ConstructorArgumentValues, BeanWrapper, Class<?>[], String[], Object, boolean) line: 741	
+	ConstructorResolver.instantiateUsingFactoryMethod(String, RootBeanDefinition, Object[]) line: 467	
+	DefaultListableBeanFactory(AbstractAutowireCapableBeanFactory).instantiateUsingFactoryMethod(String, RootBeanDefinition, Object[]) line: 1173	
+	DefaultListableBeanFactory(AbstractAutowireCapableBeanFactory).createBeanInstance(String, RootBeanDefinition, Object[]) line: 1067	
+	DefaultListableBeanFactory(AbstractAutowireCapableBeanFactory).doCreateBean(String, RootBeanDefinition, Object[]) line: 513	
+	DefaultListableBeanFactory(AbstractAutowireCapableBeanFactory).createBean(String, RootBeanDefinition, Object[]) line: 483	
+	AbstractBeanFactory$1.getObject() line: 306	
+	DefaultListableBeanFactory(DefaultSingletonBeanRegistry).getSingleton(String, ObjectFactory<?>) line: 230	
+	DefaultListableBeanFactory(AbstractBeanFactory).doGetBean(String, Class<T>, Object[], boolean) line: 302	
+	DefaultListableBeanFactory(AbstractBeanFactory).getBean(String, Class<T>) 	
+		在处理 methodValidationPostProcessor 时
+	PostProcessorRegistrationDelegate.registerBeanPostProcessors(ConfigurableListableBeanFactory, AbstractApplicationContext) line: 225	
+	AnnotationConfigEmbeddedWebApplicationContext(AbstractApplicationContext).registerBeanPostProcessors(ConfigurableListableBeanFactory) line: 703	
+	AnnotationConfigEmbeddedWebApplicationContext(AbstractApplicationContext).refresh() line: 528	
+	AnnotationConfigEmbeddedWebApplicationContext(EmbeddedWebApplicationContext).refresh() line: 122	
+
+	
+	完成 MapperFactoryBean 里SqlSession 等赋值操作： 在处理其他bean中注入Mapper时
+	MapperFactoryBean<T>(SqlSessionDaoSupport).setSqlSessionFactory(SqlSessionFactory) line: 49	
+	NativeMethodAccessorImpl.invoke0(Method, Object, Object[]) line: not available [native method]	
+	NativeMethodAccessorImpl.invoke(Object, Object[]) line: 62	
+	DelegatingMethodAccessorImpl.invoke(Object, Object[]) line: 43	
+	Method.invoke(Object, Object...) line: 498	
+	BeanWrapperImpl$BeanPropertyHandler.setValue(Object, Object) line: 358	
+	BeanWrapperImpl(AbstractNestablePropertyAccessor).processLocalProperty(AbstractNestablePropertyAccessor$PropertyTokenHolder, PropertyValue) line: 467	
+	BeanWrapperImpl(AbstractNestablePropertyAccessor).setPropertyValue(AbstractNestablePropertyAccessor$PropertyTokenHolder, PropertyValue) line: 290	
+	BeanWrapperImpl(AbstractNestablePropertyAccessor).setPropertyValue(PropertyValue) line: 278	
+	BeanWrapperImpl(AbstractPropertyAccessor).setPropertyValues(PropertyValues, boolean, boolean) line: 95	
+	BeanWrapperImpl(AbstractPropertyAccessor).setPropertyValues(PropertyValues) line: 75	
+	DefaultListableBeanFactory(AbstractAutowireCapableBeanFactory).applyPropertyValues(String, BeanDefinition, BeanWrapper, PropertyValues) line: 1564
+		setSqlSessionFactory setSqlSessionTemplate addToUse 等方法获取点
+	DefaultListableBeanFactory(AbstractAutowireCapableBeanFactory).populateBean(String, RootBeanDefinition, BeanWrapper)    
+	DefaultListableBeanFactory(AbstractAutowireCapableBeanFactory).doCreateBean(String, RootBeanDefinition, Object[]) line: 553	
+	DefaultListableBeanFactory(AbstractAutowireCapableBeanFactory).createBean(String, RootBeanDefinition, Object[]) line: 483	
+	AbstractBeanFactory$1.getObject() line: 306	
+	DefaultListableBeanFactory(DefaultSingletonBeanRegistry).getSingleton(String, ObjectFactory<?>) line: 230	
+	DefaultListableBeanFactory(AbstractBeanFactory).doGetBean(String, Class<T>, Object[], boolean) line: 302	
+	DefaultListableBeanFactory(AbstractBeanFactory).getBean(String, Class<T>) line: 202	
+	DependencyDescriptor.resolveCandidate(String, Class<?>, BeanFactory) line: 208	
+	DefaultListableBeanFactory.doResolveDependency(DependencyDescriptor, String, Set<String>, TypeConverter) line: 1138	
+	DefaultListableBeanFactory.resolveDependency(DependencyDescriptor, String, Set<String>, TypeConverter) line: 1066		
+		处理依赖时，如其他bean注入了mapper
+	AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(Object, String, PropertyValues) line: 585	
+	InjectionMetadata.inject(Object, String, PropertyValues) line: 88	
+	AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(PropertyValues, PropertyDescriptor[], Object, String)    
+		注入起始点
+	DefaultListableBeanFactory(AbstractAutowireCapableBeanFactory).populateBean(String, RootBeanDefinition, BeanWrapper) line: 1264	
+	DefaultListableBeanFactory(AbstractAutowireCapableBeanFactory).doCreateBean(String, RootBeanDefinition, Object[]) line: 553	
+	DefaultListableBeanFactory(AbstractAutowireCapableBeanFactory).createBean(String, RootBeanDefinition, Object[]) line: 483	
+	AbstractBeanFactory$1.getObject() line: 306	
+	DefaultListableBeanFactory(DefaultSingletonBeanRegistry).getSingleton(String, ObjectFactory<?>) line: 230	
+	DefaultListableBeanFactory(AbstractBeanFactory).doGetBean(String, Class<T>, Object[], boolean) line: 302	
+	DefaultListableBeanFactory(AbstractBeanFactory).getBean(String) line: 197	
+	DefaultListableBeanFactory.preInstantiateSingletons() line: 761	
+	AnnotationConfigEmbeddedWebApplicationContext(AbstractApplicationContext).finishBeanFactoryInitialization(ConfigurableListableBeanFactory) line: 867	
+	AnnotationConfigEmbeddedWebApplicationContext(AbstractApplicationContext).refresh() line: 543	
+	AnnotationConfigEmbeddedWebApplicationContext(EmbeddedWebApplicationContext).refresh() line: 122	
+
+	
+	
+	向configuration中加接口解析
+	DaoSupport.afterPropertiesSet -> MapperFactoryBean.checkDaoConfig
+	MapperFactoryBean.sqlSession.sqlSessionFactory.configuration
+	configuration.addMapper 
+	-> mapperRegistry.addMapper 
+	-> MapperAnnotationBuilder.parse() 
+		->MapperAnnotationBuilder.parseCache   解析 @CacheNamespace
+	-> MapperAnnotationBuilder.parseStatement(method)
+	-> MapperBuilderAssistant.addMappedStatement    currentCache 和 @CacheNamespace 有关，在useNewCache方法进行赋值
+	-> configuration.addMappedStatement
+	
+	执行完createBean -> afterPropertiesSet
+		sharedInstance = getSingleton(beanName, new ObjectFactory<Object>() {
+			@Override
+			public Object getObject() throws BeansException {
+				try {
+					return createBean(beanName, mbd, args);
+				}
+				catch (BeansException ex) {
+					destroySingleton(beanName);
+					throw ex;
+				}
+			}
+		});
+		bean = getObjectForBeanInstance(sharedInstance, name, beanName, mbd);
+	getObjectForBeanInstance 部分，如果是FactoryBean会调用getObject方法，返回值做为bean
+	
+	代理类工厂 MapperProxyFactory，代理类 MapperProxy(InvocationHandler)
+	  mapperProxyFactory.newInstance(sqlSession);
+
+	调用点 MapperProxy.invoke -> mapperMethod.execute -> SqlSessionTemplate中的模板方法 -> sqlSessionProxy的对应方法 -> 
+	SqlSessionInterceptor.invoke 通过 sqlSessionFactory, executorType, exceptionTranslator 做出来 DefaultSqlSession
+	-> DefaultSqlSession对应的方法 -> executor
+	
+	拼装sql MappedStatement.getBoundSql ->  DynamicSqlSource.getBoundSql
+	
+	加@Transctional 一级缓存起作用的原因： 
+	一：  如果加了事务
+		TransactionInterceptor.invoke
+		->TransactionAspectSupport.invokeWithinTransaction
+		->TransactionAspectSupport.createTransactionIfNecessary
+		->PlatformTransactionManager.getTransaction(txAttr)
+		->AbstractPlatformTransactionManager.getTransaction
+		->AbstractPlatformTransactionManager.prepareSynchronization
+		->TransactionSynchronizationManager.initSynchronization()   
+		->synchronizations.set(new LinkedHashSet<TransactionSynchronization>()))  使 TransactionSynchronizationManager.isSynchronizationActive()==true
+	二：	SqlSessionTemplate.getSqlSession 
+		-> SqlSessionUtils.getSqlSession 
+		-> TransactionSynchronizationManager.getResource(sessionFactory)
+		-> SqlSessionUtils.sessionHolder(executorType, holder) 
+		-> if (holder != null && holder.isSynchronizedWithTransaction())   session=holder.getSqlSession()
+		-> CachingExecutor.query 
+		-> BaseExecutor.query
+		-> list = resultHandler == null ? (List<E>) localCache.getObject(key) : null;   同一SqlSession，同一Excutor，同一localCache
+
+
+
+	执行顺序 
+		MapperProxy.invoke	拿到缓存的    MapperMethod
+		-> mapperMethod.execute			
+		-> method.convertArgsToSqlCommandParam
+		-> sqlSession.<E>selectList
+		-> sqlSessionTemplate.selectList
+		-> SqlSessionInterceptor.invoke
+		-> getSqlSession		很重要的逻辑
+		-> DefaultSqlSession.selectList    考虑MappedStatement ms = configuration.getMappedStatement(statement);
+		-> CachingExecutor.query
+			BoundSql boundSql = ms.getBoundSql(parameterObject); 处理sql
+
+
+

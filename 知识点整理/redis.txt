@@ -1,0 +1,11 @@
+Redis（三）--- Redis的五大数据类型的底层实现
+https://www.cnblogs.com/MouseDong/p/11134039.html
+
+redis面试题及答案
+https://www.cnblogs.com/lingboweifu/p/11797966.html
+
+Redis知识点及面试题汇总
+https://blog.csdn.net/shuningzhang/article/details/90667395
+
+Redis Sentinel的选举
+https://blog.csdn.net/weixin_38071106/article/details/88033764

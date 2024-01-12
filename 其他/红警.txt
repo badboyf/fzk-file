@@ -1,0 +1,951 @@
+
+finalAlert2 下载  红警之家
+http://www.uc129.com/bd/ra2gj/9370.html
+
+红警2 中英对照
+https://www.bilibili.com/read/cv998559/
+
+[projectiles]标签词典
+https://www.bilibili.com/read/cv17893334/
+
+红色警戒2规则文件修改教程 武器，弹头，弹道（射弹逻辑） 篇
+https://www.sccyrj.cn/Pages/article/article_p.aspx?guid=549e073b379d405589faffefc82e5c00
+
+《红色警戒2》RULE.INI武器详解
+https://www.bilibili.com/read/cv225657/
+
+造新兵
+https://chuhaifan.com/ask/332203.html
+[InfantryTypes](步兵单位列表)
+在数字后面加上**＝SSRV2 *******注意要大写
+[VehicleTypes] 　　是机动车列表
+[AircraftTypes]　　飞行器列表
+
+
+[NAIRON]铁幕装置 
+[GAWEAT]天气控制器 
+[GACSPH]时空转移器 
+[NAMISL]核弹井
+[NAPSIS]心灵感应器 
+
+NukeSilo=yes 填true或false。这个代码指定建筑是否为核弹井。当为true时，配合SuperWeapon=MultiSpecial，就可以成功开启“核弹攻击”的超级武器。
+
+中国代码
+共辉建造场 = CACNST
+磁能反应炉 = CAPOWR
+共辉兵营 = CAHAND
+高速矿厂 = CAREFN
+共辉重工 = CAWEAP
+共辉船厂 = CAYARD
+共辉空指部 = CARADR
+共辉维修厂 = CADEPT
+共辉实验室 = CATECH
+训练场 = CAARMR
+核能反应炉 = CANRCT
+共辉围墙 = CAWALL
+火焰碉堡 = CAPILL
+受国者 = MSAM
+光陵塔 = CTESLA
+间谍卫星 = CASPYSAT
+（备注：共辉没有特别的超武，直接借用的盟军和苏联的，我忘了共辉有几个超武了）
+解放大兵 = PLA
+共辉狗 = CDOG
+共辉工程兵 = 其实是苏联工程兵
+海豹（城管？！） = GHOST2
+间谍 = 其实是盟军间谍，此版任何阵营都有间谍的说
+时空军团 = 其实是盟军的时空军团
+LordHero = LORDHERO
+式装基地车 = CMCV
+高速采矿车 = CHAR
+犀午 = LTNK
+步兵车 = BGGY
+夭启 = HOWI
+V9 = V32
+夜赝 = SEEK
+黑赝 = J10
+共辉登陆舰 = CAPC
+共辉潜艇 = SUB2
+共辉航母 = CARRIER2
+共辉无畏 = MBOAT
+共辉海豚 = CDLPH
+
+[CMCV] - 中国基地车
+[HOWI]----中国天启
+[APOC]----苏联天启
+AMCV;盟军基地车
+SMCV;联军基地
+[NACLON]  复制中心
+[FLAKT]   防空步兵
+
+
+MovementZone=Destroyer
+
+;水里走
+SpeedType=Amphibious
+MovementZone=AmphibiousCrusher
+
+武器
+FlakGuyGunE 步兵高射炮升级3级防空步兵主武器
+MammothTusk  天启的防空
+
+
+
+[VehicleTypes]
+xxxx=LTNKFZK
+[Warheads]
+xxxx=RHINAPEFZK
+
+; Light Tank 范围攻击 轻坦克
+[LTNKFZK]
+UIName=Name:LTNK
+Name=Light Tank
+Image=HTNK
+Prerequisite=CAWEAP
+Primary=120mmEFZK
+Strength=400
+Category=AFV
+Armor=heavy
+Turret=yes
+IsTilter=yes
+TargetLaser=yes
+TooBigToFitUnderBridge=true
+TechLevel=2
+Sight=8
+Speed=20
+CrateGoodie=no
+Crusher=yes
+Owner=Confederation
+Cost=100
+Points=25
+ROT=5
+IsSelectableCombatant=yes
+Explosion=TWLT070,S_BANG48,S_BRNL58,S_CLSN58,S_TUMU60
+VoiceSelect=GenSovVehicleSelect
+VoiceMove=GenSovVehicleMove
+VoiceAttack=GenSovVehicleAttackCommand
+VoiceFeedback=
+DieSound=GenVehicleDie
+MoveSound=RhinoTankMoveStart
+Maxdebris=3
+;origional - Locomotor={55D141B8-DB94-11d1-AC98-006008055BB5}
+Locomotor={4A582741-9839-11d1-B709-00A024DDAFD1}
+MovementZone=Destroyer
+ThreatPosed=40	; This value MUST be 0 for all building addons
+DamageParticleSystems=SparkSys,SmallGreySSys
+DamageSmokeOffset=100, 100, 275
+Weight=3.5
+VeteranAbilities=STRONGER,FIREPOWER,SIGHT,FASTER
+EliteAbilities=SELF_HEAL,STRONGER,FIREPOWER,ROF
+Accelerates=false
+ZFudgeColumn=8
+ZFudgeTunnel=13
+Size=3
+OpportunityFire=yes
+ElitePrimary=120mmEFZK
+
+
+; large anti-armor cannon (single shooter)
+[120mmEFZK]
+Damage=1000
+ROF=20
+Range=15
+Projectile=Cannon
+Speed=100
+Warhead=RHINAPEFZK
+Report=RhinoTankAttack
+Anim=VTMUZZLE
+Bright=yes
+Burst=2
+
+; Elite Rhino armor piercing (discarding sabot, narrow effect)
+[RHINAPEFZK]
+CellSpread=5
+PercentAtMax=.5
+Wall=yes
+Wood=yes
+Verses=100%,100%,100%,100%,100%,100%,65%,45%,60%,60%,100%
+Conventional=yes
+InfDeath=3
+AnimList=VTEXPLOD
+ProneDamage=50%
+
+
+
+[InfantryTypes]
+xx=DESOFZK
+
+; 辐射工兵 失败
+; Desolator
+[DESOFZK]
+UIName=Name:DESO
+Name=Desolater
+Category=Soldier
+Primary=RadBeamWeapon
+Secondary=RadEruptionWeaponFZK
+Prerequisite=CAHAND
+CrushSound=InfantrySquish
+Strength=1500
+Armor=plate
+TechLevel=8
+Pip=red
+Sight=6
+Speed=10
+Owner=Russians,Confederation,Africans,Arabs
+RequiredHouses=Confederation
+Cost=100
+Soylent=300
+Points=30
+IsSelectableCombatant=yes
+VoiceSelect=DesolatorSelect
+VoiceMove=DesolatorMove
+VoiceAttack=DesolatorAttackCommand
+VoiceFeedback=
+VoiceSpecialAttack=DesolatorMove
+DieSound=DesolatorDie
+Locomotor={4A582744-9839-11d1-B709-00A024DDAFD1}
+PhysicalSize=1
+MovementZone=Infantry
+ThreatPosed=20	; This value MUST be 0 for all building addons
+Deployer=yes
+DeployFire=yes
+ImmuneToRadiation=yes
+ImmuneToPsionics=no
+Bombable=yes
+AllowedToStartInMultiplayer=no
+VeteranAbilities=STRONGER,FIREPOWER,ROF,SIGHT,FASTER
+EliteAbilities=SELF_HEAL,STRONGER,FIREPOWER,ROF
+Size=1
+Fearless=yes
+SelfHealing=yes
+Crushable=no
+ElitePrimary=RadBeamWeaponE
+IFVMode=9
+
+
+; The Desolater's desolation effect
+[RadEruptionWeaponFZK]
+Damage=1		; Irrelevant as long as it is greater than 0.  Establishes that this unit can fire this weapon.
+ROF=10
+Range=4         ; SJM: changed from 1 so distance check won't fail on bridges -- only fired at own cell so should be OK
+Speed=1
+AreaFire=yes
+FireOnce=no		; SJM: Desolator should maintain radiation at site when deployed
+Projectile=InvisibleLow
+Warhead=RadEruptionWarheadFZK
+IsRadEruption=no ; SJM: we're not using this effect anymore
+RadLevel=500
+Report=DesolatorDeploy
+
+
+[RadEruptionWarheadFZK]
+Verses=2000%,2000%,2000%,2000%,2000%,2000%,2000%,2000%,2000%,2000%,2000%
+InfDeath=7
+Radiation=yes
+CellSpread=20
+CellInset=3  ; PCG: This means that the desolater won't autodeploy unless the target is 3 cells inside the max radius.
+
+
+
+
+
+
+
+
+; Light Tank
+[LTNKFZK]
+UIName=Name:LTNK
+Name=Light Tank
+Image=HTNK
+Prerequisite=CAWEAP
+Primary=120mm
+Strength=4000
+Category=AFV
+Armor=heavy
+Turret=yes
+IsTilter=yes
+TargetLaser=yes
+TooBigToFitUnderBridge=true
+TechLevel=2
+Sight=8
+Speed=20
+CrateGoodie=no
+Crusher=yes
+Owner=Confederation
+Cost=100
+Points=25
+ROT=5
+IsSelectableCombatant=yes
+Explosion=TWLT070,S_BANG48,S_BRNL58,S_CLSN58,S_TUMU60
+VoiceSelect=GenSovVehicleSelect
+VoiceMove=GenSovVehicleMove
+VoiceAttack=GenSovVehicleAttackCommand
+VoiceFeedback=
+DieSound=GenVehicleDie
+MoveSound=RhinoTankMoveStart
+Maxdebris=3
+Locomotor={4A582741-9839-11d1-B709-00A024DDAFD1}
+MovementZone=Destroyer
+ThreatPosed=40	; This value MUST be 0 for all building addons
+DamageParticleSystems=SparkSys,SmallGreySSys
+DamageSmokeOffset=100, 100, 275
+Weight=3.5
+VeteranAbilities=STRONGER,FIREPOWER,SIGHT,FASTER
+EliteAbilities=SELF_HEAL,STRONGER,FIREPOWER,ROF
+Accelerates=false
+ZFudgeColumn=8
+ZFudgeTunnel=13
+Size=3
+OpportunityFire=yes
+ElitePrimary=120mmE
+
+
+;Prism Tank
+[SREF]
+UIName=Name:SREF
+Name=Prism Tank
+Prerequisite=GAWEAP,GATECH
+Strength=150
+Category=AFV
+Armor=light
+Turret=yes ;temp until tank art done
+TurretCount=4
+WeaponCount=1
+Weapon1=Comet
+EliteWeapon1=SuperComet ; Elite Weapon
+IsChargeTurret=true
+IsTilter=yes
+TooBigToFitUnderBridge=true
+TechLevel=8
+Sight=8
+Speed=4
+CrateGoodie=yes
+Crusher=yes
+Owner=British,French,Germans,Americans,Alliance
+Cost=1200
+Points=50
+ROT=5
+IsSelectableCombatant=yes
+AllowedToStartInMultiplayer=no
+Explosion=TWLT070,S_BANG48,S_BRNL58,S_CLSN58,S_TUMU60
+VoiceSelect=GenAllVehicleSelect
+VoiceMove=GenAllVehicleMove
+VoiceAttack=GenAllVehicleAttackCommand
+VoiceFeedback=
+DieSound=GenVehicleDie
+MoveSound=PrismTankMoveStart
+Maxdebris=3
+Locomotor={4A582741-9839-11d1-B709-00A024DDAFD1}
+MovementZone=Destroyer
+ThreatPosed=40	; This value MUST be 0 for all building addons
+DamageParticleSystems=SparkSys,SmallGreySSys
+DamageSmokeOffset=100, 100, 275
+Weight=3.5
+VeteranAbilities=STRONGER,FIREPOWER,SIGHT,FASTER
+EliteAbilities=SELF_HEAL,STRONGER,FIREPOWER,ROF
+Accelerates=false
+ZFudgeColumn=8
+ZFudgeTunnel=13
+Size=3
+
+
+
+
+
+
+
+
+
+
+
+# 修改核弹装弹时间
+[MultiSpecial]
+RechargeTime=10
+
+# 修改核弹威力
+[NukePayload]
+
+[VehicleTypes]
+73=CMCVGAWEATFZK
+74=CMCVGACSPHFZK
+75=CMCVNAPSISFZK
+
+; 展开 天气控制器
+[CMCVGAWEATFZK]
+UIName=Name:CMCV
+Name=China Construction Vehicle
+Image=SMCV
+Prerequisite=CAWEAP
+Strength=1000
+Category=Support
+Armor=heavy
+DeploysInto=GAWEAT
+TechLevel=10
+Sight=6
+Speed=20
+Owner=Confederation
+CrateGoodie=yes
+Cost=120
+Points=60
+ROT=5
+Crewed=yes
+Crusher=yes
+Explosion=TWLT070,S_BANG48,S_BRNL58,S_CLSN58,S_TUMU60
+VoiceSelect=GenSovVehicleSelect
+VoiceMove=GenSovVehicleMove
+VoiceAttack=GenSovVehicleAttackCommand
+VoiceFeedback=
+DieSound=GenVehicleDie
+MoveSound=MCVMoveStart
+MaxDebris=6
+Locomotor={4A582741-9839-11d1-B709-00A024DDAFD1}
+Weight=3.5
+SpeedType=Amphibious
+MovementZone=AmphibiousCrusher
+ThreatPosed=0	; This value MUST be 0 for all building addons
+DamageParticleSystems=SparkSys,SmallGreySSys
+SpecialThreatValue=1
+ZFudgeColumn=12
+ZFudgeTunnel=15
+Size=6
+Trainable=no
+
+; 展开 时空转移器
+[CMCVGACSPHFZK]
+UIName=Name:CMCV
+Name=China Construction Vehicle
+Image=SMCV
+Prerequisite=CAWEAP
+Strength=1000
+Category=Support
+Armor=heavy
+DeploysInto=GACSPH
+TechLevel=10
+Sight=6
+Speed=20
+Owner=Confederation
+CrateGoodie=yes
+Cost=130
+Points=60
+ROT=5
+Crewed=yes
+Crusher=yes
+Explosion=TWLT070,S_BANG48,S_BRNL58,S_CLSN58,S_TUMU60
+VoiceSelect=GenSovVehicleSelect
+VoiceMove=GenSovVehicleMove
+VoiceAttack=GenSovVehicleAttackCommand
+VoiceFeedback=
+DieSound=GenVehicleDie
+MoveSound=MCVMoveStart
+MaxDebris=6
+Locomotor={4A582741-9839-11d1-B709-00A024DDAFD1}
+Weight=3.5
+SpeedType=Amphibious
+MovementZone=AmphibiousCrusher
+ThreatPosed=0	; This value MUST be 0 for all building addons
+DamageParticleSystems=SparkSys,SmallGreySSys
+SpecialThreatValue=1
+ZFudgeColumn=12
+ZFudgeTunnel=15
+Size=6
+Trainable=no
+
+; 展开 心灵感应器
+[CMCVNAPSISFZK]
+UIName=Name:CMCV
+Name=China Construction Vehicle
+Image=SMCV
+Prerequisite=CAWEAP
+Strength=1000
+Category=Support
+Armor=heavy
+DeploysInto=NAPSIS
+TechLevel=10
+Sight=6
+Speed=20
+Owner=Confederation
+CrateGoodie=yes
+Cost=140
+Points=60
+ROT=5
+Crewed=yes
+Crusher=yes
+Explosion=TWLT070,S_BANG48,S_BRNL58,S_CLSN58,S_TUMU60
+VoiceSelect=GenSovVehicleSelect
+VoiceMove=GenSovVehicleMove
+VoiceAttack=GenSovVehicleAttackCommand
+VoiceFeedback=
+DieSound=GenVehicleDie
+MoveSound=MCVMoveStart
+MaxDebris=6
+Locomotor={4A582741-9839-11d1-B709-00A024DDAFD1}
+Weight=3.5
+SpeedType=Amphibious
+MovementZone=AmphibiousCrusher
+ThreatPosed=0	; This value MUST be 0 for all building addons
+DamageParticleSystems=SparkSys,SmallGreySSys
+SpecialThreatValue=1
+ZFudgeColumn=12
+ZFudgeTunnel=15
+Size=6
+Trainable=no
+
+
+
+
+
+
+
+HOWI MammothTusk AAHeatSeeker
+
+新增武器
+[MammothTusk2]
+Damage=500   ;伤害
+ROF=10   ;射速，射弹间隔 越小越好 60为1秒
+Range=80  ; 范围越大越好
+Projectile=AAHeatSeeker ;弹道
+Speed=20   
+Warhead=HE  ;子弹头
+Burst=10    ;连发数
+Report=ApocalypseAttackAir
+
+
+
+新增坦克 主武器磁能，副武器防空炮
+[VehicleTypes]
+71=TTNKFZK
+
+中国电站
+[CAPOWR]
+Power=900
+
+[TTNKFZK]
+UIName=Name:APOC
+Name=Tesla Tank
+Prerequisite=CAWEAP
+Primary=TankBoltFZK
+Secondary=FlakTrackAAGunEFZK
+Strength=3000
+Category=AFV
+Armor=heavy
+Turret=yes
+IsTilter=yes
+TooBigToFitUnderBridge=true
+TechLevel=10
+Sight=8
+Speed=10
+CrateGoodie=yes
+Crusher=yes
+Owner=Russians,Confederation,Africans,Arabs
+RequiredHouses=Confederation
+Cost=30
+Points=25
+ROT=10
+IsSelectableCombatant=yes
+AllowedToStartInMultiplayer=no
+Explosion=TWLT070,S_BANG48,S_BRNL58,S_CLSN58,S_TUMU60
+VoiceSelect=GenSovVehicleSelect
+VoiceMove=GenSovVehicleMove
+VoiceAttack=GenSovVehicleAttackCommand
+VoiceFeedback=
+DieSound=GenVehicleDie
+MoveSound=TeslaTankMoveStart
+Maxdebris=3
+Locomotor={4A582741-9839-11d1-B709-00A024DDAFD1}
+MovementZone=Destroyer
+ThreatPosed=40	; This value MUST be 0 for all building addons
+DamageParticleSystems=SparkSys,SmallGreySSys
+DamageSmokeOffset=100, 100, 275
+Weight=3.5
+VeteranAbilities=STRONGER,FIREPOWER,SIGHT,FASTER
+EliteAbilities=SELF_HEAL,STRONGER,FIREPOWER,ROF
+Accelerates=false
+ZFudgeColumn=8
+ZFudgeTunnel=13
+Size=3
+ElitePrimary=TankBoltFZK
+
+
+[TankBoltFZK]
+Damage=1000
+ROF=100
+Range=20
+Speed=100
+Warhead=Electric
+Report=TeslaTankAttack
+Projectile=Electricbounce
+IsElectricBolt=true
+
+
+[FlakTrackAAGunEFZK]	; Separate from Flak Cannon weapon so that stats may be tweaked
+Damage=1000
+ROF=100
+Range=20
+Projectile=FlakProj	; AA bullet shared with Flak Cannon
+Speed=100
+Report=FlakTrackAttackAir
+Warhead=FlakWH
+Anim=GUNFIRE
+Burst=2
+
+
+天启
+[HOWI]
+UIName=Name:APOC
+Name=APOC
+Image=MTNK
+Prerequisite=CAWEAP,CATECH
+Category=AFV
+TargetLaser=yes
+Primary=120mmx
+Secondary=MammothTusk
+Strength=2000
+Explodes=yes
+CrateGoodie=yes
+Armor=heavy ;装甲（none为无，需要和弹头指定）
+Turret=yes
+TechLevel=7
+Sight=6
+Speed=6
+Owner=Russians,Confederation,Africans,Arabs
+Cost=3000
+Points=60
+ROT=5 ;部队转向速度
+Crusher=yes
+SelfHealing=yes
+Crewed=no
+IsSelectableCombatant=yes
+Explosion=TWLT070,S_BANG48,S_BRNL58,S_CLSN58,S_TUMU60
+VoiceSelect=GenSovVehicleSelect
+VoiceMove=GenSovVehicleMove
+VoiceAttack=GenSovVehicleAttackCommand
+VoiceFeedback=
+DieSound=GenVehicleDie
+MoveSound=ApocalypseMoveStart
+Maxdebris=3
+Locomotor={4A582741-9839-11d1-B709-00A024DDAFD1}
+Weight=3.5
+MovementZone=Destroyer
+ThreatPosed=40	; This value MUST be 0 for all building addons
+DamageParticleSystems=SparkSys,SmallGreySSys
+AllowedToStartInMultiplayer=no  ;是否对战开始时出现
+ZFudgeColumn=9
+ZFudgeTunnel=15
+Size=6
+VeteranAbilities=STRONGER,FIREPOWER,ROF,SIGHT,FASTER
+EliteAbilities=SELF_HEAL,STRONGER,FIREPOWER,ROF
+ElitePrimary=120mmxE
+
+
+
+
+磁爆坦克
+;  Tesla Tank for Russians
+[TTNK]
+UIName=Name:TTNK
+Name=Tesla Tank
+Prerequisite=NAWEAP,NARADR
+Primary=TankBolt
+Strength=300
+Category=AFV
+Armor=heavy
+Turret=yes
+IsTilter=yes
+TooBigToFitUnderBridge=true
+TechLevel=10
+Sight=8
+Speed=6
+CrateGoodie=yes
+Crusher=yes
+Owner=Russians,Confederation,Africans,Arabs
+RequiredHouses=Russians
+Cost=1200
+Points=25
+ROT=5
+IsSelectableCombatant=yes
+AllowedToStartInMultiplayer=no
+Explosion=TWLT070,S_BANG48,S_BRNL58,S_CLSN58,S_TUMU60
+VoiceSelect=GenSovVehicleSelect
+VoiceMove=GenSovVehicleMove
+VoiceAttack=GenSovVehicleAttackCommand
+VoiceFeedback=
+DieSound=GenVehicleDie
+MoveSound=TeslaTankMoveStart
+Maxdebris=3
+Locomotor={4A582741-9839-11d1-B709-00A024DDAFD1}
+MovementZone=Destroyer
+ThreatPosed=40	; This value MUST be 0 for all building addons
+DamageParticleSystems=SparkSys,SmallGreySSys
+DamageSmokeOffset=100, 100, 275
+Weight=3.5
+VeteranAbilities=STRONGER,FIREPOWER,SIGHT,FASTER
+EliteAbilities=SELF_HEAL,STRONGER,FIREPOWER,ROF
+Accelerates=false
+ZFudgeColumn=8
+ZFudgeTunnel=13
+Size=3
+ElitePrimary=TankBoltE
+
+
+防空车
+[HTK]
+UIName=Name:HTK
+Name=Flak Track
+Prerequisite=NAWEAP
+Primary=FlakTrackGun
+Secondary=FlakTrackAAGun
+Strength=180
+Category=Transport
+Armor=heavy
+DeployTime=.022
+TechLevel=3
+Sight=8
+PipScale=Passengers
+Speed=8
+CrateGoodie=no
+Owner=Russians,Confederation,Africans,Arabs
+AllowedToStartInMultiplayer=no
+Cost=500
+Points=20
+ROT=5
+Crusher=yes
+Turret=yes
+Passengers=5
+IsSelectableCombatant=yes
+Explosion=TWLT070,S_BANG48,S_BRNL58,S_CLSN58,S_TUMU60
+VoiceSelect=GenSovVehicleSelect
+VoiceMove=GenSovVehicleMove
+VoiceAttack=GenSovVehicleAttackCommand
+VoiceFeedback=
+DieSound=GenVehicleDie
+MoveSound=FlakTrackMoveStart
+EnterTransportSound=EnterTransport
+LeaveTransportSound=ExitTransport
+Maxdebris=3
+DebrisTypes=TIRE
+DebrisMaximums=6
+Locomotor={4A582741-9839-11d1-B709-00A024DDAFD1}
+MovementZone=Normal
+ThreatPosed=10	; This value MUST be 0 for all building addons
+DamageParticleSystems=SparkSys,SmallGreySSys
+SpecialThreatValue=1
+ZFudgeColumn=10
+ZFudgeTunnel=13
+ImmuneToRadiation=no
+ImmuneToPsionics=no
+;Bombable=no
+Size=3
+SizeLimit=2
+Accelerates=false
+VeteranAbilities=STRONGER,FIREPOWER,SIGHT,FASTER
+EliteAbilities=SELF_HEAL,STRONGER,FIREPOWER,ROF
+ElitePrimary=FlakTrackGunE
+EliteSecondary=FlakTrackAAGunE
+
+
+
+
+
+
+
+
+
+
+海军部队被包含在车辆部队中.它与车辆部队的不同在於移动和建造方式.另外,基洛夫飞艇和夜鹰直升机也是车辆部队(只不过移动方式为飞行).
+VeteranAbilities=STRONGER,FIREPOWER,ROF,SIGHT,FASTER
+EliteAbilities=SELF_HEAL,STRONGER,FIREPOWER,ROF
+ElitePrimary=120mmxE
+这就是一组典型的部队属性定义.分号";"後的所有内容都被作为注释,没有实际意义."[部队代码]"说明这是哪种部队的属性定义,一个部队只能有一组属性定义.它以後的所有定义都被用於定义此部队,直到说明另一种部队的"[部队代码]"为止.每一行语句说明一种属性,不能重复,但没有顺序的要求.大多数语句有默认值,例如"TechLevel"(技术等级)默认为-1,因此不是所有的语句都要列出来.属性的值在等号後说明,某些语句可以有多个值,例如"VeteranAbilities"(升级为老兵所获得的能力).
+加入部队最简单的方法就是先申明一个部队代码,然後选择一个你认为合适的现有部队,拷贝它的属性定义并冠以你所申明的部队代码.但关键的一点:你必需在你所申明的部队的属性定义中加入"Image="来说明它所使用的图形定义.图形定义是在ART.INI中所申明,默认为与部队代码相同.
+3.部队属性语句列表
+1.关於强度等的设定:
+Armor 部队所使用的装甲类型.不同的弹头对不同的装甲有不同的杀伤效果.泰伯利亚之日中可选择"none","wood", "light", "heavy","concrete". 红色警戒二代中可选择None,Flak,Plate,Light, Medium, Heavy,Wood, Steel, Concrete,Special_1, Special_2.默认为"none".
+Crushable 是否能被重型车辆部队所碾压.默认为"no".
+CollateralDamageCoefficient 当此部队爆炸时,临近的部队会受到多大伤害.应该只对火风暴资料片有效.
+Immune 是否不会受到伤害.默认为"no".
+ImmuneToPsionics 是否不会受到尤里的精神控制
+ImmuneToRadiation 是否不会受到辐射的伤害
+LegalTarget 是否能够成为攻击的目标(如果该部队不属於我方,当鼠标移动到它之上时是否成为攻击箭头)
+ImmuneToVeins 是否在泰伯利亚籐蔓中不会受到伤害.应该只对泰伯利亚之日有效.默认为"no".
+SelfHealing 是否能够自我修复.默认为"no".
+Strength 部队强度.使用数值.
+TiberiumHeal 是否在泰伯利亚矿石中自我修复.应该只对泰伯利亚之日有效.默认为"no".
+TiberiumProof 是否在泰伯利亚矿石中不会受到伤害.应该只对泰伯利亚之日有效.默认为"no".
+TypeImmune 受到来自我方的同类型攻击不会受到伤害.一个例子是泰伯利亚之日中的音波坦克.它受到我方的音波坦克攻击不会受到伤害,但如果受到敌方的音波坦克攻击或我方其他部队的攻击就会受到伤害.默认为"no".
+IsWebImmune Cyborg Reaper的猎人网是否对此部队无效.应该只对火风暴资料片有效.默认为"no".
+2.关於移动,速度等的设定:
+Acceleration 说明有多快的加速度
+AccelerationFactor 说明有多快的加速度(嗯...这个我还不是很清楚...)
+DeaccelerationFactor 说明有多快的负加速度
+DeployTime 此部队展开为建筑或重新变为部队所需的时间(例如NOD自行炮)
+Dock 部队停靠的建筑,例如矿车停靠於矿场,直升机停靠於机场.
+IsTilter 是否在斜坡上倾斜.只对地面部队有效.默认为YES.
+Locomotor 部队的移动方式.不要改动,只拷贝现有值!
+地面车辆: 4A582741-9839-11d1-B709-00A024DDAFD1
+气垫车辆: 4A582742-9839-11d1-B709-00A024DDAFD1
+潜地车辆: 4A582743-9839-11d1-B709-00A024DDAFD1
+步兵: 4A582744-9839-11d1-B709-00A024DDAFD1
+飞机: 4A582746-9839-11d1-B709-00A024DDAFD1
+步行车辆: 55D141B8-DB94-11d1-AC98-006008055BB5
+喷气跳跃: 92612C46-F71F-11d1-AC9F-006008055BB5
+MovementRestrictedTo 部队限制於某种地形移动.例如泰伯利亚之日中的列车.
+MovementZones 移动区域.
+武装气垫车辆:AmphibiousDestroyer
+非武装气垫车辆:AmphibiousCrushercrushing
+武装车辆: Destroyer
+非武装,可碾压车辆:Crusher
+非碾压车辆:Normal
+飞机,喷气跳跃: Fly
+潜地车辆:Subterannean
+投雷兵,导弹兵:InfantryDestroyer
+一般步兵: Infantry
+MoveToShroud 是否可以移动进未探索地区
+PitchSpeed 飞机起飞速度
+PitchAngle 飞机起飞角度
+Reload 部队重装弹时间(如果有弹药数量设定)
+RollAngle 飞机转向角度
+ROT 部队转向速度
+Speed 部队速度
+SpeedType 部队速度类型.
+WalkRate 步行车辆步行速率
+3.武器和作战:
+Ammo 部队携带的弹药数量.默认为-1即无限.
+C4 是否携带攻击建筑的炸药,只对步兵有效.
+DeployFire 此部队在展开後可以开火
+DeployToFire 必须先展开才能开火.(例如NOD自行炮)
+DeployFireWeapon 展开後用何种武器开火.0代表主武器,1代表副武器
+DistributedFire 可以向多个目标开火
+ElitePrimary当成为精英部队後使用的武器
+EliteSecondary当成为精英部队後使用的第二武器
+Explodes 当被摧毁後是否会爆炸.
+EmptyReload 当弹药数为0後重新开始装弹所需时间
+FireAngle 开火的角度
+GuardRange 警戒距离
+Gunner 是否可以变换武器.只对步兵战斗车有效.
+NoMovingFire 不能在移动时开火
+Primary 第一/主武器
+Reload 部队重装弹的时间
+Secondary 第二/副武器
+TargetLaser 是否开火时会有瞄准激光.只是视觉效果而已.
+ToProtect 此部队是否有其他部队保护.只对电脑玩家有效.
+4.拥有,多少等的设定:
+AllowedToStartInMultiplayer 是否在对战游戏一开始时出现.
+BuildLimit 最大制造数量
+Category 让计算机知道这是哪种部队.可以使用"Soldier", "Civilian", "VIP", "Ship", "Recon", "AFV", "IFV", "LRFS", "Support", "Transport", "AirPower" and "AirLift".
+Cost 制造所需费用.
+Name 部队的名字.现在只剩下注释作用了.
+Nominal 是否显示其正确名称而不是"enemy object"
+Owner 此部队的拥有者.例如"GDI","SOVIET".
+Prerequisite 制造此部队所需的建筑.
+TechLevel 技术级.设定为-1即为不可制造.
+UIName部队的名称,在RA2.CSF中设定.
+5.视野,音响的设定:
+AuxSound1 飞机起飞声
+AuxSound2 飞机降落声
+CrushSound 此部队被碾压时发出的声音
+DamageParticleSystems 此部队损坏时的效果
+DeploySound 此部队的展开声
+Disguised 能否伪装为敌方步兵
+Explosion 爆炸时使用的效果
+Image 部队所使用的图像定义,由ART.INI所定义.
+Invisible 是否完全不为敌方所见.
+Insignificant 是否不被敌方主动攻击.
+Pip 此部队被容纳於运输单位中时显示的方格颜色.
+PipScale 此部队所显示的方格的类型.可以使用"Passengers", "Tiberium", "Ammo", "Power".
+RadarInvisible 是否无法被敌方雷达显示.
+RadarVisible 是否当处於黑幕下时仍能被雷达显示.
+VoiceSelect 部队被选择时的声音.
+VoiceAttack 部队攻击时的声音.
+VoiceDie 部队死亡时的声音.
+VoiceFeedback 部队受到攻击时的声音.
+VoiceMove 部队移动时的声音.
+6.升级的设定:
+EliteAbilities 部队成为精英後的能力:"FASTER", "STRONGER", "FIREPOWER", "SCATTER", "ROF", "SIGHT", "CLOAK", "TIBERIUM_PROOF", "VEIN_PROOF", "SELF_HEAL", "EXPLODES", "RADAR_INVISIBLE", "SENSORS", "FEARLESS", "C4", "TIBERIUM_HEAL", "GUARD_AREA", "CRUSHER". 可以多选.
+VeteranAbilities 部队成为老兵後的能力:"FASTER", "STRONGER", "FIREPOWER", "SCATTER", "ROF", "SIGHT", "CLOAK", "TIBERIUM_PROOF", "VEIN_PROOF", "SELF_HEAL", "EXPLODES", "RADAR_INVISIBLE", "SENSORS", "FEARLESS", "C4", "TIBERIUM_HEAL", "GUARD_AREA", "CRUSHER". 可以多选.
+7.其他:
+Agent 是否具有间谍的能力.
+Civilian 是否为平民.
+Cyborg 是否为生化机器人.
+Engineer 是否为工程师.
+Fearless 是否不会趴下.
+Infiltrate 是否能够进入敌方建筑.
+VehicleThief 是否可以盗取敌方车辆.只对泰伯利亚之日有效.
+这只是大致的列表,还有一些未列出,我会逐步添加进去.
+;veteran factors   等级因素
+VeteranRatio=3.0        上升一次兵种所必须破坏的价值为自身价值的3倍
+VeteranCombat=1.1       一星兵种攻击力为原来的1.1倍
+VeteranSpeed=1.2        它的速度为原1.2倍
+VeteranSight=0.0        他的视野(建议不要修改)
+VeteranArmor=1.5        它的生命为原1.5倍
+VeteranROF=0.6          他的射速（例如原来1秒一次 现在0.6秒一次）
+VeteranCap=2            最大可升2级(建议不要修改)
+InitialVeteran=no       是否开始时为一星(不知道是不是这个意思)
+;repair and refit 出售与修理
+RefundPercent=50%       出售价格为建造的50%
+ReloadRate=.3           航空器重装弹时间:0.3分钟
+RepairPercent=15%       把一个东西由0修到满血耗费的钱为建造钱的15%
+RepairRate=.016         每2次扳手闪动的时间间隔为0.016分钟(建筑)
+RepairStep=8            每次扳手闪动时恢复8点血(建筑)
+URepairRate=.016        每2次维修的时间间隔为0.016分钟(维修厂)
+IRepairRate=.001        每2次恢复的时间间隔为0.001分钟(医院)
+IRepairStep=20          每次恢复的血为20点(医院)
+TiberiumHeal=.010       在泰伯利亚之石中每2次恢复的间隔为0.01分钟(无效)
+SelfHealInfantryFrames=50   步兵每2次自我恢复的时间间隔为50桢
+SelfHealInfantryAmount=20   步兵每次自我恢复能恢复20生命
+SelfHealUnitFrames=75 自疗单位每2次自我恢复的时间间隔为75桢
+SelfHealUnitAmount=5   自疗单位每次自我恢复能恢复5生命
+; income and production 收入与产量
+;BailCount=28            矿车所能携带单位原料量
+BuildSpeed=.7            制作建筑时每用1000元要花费的时间为0.7分钟
+BuildupTime=.06          一个建筑制作完成 展开时要花费0.06分钟
+GrowthRate=5             泰伯利亚矿石每5分钟生长一次(无效)
+TiberiumGrows=yes        泰伯利亚矿石可以生长(无效)
+TiberiumSpreads=yes      泰伯利亚矿石可以延伸到本来没有的地方(无效)
+SeparateAircraft=yes     第一架飞机购买前需要一个机场
+SurvivorRate=0.4        一个建筑出售掉原本制造的钱*0.4换算为残兵出现
+AlliedSurvivorDivisor=500 盟军制造的建筑出售掉   原本花的钱/500为兵数
+SovietSurvivorDivisor=250 苏军制造的建筑出售掉   原本花的钱/250为兵数
+ThirdSurvivorDivisor=750   尤里制造的建筑出售掉   原本花的钱/750为兵数
+PlacementDelay=.05       展开时间为0.05分钟
+WeedCapacity=56          weed需要被一个房子收获用来制造化学飞弹的数量
+; computer and movement controls     电脑与活动控制
+CurleyShuffle=yes        直升机是否可以在发射2发炮弹间移动位置
+BaseBias=2               敌人距我方基地过近时避免炮火误击我方单位参数
+BaseDefenseDelay=.25     接到友方的求助后推迟0.25分钟出兵?
+CloseEnough=2.25         假如距离目的地小于2.25单位长就认定为靠近
+DamageDelay=1            低电力时每分钟所造成的伤害0.25?
+GameSpeedBias=1.6        单人游戏中物体速度1.6倍于原来速度
+Stray=2.0                队伍成员间的距离低于2时就会重新排布
+RelaxedStray=3.0 ;gs Gather commands will use this number instead, allowing for bigger teams in AIT
+不严格的游离;为了顾及到AIT中的较大的团队，Gether指令被该数替代
+CloakDelay=.02          强制延迟以使在允许下潜之前能在水面上停留
+SuspendDelay=2          中止的AI队伍将会保持中止的时间为2分钟
+SuspendPriority=1       当基本防御展开时低优先权(<1)任务将被中止
+FlightLevel=1500        飞机飞行的高度
+ParachuteMaxFallRate=-3 降落伞最大下降速度
+NoParachuteMaxFallRate=-100   无降落伞最大下降速度
+GuardModeStray=2.0 保护其他单位的警戒距离
+MissileSpeedVar=.25      导弹加速百分比
+MissileROTVar=.25        导弹转弯速率
+MissileSafetyAltitude=750 导弹安全高度
+;-RTO
+TeamDelays=2000,2500,3500   创造部队间隔时间为?秒(困难,中等,简单)
+AIHateDelays=30,50,70       AI选择敌人的时间(困难,中等,简单)
+AIAlternateProductionCreditCutoff=1000 AI在拥有多少钱时开始造兵
+NodAIBuildsWalls=no    当电脑作为NOD时候是否制造墙壁(无效)
+AIBuildsWalls=no 电脑是否建造墙壁(无效)
+; -RTO*
+MultiplayerAICM=400,0,0 单机游戏中AI产生钱数量的系数(困难,中等,简单),应该是每分钟
+AIVirtualPurifiers=4,2,0 从困难到简单电脑收获的红利(不包括战役)
+AISlaveMinerNumber=4,3,2 奴隶矿车数
+HarvestersPerRefinery=2,2,1每矿最多矿车数
+AIExtraRefineries=2,1,0额外矿车数
+HealScanRadius=10        医疗兵种能自动医疗的范围
+FillEarliestTeamProbability=100,100,100 制造最早编队的概率为100%
+;-RTO
+MinimumAIDefensiveTeams=1,1,1     最少电脑防御编队1队
+MaximumAIDefensiveTeams=2,2,2   最大电脑防御编队2队
+TotalAITeamCap=30,30,30    电脑编队总和30队?
+UseMinDefenseRule=yes 使用最低编队规则
+DissolveUnfilledTeamDelay=5000 电脑制造的第一队不被解决的前提下等待多少时间(秒)制造第二队???
+LargeVisceroid=VISC_LRG
+SmallVisceroid=VISC_SML

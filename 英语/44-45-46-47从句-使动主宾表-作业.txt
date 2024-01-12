@@ -1,0 +1,532 @@
+
+45从句-主语从句=================================================================================
+序号	中文	英文
+that		
+1	他经常半夜给我打电话让我很恼火	that he always calls me at night annoys me
+2	他没考过这次考试让我们很惊讶	that he didn't pass the exam suprised us
+3	他没来让我很开心	that he didn't come made me happy
+4	学生没做作业让老师很生气	that the students didn't do their homework upset the teacher
+		
+5	他明天会过来是真的	that he will come tomorrow is true
+6	他这次考试会考好这是肯定的（sure、for sure）	that he wil do well in the exam is for sure
+7	他不知道答案是明显的（obvious）	that he doesn't know the answer is obvious
+8	他能及时赶到是有可能的（in time、on time）	that he can get here in time is possible
+9	他能把英语学好是不能的(possible、impossible)	that he can lear Enlish well is impossible
+10	他还住在这里是不大可能的（likely、unlikely）	that he still lives here is unlikely
+11	他很紧张是明显的	that he is nervous is obvious
+12	他两年前开始学的英语是真的（true、truth）	that he started learning English two years ago is true
+13	他能取得进步是不大可能的（make progress）	that he can make progress is unlikely
+14	我的手机被偷了是不可能的	that my phone was stolen is impossible
+		
+15	他能说出流利的英语是事实	that he can speak English fluently is a fact
+16	狗是人类的朋友是常识（common sense）	that dogs are our friends is a common sense
+17	他能每天坚持学习英语是个很好的开始	that he can keep learning Englsih everyday is a good start
+18	他离开是个好事情	that he left is a good thing
+19	他现在需要帮助是事实	that he needs help is a fact
+		
+20	据说他是个好人	it's said that he is a good person
+21	据报道那个孩子被救了	it's reported that the kid was saved
+22	人们相信他能找到丢失的孩子（missing）	it's believed that he can find the missing kid
+23	众所周知每个人都会变老（get）	it's known that everyone gets old
+24	不可否认中国已变强大（deny）	it can't be denied that China has got strong
+25	据说他再也没有回来过	it's said that he has never been back
+26	据报道飞机仍然没有被找到	it's reported that the plane is still missing
+27	人们相信他会回来的	it's believed that he will be back
+28	众所周知中国历史悠久	it's known that China has a long story
+29	不可否认英语很重要	it can't be denied that English is very important
+whether/if		
+30	他来不来没什么差别（make no difference）	whether he will come makes no difference
+31	他会不会这么做不重要（matter）	whether he will do this doesn't matter
+32	你想不想让我来对我很很重要（意味很多）（mean）	whether you want me to come or not means a lot to me
+33	你喜不喜欢我不会改变任何事情	whether you like me or not won't change anything
+34	你同意不同意都不会改变我的想法（change one's mind）	whether you agree won't change my mind
+		
+35	他知不知道这件事还不清楚（clear）	whether he konws this thing isn't clear yet
+36	他能不能过来很重要	whether he can come is important 
+37	他会不会买这辆车还不确定	whether he will buy the car is not for sure 
+38	他会不会出国还不知道（unknown）	whether he will go abroad is unknown
+		
+39	他们要不要出国还没被决定	whether they will go abraod hasn't been decided yet
+40	他们会不会改变注意还没被告诉我们	whether they will change their minds hasn't been told to us
+41	他会不会很她结婚在第二章没有提到	whether he will get married with her isn't mentioned in chapter two
+42	我们要不要告诉他将会在明天被讨论	whether we should tell him will be discussed tomorrow
+what		
+43	他说的话让我很生气	what he said made me angry
+44	他做的事让我心烦意乱	what he did upset me
+45	他跟我朋友说的话让我很尴尬	what he said to my friend embarrassed me
+46	他决定的让我震惊了	what he decided shocked me
+47	他最近做的事让我很担心	what he has been doing worried me
+48	他说的话打动了评委	what he said moved the judge
+49	这些科学家做的事将会改变未来(scientist)	what the scientists did will change the future
+50	总统做的决定将会改变这个国家的命运	what the president decided will change the fate of the country
+51	你说什么都无所谓	what you say doesn't matter
+		
+52	他说的是真的	what he said is true
+53	你做的没有意义	what you did is meaningless
+54	他干了什么还不太清楚	what he did is not clear
+55	你听到什么了对我来说不重要	what you heard isn't importan to me
+56	他对那个老人做的事太残忍了（brutal  cruel）	what he did to that old man is brutal
+57	他在舞台上说的话很激励人心（inspiring）	what he said on the stage is inspiring
+		
+58	我需要的是你的支持(support)	what I need is your support
+59	他想要的是钱	what I want is money
+60	我在乎的是你的安全(care)	what I care about is your safety
+61	我担心的是他的将来(worried)	what I am worried about is his future
+62	我要做什么不管你的事	what I will do is none of your business
+63	成功所需要的是你的努力	what is needed for successs is your effort
+64	人们在找工作中最关心什么是个问题	what people care about the most in looking for a job is a question
+		
+65	你所看到的将会被告知房间里的每个人	what you saw will be told to everyone in the house
+66	在他身上发生的事将会被写进书里	what happened to him will be written into the book
+67	总统说的话将会被报道	what the president said will be reported
+68	他为国家所做的事情讲会永远被人们记住	what he did for the country will be remembered forever
+69	你所说的话将会成为呈堂公证	what you say will be used against you in a court of law
+how		
+70	他通过考试的方式让我们失望（pass the exam）	how he passed the exam disappointed us
+71	他们怎么幸存下来的让我震惊（survive）	how he survived shocked us
+		
+		
+72	这件事怎么发生的依然不确定	how this thing happened is still not for sure
+73	他怎么赢得这场比赛的依然未知	how he won this game is still unknown
+74	他怎么找到丢失的钱包的不重要	how he found the missing wallet is not important
+		
+75	他们怎么相遇的在第二章有提到	how they met is mentioned in the second chapter
+76	他们的钱包怎么被偷的已经被告诉了警察	how his wallet was stolen has been told to the police
+77	这件事怎么发生的还没被告知任何人	how this thing happend hasn't been told to anyone
+78	他们要怎么去北京还没被决定	how they will go to BJ hasn't been decided
+79	他怎么为国捐躯的将会永远被人们记住	how he died for the country will be remembered forever
+when		
+80	他什么时候离开的让我很迷惑	when he left confused me
+81	你什么时候开始学英语的无所谓	when you started learning English doesn't matter
+82	他们什么时候找到丢失钱包的没什么差别	when you found the missing wallet makes no difference
+83	他什么时候告诉我们将会改变我们的计划	when he will tell us will change our plan
+		
+84	他什么时候离开的不清楚	when he left isn't clear
+85	你什么时候告诉他的很重要	when you told him is very important
+86	他什么时候去北京还不确定	when he will go to BJ is not for sure
+87	他什么时候将被调到人事部还未可知	when he will be transfered to the human resource department is unknown
+		
+88	他们什么时候结婚的在这本书中没被提到	when they got married isn't mentioned in the book
+89	他们什么时候出国还没定下来	when they will go abroad hasn't been decided
+90	他们什么时候开始学英语还没告诉我	when they will start learnig English hasn't been told to me
+where		
+91	他去哪了让他妈妈很担心	where he went worries his mother
+92	他在哪学的英语都无所谓	where he learnt English doesn't matter
+93	他们在哪找到的他没什么差别	where they found him makes no difference
+94	他要去哪将会改变我们的计划	where he will go will change our plan
+		
+95	他把书藏哪里了不清楚（hide hid hidden）	where he hid the money isn't clear
+96	他在哪丢的他的钱包不知道	where he lost his wallet is unknown
+97	他把手机放在哪里了不确定	where he put the phone is not for sure
+98	你在哪看到的他对我很重要	where you saw him is important for me
+		
+99	他呆了3个月的地方是美国	where he stayed for three months is America
+100	他将要去的是一个美丽的地方	where he will go is a beautiful place
+101	他藏钱的是一个隐蔽的地方	where he hid the money is a secret place
+		
+102	他把钱藏哪了还没告知警察	where he hid the money hasn't been told to the police
+103	他在哪遇到的她在书中没提到	where he met here isn't mentioned in the book
+104	他将要去哪里还没定下来	where he will go hasn't been decided
+why		
+105	他为什么离开让我们都很迷惑	why he left confused us
+106	她为什么不开心让我很担心	why she is unhappy worries us
+107	你为什么不告诉我对我来说很重要	why you don't tell me is important to me
+		
+108	他为什么离开不清楚	why he left isn't clear
+109	他为什么不想回家不知道	why he doesn't want to go home is unknown
+110	他为什么必须去北京很奇怪	why he must go to BJ is strange
+111	他为什么要杀他还不确定	why he would kill him is not for sure yet
+		
+112	他为什么没娶他在书里没提到（marry）	why he didn't marry her isn't mentioned in the book
+113	他为什么要杀他还没告知警方	why he killed him hasn't been told to the police
+114	他当时为什么没在工作将会写进报告	why he wasn't working will be written into the report
+who		
+115	昨天来我家那个人让我很烦	who came over yesterday annoys me
+116	昨天我在街上看到的人吓到我了	who I saw on the street yesterday scared me
+117	我明天要见的人英语说的很流利	who I will meet tomorrow  can speak fluent English
+118	等会要来的人不认识你	who will come later doesn't know you
+		
+119	昨天来我家那个人很容易相处（easy-going）	who came over yesterday is easy-going
+120	昨天我在街上看到的人看起来不错	who I saw on the street yesterday is nice
+121	我明天要见的人很幽默（humorous）	who I will meet tomorrow is humorous
+122	等会要来的人很小气（mean）	who will come later is mean
+		
+123	昨天来我家的那个人是我的朋友	who came over yesterday is my friend
+124	昨天我在街上看到的人是个美国人	who I saw on the street yesterday is an American
+125	明天我要见的人是我的生意伙伴（partner）	who I will meet tomorrow is my business partner
+126	等会要来的人是我老师	who will come later is my teacher
+		
+127	明天要来的人是你昨天见过的人	who will come tomorrow is who you saw yesterday
+128	等会你要见的人就是以后教你英语的人	who you will meet is who will teach you English
+129	等会要来的人是你不认识的人	who will come is who you don't know
+疑问词+ever		
+130	不管他说什么都让我生气	whatever he says makes me angry
+131	不管他说什么都是假的	whatever he says is not true
+132	不管你说什么都会被写进报告	whatever you say will be written into the report
+133	不管他做什么都无所谓	whatever he does doesn't matter
+		
+	Whenever	
+134	不管你什么时候来都行	whenever you come is ok
+135	你什么时候走都不被允许（allow）	whenever you leave is not allowed
+		
+	Wherever	
+136	你在的任何地方就是我的家	wherever you are is my home
+137	不管你去哪都会被告知你的医生	wherever you go will be told to your doctor
+		
+	Whoever	
+138	不管是谁违反了法律都会被惩罚（break the law）	whoever breaks the law will be punished
+139	不管谁来都会受到欢迎（welcome）	whoever comes will be welcome
+
+
+46从句-宾语从句=================================================================================
+序号 	中文	英文
+that		
+1	他说他明天会来	he said that he would come tomorrow
+2	我听说他去北京了	I heard that he went to BJ
+3	我的意思是我不知道这件事	I mean that I don't know the thing
+4	没人说你错	nobody said that you were wrong
+5	他发现他不在家	he found that he wasn't at home
+6	我们决定明天去北京	we decided that we would go to BJ
+7	我突然意识到我错了	I suddenly found that I was wrong
+8	我承认他是个好人	I admit that he is a good person
+9	我听说他还没回来	I heard that he hadn't been back
+10	有人跟我说我不应该相信你	someone told me that I shouldn't believe you
+		
+11	他说他明天会来了吗	did he say that he would come tomorrow
+12	你知道他是老师吗	do you know that he is a teacher
+13	你听说他要出国了吗	did you hear that he would go abroad
+14	你承认你错了吗	do you admit that you are wrong
+15	你什么时候意识到你错了的	when did you realize that you were wrong
+16	你们什么时候决定要去北京的	when did you decide that you would go to BJ
+17	你怎么发现他是个老师的	how did you find out that he is a teacher
+		
+18	他跟我说他不会回来的	he told me that he wouldn't come back
+19	他答应我他会帮我的	he promised me that he would help me
+20	他教给我我应该自信些	he taught me that I should be confident
+		
+21	你为什么不告诉他你是个老师	why don't you tell me that you are a teacher
+22	他告诉你他要去北京了吗	did he tell you that he would go to BJ
+23	我没告诉你我很忙吗	didn't I tell you that I was busy
+24	他提醒了我明天应该早起	he reminded me that I should get up early tomorrow
+25	他什么时候告诉你他要买车的	when did he tell you that he would buy a car
+26	谁告诉你我看到他了	who told you I saw him
+27	他什么时候答应你要帮你的	when did he promise you that he would help you
+28	你告诉他你是个老师了吗	did you tell him that you were a teacher
+		
+29	我很生气你没告诉我	I am angry that you didn't tell me
+30	我恐怕他不会来了	I am afraid that he won't come
+31	我很开心你通过了考试	I am happy that you passed the exam
+32	我很惊讶他是个老师	I am surprised that he is a teacher
+33	我担心他会离开	I am worried that he will leave
+34	我很失望他对我撒谎	I am disappointed that he lied to me
+35	我很感动他帮了我	I am moved that he helped me
+36	我很荣幸你能来	I am honored that you can come
+37	你真幸运娶了她	you are so lucky that you married her
+38	他帮你找到钱包了，你一定很开心吧	you must be happy that he found the wallet for you
+39	你通过考试了，你应该开心啊	you should be happy that you passed the exam
+		
+40	他没告诉你你生气吗	are you angry that he didn't tell you
+41	他向你撒谎你不失望吗	aren't you disappointed that he lied to you
+42	他帮你了你你不感动吗	aren't you moved that he helped you
+43	你通过考试了你为什么不开心呢	why aren't you happy that you passed the exam
+44	他回来了你不应该开心吗	aren't you supposed to be happy that he came back
+45	他回来了你为什么不能开心点呢	why can't you be happy that he came back
+46	他没回来你担心吗	are you worried that he didn't come back
+		
+47	我觉得他是个幽默的人	I think that he is a humorous person
+48	我觉得他不是个乐观的人	I don't think that he is an optimistic person
+49	我相信他能遵守诺言	I believe that he can keep his promise
+50	我相信他不会离开的	I don't believe that he will leave
+		
+51	你觉得我能学好英语吗	do you think that I can learn English well
+52	你觉得我应该告诉他吗	do you thingk that I should tell him
+53	你相信他能遵守承诺吗	do you believe that he can keep his words
+		
+54	你觉得我学不好英语吗	don't you think that I can learn Enlish well
+55	你为什么觉得他不是个好人	why don't you think that he is a good person
+56	你觉得我不能通过考试吗	don't you think that I can pass the exam
+		
+57	你觉得他会去哪了呢	where do you think he went
+58	你觉得这个房子多大	how big do you think the house is
+59	你觉得谁会赢	who do you think will win
+60	你觉得他正在给谁打电话呢	who do you think he is calling
+61	你觉得他会买哪辆车呢	which car do you think he will buy
+62	你觉得他什么时候回来的	when do you think he came back
+63	你以为你是谁	who do you think you are
+		
+64	我就知道你不会通过考试	I knew that you wouldn't pass the exam
+65	我没想到你会来	I didn't expect that you would come
+66	我还以为他是个老师呢	I thought that he was a teacher
+67	我从来没怀疑过他回来	I have never doubted that he will be back
+68	我还担心你不会来了呢	I was worried that you wouldn't come
+whether/if		
+69	我不知道他是不是老师	I don't know if he is a teacher
+70	我想知道它是真是假（wonder）	I wonder whether it is true or not
+71	我不在乎他会不会来	I don't care if he will come
+72	我们讨论了要不要给她打电话	we discussed whether to call him
+73	他们在考虑要不要买车	they are thinking about whether they should buy a car
+74	那得看他想不想来	that depends on whether he wants to come
+		
+75	我不确定我知道不知道	I am not sure if I know
+76	我很好奇他会不会来	I am curious if he will come
+77	我很担心他会不会生气	I am worried if he will be angry
+		
+78	他问我能不能帮他	he asked me if I could help him
+79	他们没告诉我他会不会帮我们	they didn't tell me if they would help us
+what		
+80	我不知道我该干什么	I don't know what I should do
+81	我不敢相信我看到的	I can't believe what I saw
+82	我没听到他们说的什么	I didn't hear what they were talking about
+83	那得看你要买什么	that depends on what you will buy
+84	我们还没决定要买什么	we haven't decided what to buy
+		
+85	他会告诉你你该做什么	he will tell you what you are supposed to do
+86	他问我听到什么了	he asked me what I heard
+		
+87	我不确定他说什么了	I am sure what he said
+88	我很好奇他会做什么	I am curious what he will do
+		
+89	你知道他做什么了吗	do you know what he did
+90	你决定好我们要买什么了吗	have you decided what we will buy
+91	你相信他说的吗	do you believe what he said
+92	你听到他们说什么了吗	did you hear what they said
+93	你能告诉我你学到什么了吗	can you tell me what you’ve learnt
+94	你想知道发生什么了吗	do you want to know what happened
+95	你好奇他告诉我什么了吗	are you curious what he told me
+when		
+96	我不知道该什么时候给他打电话	I don't know when to call him
+97	我知道他什么时候到	I know when he will arrive
+98	他没说他什么时候看到他的	he didn't say when he saw him
+99	我想知道你什么时候丢的手机	I wonder when you lost your phone
+100	他还没决定我们什么时候出发	he hasn't decided when we will leave
+101	我们讨论了该什么时候去北京	we discussed when to go to BJ
+102	那取决于他什么时候回来	that depends on when he will come back
+		
+103	司机会告诉我们什么时候能到北京的	the driver will tell you when we can get to BJ
+104	他问我他什么时候能离开这里	he asked me when we he can leave
+		
+105	我不确定他什么时候离开的	I am not sure when he left
+106	我很好奇他什么时候开始学的英语	I am curious when he started learning English
+		
+107	你知道我什么时候买的这辆车吗	do you know when I bought this car
+108	他说他什么时候出国了吗	did he said when he would go abroad
+109	你定下来我们什么时候告诉他了吗	have you decided when we will tell him
+110	你能告诉我他什么时候离开的吗	can you tell me when he left
+111	你想知道他什么时候开始学的英语吗	do you want to know when he started learning English
+where		
+112	我不知道他去哪了	I don't know where he went
+113	我知道他们要在哪里见面	I know where they will meet
+114	他没说他在哪里丢的钱包	he didn't say where he lost his wallet
+115	我想知道你在哪看到的他	I want to know where you saw him
+116	我们还没决定要去哪里	we haven't decided where to go
+117	那得看他在哪里买的这辆车	that depends on where he bought the car
+		
+118	他会告诉你在哪你能见到他	he will tell you where you can see him
+119	他问我去哪里了	he asked me where I went
+		
+120	我不确定他去哪里了	I am not sure where he went
+121	我很好奇他在哪里买的车	I am curious where he bought the car
+		
+122	你知道他去哪里了吗	do you know where he went
+123	他说他要去哪了吗	did he say where he would go
+124	你能告诉我你在哪里看到的他吗	can you tell me where you saw him
+125	你想知道我在哪买的这手机吗	do you want to know where I bought the phone
+why		
+126	我甚至都不知道他为什么生气	I even don't know why he is angry
+127	我知道他为什么不想见你	I know why he doesn't want to see you
+128	他没说他为什么要离开	he didn't say why he would leave
+129	我想知道你为什么生我的气	I want to know why you are angry with me
+130	那得看他为什么要改变计划	that depends on why he wants to change the plan
+		
+131	他会告诉你为什么你没通过考试	he will tell you why you didn't pass the exam
+132	他问我为什么不想见他	he asked me why I didn't want to see him
+		
+133	我不确定他为什么不想来	I am not sure why he doesn't want to come
+134	我很好奇他为什么生气	I am curious why he is angry
+		
+135	你知道他为什么生气吗	do you know why he is angry
+136	他说他为什么离开了吗	did he say why he left
+137	你能告诉我你为什么不想见我吗	can you tell me why you don't want to see him
+138	你想知道他为什么迟到吗	do you want to know why he was late
+how		
+139	我不知道怎么告诉他这件事	I don't know how to tell him the thing
+140	我知道他怎么死的	I know how he died
+141	他没说他怎么发现的	he didn't say how he found out the thing
+142	我想知道你怎么把照片发给他的	I want to know how you sent him the picture
+143	我们还没决定怎么去北京	we haven't decided how to go to BJ
+144	这取决于你工作多努力	that depends on how hard you work
+		
+145	他会告诉你怎么到天安门	he will tell you how you can get to TAM square
+146	他问我怎么能到天安门	he asked me how he could get to TAM square
+		
+147	我不确定他怎么来的	I am not sure how he came
+148	我很好奇他怎么死的	I am curious how he died
+		
+149	你知道我怎么找到他的吗	do you know how I found him
+150	他告诉你他怎么发现的了吗	did he tell you how he found out it
+151	你能告诉我你怎么通过考试的吗	can you tell me how you passed the exam
+152	你想知道我怎么遇见他的吗	do you want to know how I met him
+who		
+153	我不知道他给谁打电话了	I don't know who he called
+154	我知道你是谁	I know who you are
+155	他没说谁会来	he didn't say who would come
+156	我想知道谁告诉你的这件事	I want to know who told you the thing
+157	我们还没决定要告诉谁	we haven't decided who we will tell
+158	这取决于他想见谁	this depends on who he wants to meet
+		
+159	他告诉了我你是谁	he told me who you were
+160	他问我我给谁打电话了	he asked me who I called
+		
+161	我不确定他正在给谁打电话	I am not sure who he is calling
+162	我很好奇谁给她买的花	I am curious who bought the flowers for her
+		
+163	你知道谁赢这场比赛了吗	do you know who won the game
+164	他说他喜欢谁了吗	did he say who he liked
+165	你能告诉我谁借的钱吗	can you tell me who borrowed the money
+166	你想知道我告诉谁了吗	do you want to know who I told
+主谓宾宾补		
+167	我觉得他能来是好事	I think it a good thing that he can come
+168	我认为他能每天学习英语很重要	I think it important that he can learn English everyday
+169	我相信他说的话是真的	I believe it true what he said
+
+从句-表语从句=================================================================
+that
+1  他的问题是他不相信任何人
+2  事实是他们已经知道这件事了
+3  真相是他们今天早晨就离开了
+4  我的计划是我们去北京吧带他
+5  他的观点是我们应该把真相告诉他的父母
+6  我想说的是（我的意思是）他是个好人
+7  重点是我觉得他告诉我们的不是真的
+8  最重要的事情是你要每天学习英语
+9  原因是他不想离开
+10 我的处境是我不能想相信任何人
+11 我所知道的是他们需要我们的帮助
+12 他告诉我的是他想明天买辆车
+13 我被告知的是任何人不许离开这间房子
+14 我想说的是我们不能只是在这里等他
+15 我相信的是坏人会被惩罚
+16 我的意思是我们应该先搞清楚发生了什么
+17 我们的共同点是我们有共同的敌人
+
+whether
+1  我的问题是他们能不能按时完成任务
+2  我的担忧是他们会不会及时到来
+3  重点（关键）是他们会不会遵守承诺
+4  问题是他们会不会像他们所说的那样做
+5  我想知道的是你会不会帮我
+6  我们不知道的是他有没有对我们撒谎
+7  你需要搞清楚的是他是不是老师
+8  你需要告诉我的是他说的是不是真的
+9  我们需要确定的是他们是不是真的回来
+10 我好奇的是他们会不会像他们所说帮我们
+11 让我迷惑的是他们是不是真的找到了钱包
+12 我不确定的是他们是不是真的知道这件事
+
+what
+1  那是我们应该做的
+2  这就是我听到的
+3  那就是我所看到的的
+4  就是我我想要的
+5  他跟我想的一样
+6  那不是我告诉你的
+7  这个表示我昨天丢的
+8  这辆车是我想作为礼物送给她的
+9  他不是我所想象的那样
+10 我已经不是以前的我了
+11 他们什么时候离开的是我们不知道的
+12 他怎么死的是我正尝试搞明白的
+13 他们去哪了是我想知道的
+14 他去见谁了是我们需要搞清楚的
+15 他为什么不想见我是你需要告诉我的
+
+how
+1  他们就这么认识了（这就是他们怎么认识的）
+2  他就这么死了（这就是他怎么死的）
+3  他就这么把问题解决了
+4  他们就这么结婚了
+5  二次世界大战就是那么发生的
+6  重点是他怎么把问题解决的
+7  问题是他怎么做到的
+8  我想知道的是你怎么来的
+9  我不明白的是他们怎么知道我的电话的
+10 我想让你告诉我的是你怎么学好英语的
+11 你需要告诉我的是你怎么弄到的钱
+12 我正尝试搞明白的是他们怎么找到我们的
+13 我想问的是他怎么被开除的
+
+when
+1  他就是那时娶得她（那就是他什么时候娶得她）
+2  我就是在那个时候给她打的电话
+3  他们就是在那个时候出的国
+4  二次世界大战就是在那个时候发生的
+5  明天就是他们要见面的时候
+6  昨天就是他被杀的时候
+7  新年是我们庆祝的时候
+8  三点是你要给我打电话的时候
+9  我想知道的是他们什么时候走的
+10 我想让你告诉我的是你什么时候开始学英语的
+11 你需要告诉我的是你什么时候能把钱用到手
+12 我正常时搞明白的是这个会议什么时候会被举行
+13 我想问你的是他什么时候被开除的
+
+why
+1  他就是因为这个不相信我（这就是为什么他不相信我）
+2  这就是为甚他生我的起的原因
+3  我就是因为这个不想去
+4  就是为什么你学不好英语
+5  二次世界大战就是因为这个发生的
+6  问题是他为什么看起来这么累
+7  重点是他为什么没来
+8  我想知道的是你为什么不告诉我
+9  我不明白的是你为什么还在这
+10 我想让你告诉我的是你为什么不喜欢我
+11 你需要搞明白的是他们为什么不想和你一起工作
+12 我想问的是他为什么被开除了
+
+where
+1  我就是在哪里看到的他
+2  他们就是在这结的婚
+3  那就是我丢包的地方
+4  我们就是在这个地方认识的
+5  美国是我想去的地方
+6  图书馆是我经常去的地方
+7  我想知道的是他去哪里了
+8  让我坤混的是他现在在哪里
+9  我好奇的是他平时都在哪吃饭
+10 我想让你告我的是他平常都在哪里跑步
+
+who
+1  这就是昨天见到的那个人
+2  这就是教我英语的人
+3  这就是我想让你见的人
+4  这就是教我的人
+5  那个高个子的人就是教的人
+6  那个穿西装的人就是我昨天见到的人
+7  我想知道的是你给谁打的电话
+8  我想让你告诉我的是谁教的你英语
+9  你需要高无我的是你把这辆车给睡了
+10 我想问的是谁被开除了
+
+because
+1  那是因为他吧相信我
+2  那是因为我生他的气
+3  那是因为我不想去
+4  那是因为我不想学英语
+5  那是因为二次世界大战发生了
+
+as if
+1  他看起来像个艺术家
+2  他看起来好像醉了
+3  你看起来并没有什么工作经验
+4  我感觉我们认识了好多年
+5  看来好像要下雨
+6  看起来他好像很生气
+7  看来我们得走回家了
+8  听起来好像有人在敲门
+9  闻起来好像有东西烧焦了
+ 
+as
+1  事情并不总是表面看起来那样
+2  并不是你想的那样
+3  并不是你看到的那样

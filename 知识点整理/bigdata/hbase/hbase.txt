@@ -1,0 +1,7 @@
+搭建完成后 在/home/testuser下多出来了/hbase目录
+cd /home/testuser/hbase/data   && ls
+default  hbase
+default是默认命名空间
+
+
+create 'Student','StuInfo','Grades'   #表明  列族名

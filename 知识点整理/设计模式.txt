@@ -1,0 +1,30 @@
+观察者：Subject	addObserver deleteObserver notifyObservers
+		Observer update
+		实例化Observer时，要把自己加入到Subject中
+		
+访问者： 
+	ObjectStructure attatch所有的Subject，accept Visitor后，调用Visitor的visit
+
+观察者、访问者区别：
+	访问者注重每个Visitor都能访问一遍Subject。观察者关注Subject变了后，能通知Observer，怎么把Observer加入到Subject中是关键
+	
+桥接模式：
+	关注点是不同的接口有不同的用处
+
+策略模式：
+	Comparator
+	Spring Resource 中的策略模式
+	Spring Bean 实例化中的策略模式
+
+中介者：
+	中间类和其他类联系
+
+装饰器Decrerator：
+	FilterInputStream 继承了InputStream，包含了InputStream。子类BufferedInputStream提供了缓冲区功能，还有DateInputStream、LineNumberInputStream、PushbackInputStream
+
+适配器Adatper：	
+	ByteArrayInputStream，StringBufferInputStream
+	InputStreamReader 将InputStream适配成Reader
+	
+单例模式：
+	懒汉，恶汉，双检查(加volatile否则指令重排序(分配内存，实例化，赋值，分配内存后，外层判断null为false))，内部静态类，Enum

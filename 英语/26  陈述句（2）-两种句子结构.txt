@@ -1,0 +1,6 @@
+主  谓  宾   宾补  （n/a/介短/adv/done）
+主  谓  间宾 直宾
+
+
+he left the door open		状态
+he didn't close the door	动作

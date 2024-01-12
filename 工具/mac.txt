@@ -1,0 +1,48 @@
+#### 文件夹
+
+隐藏、显示 隐藏文件
+defaults write com.apple.finder AppleShowAllFiles -bool true
+defaults write com.apple.finder AppleShowAllFiles -bool false
+```
+command + shift + .       显示隐藏文件
+```
+
+ctrl + z 
+ctrl + shift + z
+
+subline text3 	
+ctrl+command+j	格式化json
+command+q		退出
+command+shift+p	打开命令， pci 安装插件
+
+item2
+清除当前行：ctrl + u
+到行首：ctrl + a
+到行尾：ctrl + e
+前进后退：ctrl + f/b (相当于左右方向键)
+上一条命令：ctrl + p
+搜索命令历史：ctrl + r
+删除当前光标的字符：ctrl + d
+删除光标之前的字符：ctrl + h
+删除光标之前的单词：ctrl + w
+删除到文本末尾：ctrl + k
+交换光标处文本：ctrl + t
+清屏1：command + r
+清屏2：ctrl + l
+⌘ + 数字在各 tab 标签直接来回切换
+⌘ + f 所查找的内容会被自动复制
+⌘ + d 横着分屏 / ⌘ + shift + d 竖着分屏
+⌘ + r = clear，而且只是换到新一屏，不会想 clear 一样创建一个空屏
+ctrl + u 清空当前行，无论光标在什么位置
+⌘ + ;    自动提示
+⌘ + shift + h 会列出剪切板历史
+Control + w      删除前面的单词
+
+chrome
+command + L   光标地址栏
+
+chrome 切换语言
+设置浏览器显示语言为英语：
+defaults write com.google.Chrome AppleLanguages '(en-US)'
+切为中文：
+defaults write com.google.Chrome AppleLanguages '(zh-CN)'

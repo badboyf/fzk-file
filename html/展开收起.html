@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>无标题文档</title>
+</head>
+  
+<body>
+<style>
+.thread_article{position: relative;overflow: hidden;}
+#gradient{
+	width: 100%;
+	height:50px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: -moz-linear-gradient(bottom,rgba(255,255,255,.1),rgba(255,255,255,0));
+	background: -webkit-gradient(linear,0 top,0 bottom,from(rgba(255,255,255,0)),to(#fff));
+	background: -o-linear-gradient(bottom,rgba(255,255,255,.1),rgba(255,255,255,0));}
+#read-more{padding: 5px;background: #fff;color: #333;}
+#read-more a{padding-right: 22px;text-decoration: none;color:#0f88eb;}
+#read-more a: hover{color: #000;}
+.text-center{text-align:center;}
+</style>
+
+<div class="thread_article">
+这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文
+这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文字这是很长很长的文
+<div id="gradient"></div>
+</div>
+<div id="read-more" class="text-center"></div>
+
+
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var slideHeight = 200;
+		var defHeight = $('.thread_article').height();
+		console.log($('.thread_article'), defHeight);
+		if(defHeight >= slideHeight){
+			$('.thread_article').css('height' , slideHeight + 'px');
+			$('#read-more').append('<a href="#">查看全文 <i class="fa fa-angle-down"></i></a>');
+			$('#read-more a').click(function(){
+			var curHeight = $('.thread_article').height();
+			if(curHeight == slideHeight){
+			$('.thread_article').animate({
+				height: defHeight
+			}, "normal");
+			$('#read-more a').html('收起 <i class="fa fa-angle-up"></i>');
+			$('#gradient').fadeOut();
+		    }else{
+				$('.thread_article').animate({
+				height: slideHeight
+				}, "normal");
+				$('#read-more a').html('查看全文 <i class="fa fa-angle-down"></i>');
+			$('#gradient').fadeIn();
+		   }
+		   return false;
+		  });  
+		}
+	});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+句子的种类
+
+按结构分：	简单句	he is a boy
+		并列句	he is a boy, and he came here
+		复合句 	he is the boy who came here
+		
+按结构分：	陈述句：
+			肯定句
+			否定句
+		疑问句：
+			特殊疑问句
+			一般疑问句
+句子的本质：
+	5种句子结构
+	8种句子成分
+	11类词性
+11种此类：动词、时表词、名词、形容词、副词、介词、代词、连词、冠词、数次、感叹词
+5大句子结构，8大句子成分
+	主 谓				he left
+	主 谓 宾				he bount a car.		
+	主 谓 宾 宾补			he calls me tom.	he make me angry
+	主 谓 间宾 直宾		he bought me a car.	he told me a story
+	主 系 表				he is a teacher.	he is tall
+	
+	主语、谓语、宾语、表语、补语、同位语、定语、状语
+
+同位语：
+	i met tom, one of my friends
+
+定语：
+	对名词进行修饰限定的词语：前置定语、后置定语
+	材料、用途、时间、地点、内容、类型
+	形容词	a clever boy	a young man		a new car
+	名词		a diamond ring	a store bridge	a story book	chldren education
+	代词		my book		his name	our money
+	数词 	three boys	the first person
+	副词 	china today		the situation now	the boy there
+	介词短语	the book on the table	people aroung the world
+
+状语：
+	修饰动词，副词、形容词、整句、介词短语，表时间、地点、原因、方式、程度
+	时间：he came yesterday
+		he called me this morning
+		he is going to come at night
+	地点：he is going to come here
+		he didn't go there
+		i put the book on the dest
+		i saw him on the street
+	原因：he bought the flower for here
+		he died of heart disease
+		he jumped with excetement
+	方式：he went to beijing by plane
+		he came in through the door
+		they are talking in English
+		he came in quietly
+		they are playing happily
+		he is walking slowly
+	程度：
+		he is very/so/too/pretty/quite young
+		the book is very/so/too/pretty/quite interesting
+		i almost forgot
+		he likes english much
+		i can barely see anything
+		i am deeply moved

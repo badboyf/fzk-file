@@ -1,0 +1,10 @@
+<div class="t4 mt-14">
+  <span>{{article?.title}}</span>
+</div>
+<div class="mt-4 t5">
+  <span>{{article?.publish_date | date: 'yyyy.MM'}}</span>
+  <span class="ml-28">{{article?.periodical?.prd_name}}</span>
+</div>
+<div class="mt-8 t6">
+  <span (click)="gotoArticleDetail()">{{article?.abstract}}</span>
+</div>

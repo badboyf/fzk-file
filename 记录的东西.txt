@@ -1,0 +1,126 @@
+http://hg.openjdk.java.net/ openjdk源码下载地方
+  选jdk版本->browse->zip
+notepad插件下载地址：   https://sourceforge.net/projects/npp-plugins/files/
+
+jdk导入https cer证书： keytool -import -trustcacerts -alias embedit-infra -keystore cacerts -file embedit-infra.cer -storepass changeit
+
+C:\Windows\System32\drivers\etc
+ionic cordova run android
+
+win10输入法不见了： win + R    输入ctfmon.exe
+win10左下搜索不了： explorer杀掉，重启一个
+10wifi不出来:	网络共享中心，诊断
+
+nodepad
+正则搜索：
+^p(.+)				以p开头的行
+^[pa](.+)			以p/a开头的行
+^[^pa](.+)			不以p/a开头的行
+查找替换
+^[p](.+)			"$1			以p开头的行替换为行首加"
+NumberInt\((\d+)\)	$1			类似NumberInt(100)替换为100
+.+\((\d+)\)			括号中包含数据 NumberInt(10)
+
+eclipse：
+alt + shift + m    提出方法
+
+linux：
+find . -name ""
+grep -rn "hello,world!" *
+grep -rn "phaseA.*phaseB" /   既包含phaseA又包含phaseB
+
+vim
+:.,$-1d						当前行到倒数第二行内容全删掉
+/.*red\&.*blue				同一行
+^((?!(1111|2222)).)*$		不包含某些字符串的行	
+aff\\?(.*)filter=(?!2222|1111)	filter后不匹配某些字符
+
+
+右键菜单的n种方法： https://blessing.studio/add-notepad-plus-plus-to-context-menu/
+
+
+git branch -a 
+git branch -d {branch}					删除本地分支
+git push origin --delete <branch>		删除远程分支
+git push origin {branch}
+git rebase -i {commit_id}
+比较两个commit
+git log
+git diff <commit_id>
+和远程分支关联，三种
+1. git pull origin {branch}
+2. git checkout -b {branch} origin/{branch}
+3. git fetch origin {branch}:{branch}
+撤销commit
+git reset --soft HEAD~1         
+	--mixed 不删代码，撤销commit，撤销git add . 不加也行，默认就是
+	--soft  不删代码，撤销commit
+	--hard	删除代码，撤销commit，撤销git add .
+	~1 就是前一次commit      ~2 就是前2次commit
+取消add文件
+git reset HEAD 			取消全部add
+git reset HEAD XXX/XXX/ 取消add某个文件 
+修改commit信息
+git commit --amend
+
+idea快捷键
+ctrl + alt + v		返回值补全
+ctrl + alt + 左/右	
+ctrl + alt + 点击	open implemention
+Ctrl + Shift + Backspace	跳转到上次编辑的地方
+ctrl + b			跳进方法
+ctrl + alt +b		跳进实现
+alt + F8			debug时，计算
+alt + 上				上一个方法
+alt + ←				左tab
+ctrl + shift + ↑	向上移动一行
+ctrl + alt + o 		导包
+ctrl + shift + f  	查找
+shift + shift		全部查找
+alt + insert		创建类
+ctrl + R			当前类替换
+alt + enter			生成get/set/contructor
+Ctrl + Shift + J	去掉空白
+Ctrl + Alt + L		格式化代码
+iter				增强for
+itar 				array for
+itco 				Collection迭代 
+iten 				enumeration遍历
+shift + f8			跳出方法
+alt + 7				outline
+
+
+mysql
+CREATE DATABASE 数据库名
+show databases;
+use {database};
+
+
+
+md/mkdir a		创建文件夹
+rd /s /q a		删除文件夹,/s文件夹内有文件也删除，/q不询问是否确认删除
+
+del a.txt		删除文件
+del /s /q *.*	全部删除
+
+type nul>a.txt	创建空文件
+echo abc>a.txt	复写a.txt文件,没有文件会创建
+echo abc>>a.txt	a.txt文件中追加abc,没有文件会创建
+
+
+netstat -ano
+netstat -aon|findstr "49157"		#端口号
+tasklist | findstr chrome
+tasklist|findstr "2720"				#PID
+taskkill /f /t /im Tencentdl.exe	#杀掉
+taskkill /pid 4136 -t -f
+
+wmic process where caption="WINWORD.EXE" get caption,commandline
+"wmic process where \"(CommandLine LIKE '%word%')\" get Caption,CommandLine,processId"
+wmic process where "(CommandLine LIKE '%F:\\tmp\\for-bug\\2.docx%')" get Caption,CommandLine,processId
+
+
+chcp 65001
+start /b java -jar -Dfile.encoding=UTF-8 -Dcrossdomain.db=4 crossdomain-tk-initialize-2.2.0-RELEASE.jar >>out4.log 2>&1
+
+start /b java Loop >> out 2>&1

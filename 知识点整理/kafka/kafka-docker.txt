@@ -1,0 +1,70 @@
+-v /etc/timezone:/etc/timezone \
+-v /etc/localtime:/etc/localtime \
+-v /root/docker/kafkawurstmeister/config:/opt/kafka_2.12-2.3.0/config \
+-v /root/docker/kafkawurstmeister/logs:/opt/kafka_2.12-2.3.0/logs \
+-v /root/docker/kafka/kafka-logs/:/kafka/ \
+--env KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://10.64.84.131:9092  \	
+--env KAFKA_LISTENERS=PLAINTEXT://10.64.84.131:9092  \
+--env KAFKA_ADVERTISED_HOST_NAME=10.64.84.131 \
+--env KAFKA_ADVERTISED_PORT=9092 \
+
+判断一下ip对不对
+1 在 --rm 前提下，需要清理数据卷，包括zookeeper的
+docker volume prune
+docker run --rm -d --name zk01 -p 2181:2181 wurstmeister/zookeeper
+docker run --rm -d --privileged=true --name kfk \
+	--link zk01 \
+	--env KAFKA_ZOOKEEPER_CONNECT=zk01:2181 \
+	--env KAFKA_LISTENERS=PLAINTEXT://0.0.0.0:9092  \
+	--env KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://10.64.84.131:9092  \
+	-v /root/docker/kafka/logs:/opt/kafka/logs \
+	-p 9092:9092 \
+	wurstmeister/kafka
+
+2. 不 --rm 
+docker run -d --privileged=true --name kfk \
+	--link zk01 \
+	-e KAFKA_BROKER_ID=0 \
+	--env KAFKA_ZOOKEEPER_CONNECT=zk01:2181 \
+	--env KAFKA_LISTENERS=PLAINTEXT://0.0.0.0:9092  \
+	--env KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://10.64.84.131:9092  \
+	-v /root/docker/kafka/logs:/opt/kafka/logs \
+	-p 9092:9092 \
+	wurstmeister/kafka
+docker start kfk
+
+3. 使用 wurstmeister/kafka 创建容器后，执行命令启动，和虚拟机原理一样
+docker run -it --privileged=true --name kafka \
+	-p 9092:9092 \
+	-p 2181:2181 \
+	-v /root/docker/kafka/config/server.properties:/opt/kafka/config/server.properties \
+	-v /root/docker/kafka/logs:/opt/kafka/logs \
+	-v /root/docker/kafka/kafka-logs:/tmp/kafka-logs/ \
+	wurstmeister/kafka /bin/bash
+vi opt/kafka/config/server.properties
+	listeners=PLAINTEXT://172.17.0.2:9092
+	advertised.listeners=PLAINTEXT://10.64.84.131:9092
+nohup /opt/kafka/bin/zookeeper-server-start.sh opt/kafka/config/zookeeper.properties 2>&1 >/opt/kafka/logs/zk.log &
+nohup /opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/server.properties 2>&1 > /opt/kafka/logs/kafka.log &
+/opt/kafka/bin/kafka-topics.sh --delete --bootstrap-server 172.17.0.3:9092 --topic t1
+/opt/kafka/bin/kafka-topics.sh --create --bootstrap-server 172.17.0.3:9092 --replication-factor 1 --partitions 1 --topic t1
+/opt/kafka/bin/kafka-topics.sh --list --bootstrap-server 172.17.0.3:9092
+
+虚拟机启动：注意修改 server.properties, 不然远程无法调用
+启动zoo:		nohup /root/kafka/kafka_2.12-2.3.0/bin/zookeeper-server-start.sh /root/kafka/kafka_2.12-2.3.0/config/zookeeper.properties 2>&1 > /root/kafka/zookeeper.log &
+启动kafka:	nohup /root/kafka/kafka_2.12-2.3.0/bin/kafka-server-start.sh /root/kafka/kafka_2.12-2.3.0/config/server.properties 2>&1 > /root/kafka/kafka.log &
+创建topic：	/root/kafka/kafka_2.12-2.3.0/bin/kafka-topics.sh --create --bootstrap-server 10.64.84.131:9092 --replication-factor 1 --partitions 1 --topic t1
+删除topic	/root/kafka/kafka_2.12-2.3.0/bin/kafka-topics.sh --delete --bootstrap-server 10.64.84.131:9092 --topic t1
+topic列表	/root/kafka/kafka_2.12-2.3.0/bin/kafka-topics.sh --list --bootstrap-server 10.64.84.131:9092
+producer测试	/root/kafka/kafka_2.12-2.3.0/bin/kafka-console-producer.sh --broker-list 10.64.84.131:9092 --topic t1
+consumer测试	/root/kafka/kafka_2.12-2.3.0/bin/kafka-console-consumer.sh --bootstrap-server 10.64.84.131:9092 --topic t1 --from-beginning
+创建分区：		/root/kafka/kafka_2.12-2.3.0/bin/kafka-topics.sh --alter --zookeeper 10.64.84.131:2181 --partitions 2 --topic t1
+
+
+docker volume prune
+docker volume rm my-vol
+docker volume ls
+
+
+
+修改默认的ListenerContainerFactory：	https://www.cppentry.com/bencandy.php?fid=120&id=203877

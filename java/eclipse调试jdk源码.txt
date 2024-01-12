@@ -1,0 +1,16 @@
+1.mkdir -p D:\Java\make_debug   
+  mkdir -p D:\Java\make_debug\jdk_debug 
+  mkdir -p D:\Java\make_debug\jdk_src
+2.从%JAVA_HOME%下找到src.zip源码源码压缩包，解压至jdk_src目录，并只保留java，javax,org三个文件夹。
+3.从%JAVA_HOME%\jre\lib找到rt.jar，将它拷贝到make_debug文件夹。
+4.	cd make_debug
+	dir /B /S /X .\jdk_src\*.java > .\filelist.txt
+	生成filelist.txt文件，里面为待编译的文件路径*/*.java。
+5.	cd make_debug
+	javac -J-Xms16m -J-Xmx1024m -sourcepath .\jdk_src -cp .\rt.jar -d .\jdk_debug -g @.\filelist.txt >> .\log.txt 2>&1
+	编译filelist.txt文件中列出的*.java源文件，编译的*.class文件会放入jdk_debug文件夹
+6.	cd jdk_debug
+	jar cf0 .\rt_debug.jar .\*
+	将.class文件打成jar，打包完成后会在D:/jdk/jdk_debug目录中生成rt_debug.jar。
+7.把这个生成的rt_debug.jar包复制到%JDK_HOME%\jre\lib\endorsed下。如果没有endorsed目录，自己创建一下。
+8.在eclipse里面找到Window->Installed JRES，选择jdk，点击Edit，然后点击Add External jars，选择刚才创建的rt_debug.jar导入，然后把rt_debug.jar移动到rt.jar的前面，最后选中rt_debug.jar，点击Source Attachment选择%JAVA_HOME%/jdk/src.zip添加源文件，最后，重启eclipse。

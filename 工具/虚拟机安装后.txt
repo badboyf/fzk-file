@@ -1,0 +1,34 @@
+解决联网问题：
+https://www.cnblogs.com/badboyf/p/7517737.html
+
+安装vim
+yum install vim
+
+安装openssh
+yum install openssh*
+vim /etc/ssh/sshd_config
+Port=22  设置SSH的端口号是22(默认端口号为22)
+Protocol 2  启用SSH版本2协议
+ListenAddress 192.168.0.222  设置服务监听的地址
+DenyUsers   user1 user2 foo  拒绝访问的用户(用空格隔开)
+AllowUsers  root osmond vivek  允许访问的用户(用空格隔开)
+PermitRootLogin  no  禁止root用户登陆
+PermitEmptyPasswords no  用户登陆需要密码认证
+PasswordAuthentication  yes  启用口令认证方式
+然后
+service sshd restart
+
+安装jdk
+tar -zxvf jdk-8u73-linux-x64.gz -C /usr/local/
+vim /etc/profile
+export PATH=$PATH:/sbin
+export JAVA_HOME=/usr/local/jdk1.8.0_73
+export PATH=$JAVA_HOME/bin:$PATH
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+
+安装docker
+yum install -y docker-ce-17.09.0.ce-1.el7.centos.x86_64.rpm
+service docker start
+docker info 查看成功
+docker load -i centos.tar
+curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f1361db2.m.daocloud.io    访问docker hub飞快

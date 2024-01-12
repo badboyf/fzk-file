@@ -1,0 +1,3 @@
+{"sub":{"$size": 3 } , "subCount" : 0 }
+
+db.repairDatabase()

@@ -1,0 +1,40 @@
+
+
+https://www.cnblogs.com/yjlch1016/p/9289588.html
+
+yum install -y openssl-devel bzip2-devel expat-devel gdbm-devel readline-devel sqlite-devel gcc gcc-c++
+yum -y install gcc automake autoconf libtool make
+yum install python3-devel
+yum install mariadb-devel
+yum install -y wget
+wget https://www.python.org/ftp/python/3.6.7/Python-3.6.7.tgz
+mv Python-3.6.7.tgz /usr/local
+cd /usr/local
+tar -zxvf Python-3.6.7.tgz
+cd Python-3.6.7
+
+./configure --prefix=/usr/local
+
+ ln -s /usr/local/python3/bin/python3 /usr/bin/python3
+ ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3
+
+ pip3 install --upgrade setuptools pip
+ pip3 install virtualenv
+
+
+
+ python3 -m venv venv
+. venv/bin/activate
+pip install --upgrade pip
+pip install apache-superset
+superset db upgrade
+	如果报错：This system lists a couple of UTF-8 supporting locales that you can pick from. The following suitable locales were discovered: en_US.utf8 
+	执行： export LC_ALL=en_US.utf-8 && export LANG=en_US.utf-8 && superset db upgrade
+superset init
+
+
+
+
+
+
+

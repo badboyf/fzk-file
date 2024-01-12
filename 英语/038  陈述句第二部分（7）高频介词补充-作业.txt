@@ -1,0 +1,64 @@
+序号	中文	主	谓/系	宾/表	副词/介词短语	
+ahead of						
+1	他比我早几个小时到的那   	he	got		there	a few hours ahead of me
+2	我比你早知道这件事	I	knew	the thing	ahead of you	
+3	我认识他比你早	I 	knew	him	ahead of you	
+4	他一直领先其他同学	he	is(always)	ahead of others		
+5	他在英语方面比我强	he	is	ahead of me	in English	
+6	他在记忆里方面强于同龄人	he	is	ahead of his peers	in memery	
+7	他当时在我前面一米的地方	he	was	one meter ahead of me		
+8	他抢在我前面上了车	he	got	in the car	ahead of me	
+9	除了黑暗我什么都没有（在我前面）	I	have 	nothing	except darkness	ahead of me
+10	我有很多工作摆在我面前	I	have 	a lot of work	ahead of me	
+as for						
+11	至于这件事，你就不用管了	as for this thing，leave it alone				
+12	至于他，我会告诉他的	as for him，I will let him know				
+13	至于他的能力，我不认为是个问题	as for his ability，I don't think it a problem				
+Due to/owing to/Because of/on account of/as a result of						
+14	由于堵塞的交通，他来晚了 	he	came		late	due to traffic jam
+15	由于暴风雨，他没去上班	he	didnt go		to work	due to storm
+16	他因病不能来	he	can't come		due to illness	
+17	他由于马虎犯了错 	he	made	a mistake	due to carlessness	
+18	由于他马虎犯的错已经被改正了	the mistake due to his carlessness has been corrected				
+19	由于天气不好，他们决定推迟旅行	they	decide	to put off the trip	due to the bad weather	
+						
+20	他的死是由车祸造成的	his death	was	due to car accident		
+21	这场车祸是由他的粗心造成的	the car accident	was	due to his carelessness		
+22	这次错误是由经验的缺乏造成的 	the mistake  	was	due to his lack of experience		
+23	你的成功都归因于你的努力工作	your success	was	due to your hardworking		
+24	你的失败是由于疏忽造成的	your failure	was	due to your carelessness		
+thanks to						
+25	多亏了你的帮助，我们才得以成功	thanks to your help，we succeeded				
+26	多亏了他的提醒，我们才躲过这场车祸	thanks to his warning，we avoided the car accident				
+27	多亏了你，我才能见到他	thanks to you，we saw him				
+28	对亏了你了，我再也见不到他了	thanks to you，I will never see him again				
+for						
+29	对于你的损失，我感到抱歉	I	am	sorry	for your loss	
+30	对于晚点，我感到抱歉	I	am	sorry	for the delay	
+31	我因刚才说话感到抱歉	I	am	sorry	for what I said	
+at						
+32	听到这个消息他很惊讶	he	was	surprised	at the news	
+33	对于他做的事情，我感到惊讶	I	am	surprised	for what he did	
+from/of						
+34	他死于车祸	he	died		from car accident	
+35	他因失血过多而死	he	died		from bleeding too much	
+36	他死于心脏病	he	died		of heart disease	
+37	他死于饥饿	he	died		of hunger	
+38	他死于营养不良	he	died		of malnutrition	
+with						
+39	他激动地跳了起	he	jump		with excitement	
+40	他气得浑身发抖	he	shivered		with anger	
+41	他喜悦地流下了眼泪	he	burst		into tears	with joy
+by mistake/chance/accident						
+42	我弄错了拿走了他的包	I	took	his bag	by mistake	
+43	他们在地铁站偶然相遇了	they	met		in the subway station	by chance
+44	他意外地听到了这个消息	he	heard	the news	by accident	
+out of						
+45	他出于好奇打开了那扇门 	he	opened	the door	out of curiouscity	
+46	我出于好心帮了他	I	helped	him	out of kindness	
+47	他出于对她的爱离开了他	he	left	her	out of the love	for her
+48	他出于对知识的求知欲问了他	he	asked	him	out of the desire	for knowledge
+49	他那么做是出于无奈	he	did  	that	out of having no other ways	
+through						
+50	他们完成任务是由于团队合作	they	completed	the task	through teamwork	
+51	他们输比赛是由于错误的配合	they	lost	the game	through bad cooperation	

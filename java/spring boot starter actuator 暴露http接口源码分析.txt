@@ -1,0 +1,87 @@
+起始入口：WebEndpointAutoConfiguration
+注册PathMappedEndpoints时需要Collection<EndpointsSupplier<?>> endpointSuppliers，
+JmxEndpointDiscoverer	JmxEndpointAutoConfiguration生命
+ServletEndpointDiscoverer	下面三个为WebEndpointAutoConfiguration声明
+WebEndpointDiscoverer
+ControllerEndpointDiscoverer
+
+每种Discoverer分别获取endpoints
+	private Collection<E> discoverEndpoints() {
+		Collection<EndpointBean> endpointBeans = createEndpointBeans();
+		addExtensionBeans(endpointBeans);
+		return convertToEndpoints(endpointBeans);
+	}
+
+获取到endpoints
+	private Collection<EndpointBean> createEndpointBeans() {
+		Map<EndpointId, EndpointBean> byId = new LinkedHashMap<>();
+		String[] beanNames = BeanFactoryUtils.beanNamesForAnnotationIncludingAncestors(
+				this.applicationContext, Endpoint.class);
+		for (String beanName : beanNames) {
+			if (!ScopedProxyUtils.isScopedTarget(beanName)) {
+				EndpointBean endpointBean = createEndpointBean(beanName);
+				EndpointBean previous = byId.putIfAbsent(endpointBean.getId(),
+						endpointBean);
+				Assert.state(previous == null,
+						() -> "Found two endpoints with the id '" + endpointBean.getId()
+								+ "': '" + endpointBean.getBeanName() + "' and '"
+								+ previous.getBeanName() + "'");
+			}
+		}
+		return byId.values();
+	}
+生成PathMappedEndpoints时，调用getEndpoints(Collection<EndpointsSupplier<?>> suppliers)方法中调用了四类Discoverer的父类EndpointDiscoverer的getEndpoints()方法
+在EndpointDiscoverer。createEndpointBeans()中，扫描出全部的@Endpoint类，包装成带id的EndpointBean。
+
+进入到EndpointDiscoverer.addExtensionBeans
+private void addExtensionBeans(Collection<EndpointBean> endpointBeans) {
+		Map<EndpointId, EndpointBean> byId = endpointBeans.stream()
+				.collect(Collectors.toMap(EndpointBean::getId, (bean) -> bean));
+		String[] beanNames = BeanFactoryUtils.beanNamesForAnnotationIncludingAncestors(
+				this.applicationContext, EndpointExtension.class);
+		for (String beanName : beanNames) {
+			ExtensionBean extensionBean = createExtensionBean(beanName);
+			EndpointBean endpointBean = byId.get(extensionBean.getEndpointId());
+			Assert.state(endpointBean != null,
+					() -> ("Invalid extension '" + extensionBean.getBeanName()
+							+ "': no endpoint found with id '"
+							+ extensionBean.getEndpointId() + "'"));
+			addExtensionBean(endpointBean, extensionBean);
+		}
+	}
+扫描出@EndpointWebExtension的healthEndpointWebExtension, environmentEndpointWebExtension
+
+	private E convertToEndpoint(EndpointBean endpointBean) {
+		MultiValueMap<OperationKey, O> indexed = new LinkedMultiValueMap<>();
+		EndpointId id = endpointBean.getId();
+		addOperations(indexed, id, endpointBean.getBean(), false);
+		if (endpointBean.getExtensions().size() > 1) {
+			String extensionBeans = endpointBean.getExtensions().stream()
+					.map(ExtensionBean::getBeanName).collect(Collectors.joining(", "));
+			throw new IllegalStateException(
+					"Found multiple extensions for the endpoint bean "
+							+ endpointBean.getBeanName() + " (" + extensionBeans + ")");
+		}
+		for (ExtensionBean extensionBean : endpointBean.getExtensions()) {
+			addOperations(indexed, id, extensionBean.getBean(), true);
+		}
+		assertNoDuplicateOperations(endpointBean, indexed);
+		List<O> operations = indexed.values().stream().map(this::getLast)
+				.filter(Objects::nonNull).collect(Collectors.collectingAndThen(
+						Collectors.toList(), Collections::unmodifiableList));
+		return createEndpoint(endpointBean.getBean(), id,
+				endpointBean.isEnabledByDefault(), operations);
+	}
+addOperations获取路径与方法
+
+
+
+
+
+
+
+
+
+
+
+

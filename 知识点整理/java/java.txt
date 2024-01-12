@@ -1,0 +1,16 @@
+加载：
+双亲委派：
+	Bootstrap ClassLoader：<JAVA_HOME>\lib或-Xbootclasspath  如rt.jar，java.lang.String、java.util.List。启动类Main class也由启动类加载器加载。
+	ExtClassLoader：<JAVA_HOME>\lib\ext目录或java.ext.dirs系统变量指定  由sun.misc.Launcher$ExtClassLoader实现。
+	AppClassLoader：加载用户类路径（classpath）上的指定类库
+	
+	一个符合规范的类加载器，应当仅覆写ClassLoader#findClass()，以支持自定义的类加载方式。不建议覆写ClassLoader#loadClass()（以使用默认的类加载逻辑，即双亲委派模型）；如果需要覆写，则不应该破坏双亲委派模型
+
+类加载过程：
+	加载，验证，准备，解析，初始化
+	
+	
+HashMap：
+第一次put，resize(),初始化throshld，
+超过8个转红黑树，remove时少于6个转链表
+插入完成检查是否超过throshld，超过了table的size*2，并且重新分配entry

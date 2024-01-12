@@ -1,0 +1,58 @@
+{
+  "size" : 0,
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "term": {
+            "orderInfo.status": "PAY_SUCCESS"
+          }
+        }
+      ]
+    }
+  },
+  "aggs": {
+    "one_aggr": {
+      "terms": {
+        "field": "commodityInfo.commodityType"
+      },
+      "aggs": {
+        "sum_count": {
+          "sum": {
+            "field": "orderInfo.price"
+          }
+        }
+      }
+    },
+	"anothor_aggr": {
+	  "terms": {
+        "field": "commodityInfo.commodityType"
+      },
+	  "aggs": {
+        "data": {
+          "top_hits": {
+            "size": 1,
+			"sort": [
+				{
+					"orderInfo.payTime": {
+						"order": "desc"
+					}
+				}
+			],
+			"fields": ["orderInfo.payTime"]
+          }
+        }
+	  }
+	}
+  }
+}
+
+
+
+
+
+
+
+
+
+

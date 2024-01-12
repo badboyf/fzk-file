@@ -1,0 +1,45 @@
+
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 14px 5px 0;
+  position: relative;
+}
+li:last-child::before {
+  height: 30px;
+}
+li::after, li::before {
+  content: '';
+  left: -10px;
+  position: absolute;
+  right: auto;
+}
+li::before {
+  border-left: 1px solid #ccc;
+  bottom: 50px;
+  height: 100%;
+  top: -2px;
+  width: 1px;
+}
+ul {
+  padding-left: 20px;
+  list-style-type: inherit;
+}
+li::after {
+  border-top: 1px solid #ccc;
+  height: 20px;
+  top: 28px;
+  width: 16px;
+}
+li a {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 3px 8px;
+  text-decoration: none;
+  color: black;
+  white-space: nowrap;
+}
+.active {
+  background-color: #24d6ea;
+}

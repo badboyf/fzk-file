@@ -1,0 +1,21 @@
+zookeeper不适合用作注册中心的简单总结  https://www.cnblogs.com/liuyu7177/p/10985585.html 
+补充
+zk是cp的，注册中心应该是ap的
+1. ZooKeeper写是不可扩展的，当注册节点一定时，写性能会是瓶颈，发布应用时出现排队现象，表现出来的现象就是，应用的启动变得十分缓慢
+2. ZooKeeper不支持跨机房的路由，不像eureka，有zone的概念，优先本地路由，当本机房路由，当本机房出现问题时，可以路由到另一个机房
+3. ZooKeeper当节点过多时，如果有服务节点变更，需要同时通知机器，会发生“惊群效应”， 瞬间打满网卡，且容易重复通知
+
+Eureka与Zookeeper服务注册中心比较   http://dockone.io/article/78   https://www.jianshu.com/p/87ef94edaf5a
+
+EPHEMERAL 
+
+羊群效应： 解决方案是使用exist, 只注册在比自己小一位的那个节点上, 只有这个节点发生变更才会有watch.
+脑裂： 多主 解决方案Quorums，        https://blog.csdn.net/yjp198713/article/details/79400927
+Zookeeper分布式锁解决缓存击穿问题
+
+zookeeper 选举，Zab协议，paxos算法。考虑两者的区别
+ZAB协议，消息广播(类似两阶段提交)，崩溃恢复，数据同步(读写，过半提交)
+顺序一致性、原子性、单一系统镜像、持久性   
+paxos一致性达不到zookeeper要求，所以采用zab协议  https://www.cnblogs.com/crazylqy/p/7132133.html  
+zookeeper使用场景：  发布订阅, 负载均衡, 命名服务, 分布式协调/通知, 集群管理, 分布式锁, 分布式队列   https://blog.csdn.net/u013679744/article/details/79371022
+事件机制

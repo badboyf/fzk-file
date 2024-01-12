@@ -1,0 +1,120 @@
+# fdisk  /dev/sda  
+
+	执行前的状态忘了保存记录了，这是我整个流程执行完毕之后命令行的结果、
+	当时  有/dev/sda1   sda2   sda3,   然后我在下一个命令中输入的分区号是  4
+	
+	/dev/sda1 挂载到 /boot 目录下 （df -T -h 可以查看）  /boot 目录下的文件主要用于linux系统的启动
+	/dev/sda2 挂载到 / 目录下
+	/dev/sda3 挂载的是 swap分区 swap 在系统的物理内存不够用的时候，把硬盘空间中的一部分空间释放出来，以供当前运行的程序使用
+	（sda3不知道能不能）
+	
+	系统最多支持4个主分区，为解决分区不够的问题，又产生了逻辑分区的概念。这样，系统最多可以有3个主分区，一个逻辑分区。在逻辑分区中，又可以再分区。
+
+# fdisk -l
+	Disk /dev/sda: 85.9 GB, 85899345920 bytes
+	255 heads, 63 sectors/track, 10443 cylinders
+	Units = cylinders of 16065 * 512 = 8225280 bytes
+	Sector size (logical/physical): 512 bytes / 512 bytes
+	I/O size (minimum/optimal): 512 bytes / 512 bytes
+	Disk identifier: 0x0005ebd8
+	   Device Boot      Start         End      Blocks   Id  System
+	/dev/sda1   *           1          39      307200   83  Linux
+	Partition 1 does not end on cylinder boundary.
+	/dev/sda2              39        2358    18631680   83  Linux
+	/dev/sda3            2358        2611     2031616   82  Linux swap / Solaris
+	/dev/sda4            2611       10443    62911877+  8e  Linux LVM
+	
+	The number of cylinders for this disk isset to 7832.
+	There is nothing wrong with that, but thisis larger than 1024,
+	
+	and could in certain setups cause problemswith:
+	
+	1) software that runs at boot time (e.g.,old versions of LILO)
+	
+	2) booting and partitioning software fromother OSs
+	
+	   (e.g., DOS FDISK, OS/2 FDISK)
+	
+	 
+	
+	Command (m for help): 
+n 说明：新增分区																					n
+	
+	Command action
+	   e   extended
+	   p   primarypartition (1-4)
+p																							p
+
+	Partition number (1-4): 4 说明：新增分区号（1，2默认已经用了）
+
+First cylinder (2611-7832, default 2611):默认回车（最小）											默认回车（最小）
+
+	Using default value 2611
+	
+	Last cylinder or +size or +sizeM or +sizeK(2611-7832, default 7832):默认回车（最大）
+	
+	Using default value 7832
+	
+	 
+	
+	Command (m for help): t 说明：修改分区类型
+	
+	Partition number (1-4): 4 说明：修改分区类型对应的分区号
+
+	Hex code (type L to list codes): 
+8e 说明：8e是lvm磁盘类型																			8e 说明：8e是lvm磁盘类型
+
+	Changed system type of partition 3 to 8e(Linux LVM)
+	
+	Command (m for help): 
+p 说明：打印分区表															p 说明：打印分区表
+	Disk /dev/sda: 64.4 GB, 64424509440 bytes
+	
+	255 heads, 63 sectors/track, 7832 cylinders
+	
+	Units = cylinders of 16065 * 512 = 8225280bytes
+	
+	   Device Boot      Start        End      Blocks  Id  System
+	
+	/dev/sda1   *           1         13      104391  83  Linux
+	
+	/dev/sda2              14       2610    20860402+ 8e  Linux LVM
+	
+	/dev/sda4            2611       7832    41945715  8e  Linux LVM
+	
+	Command (m for help): 
+w 说明：保存退出																					w 说明：保存退出
+	The partition table has been altered!
+
+
+重启
+# reboot  
+
+查看硬盘情况（核对刚才所做的分区操作是否保存成功）
+# fdisk -l  
+
+查看当前分区的类型
+df -T /dev/sda1 说明：查看当前的主分区类型 
+
+然后当时的结果是，还是没有/sda4      需要挂载sda4到一个目录中  我在根目录下设置了一个 /fzk 目录
+# mkdir /fzk
+# mount /dev/sda4 /fzk
+提示    mount:you must specify the filesystem type  然后执行下一条命令
+
+创建文件系统在新的磁盘上
+# mkfs.ext4 /dev/sda3		(ext4, ext3, ext2, xfs)
+
+注意：这种挂在为临时挂在，在系统重启之后挂载信息就会丢失，为了解决这个问题就必须要修改/etc/fstab 这个文件，添加信息进去
+查询UUID
+# [root@localhost Desktop]$ blkid
+	/dev/sda2: UUID="52bf7979-3cae-47aa-93d3-df686383d2a4" TYPE="ext4" 
+	/dev/sda1: UUID="4c8d1572-8bbe-4e0e-88d7-c497262efe2c" TYPE="ext4" 
+	/dev/sda3: UUID="f566d2e7-899b-4f87-900d-429015142fe6" TYPE="swap" 
+	/dev/sda4: UUID="538ea2e2-8fa4-4094-9e12-ac41c3aa875d" TYPE="ext4" 
+
+
+#vim /etc/fstab
+	/dev/mapper/centos_midware-root /                       xfs     defaults        0 0
+	UUID=9c261920-4a0e-414a-8955-41d8e4c3edba /boot         xfs     defaults        0 0
+	/dev/mapper/centos_midware-swap swap                    swap    defaults        0 0
+	/dev/sda4 /fzk                                          xfs     defaults        0 0

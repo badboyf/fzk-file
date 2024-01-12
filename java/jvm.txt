@@ -1,0 +1,36 @@
+workstation
+\\dlhgvps0002
+
+如何侦测内存泄漏
+工具联合监控，热部署介入
+
+
+-XX:+UseConcMarkSweepGC 表示启用CMS垃圾回收器
+-XX:+UseG1GC 表示启用G1垃圾回收器
+
+对象进入老年代的4种情况
+假如进行Minor GC时发现，存活的对象在ToSpace区中存不下，那么把存活的对象存入老年代
+大对象直接进入老年代
+长期存活的对象将进入老年代
+动态对象年龄判定
+
+minor GC 针对年轻代
+full GC 针对老年代
+
+cms：标记清除
+CMS收集器3个明显的缺点
+对CPU资源非常敏感
+无法处理浮动垃圾,可能出现"Concurrent Mode Failure"失败
+产生大量内存碎片
+
+
+
+https://yq.aliyun.com/articles/637890	介绍工具
+
+java -Xmx1m -Xms1m  -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=C:\tmp\java\%date:~0,4%%date:~5,2%%date:~8,2%%time:~0,2%%time:~3,2%%time:~6,2%.bin OOMT1
+
+jmap -dump:format=b,file=heap.bin <pid>
+jmap -heap <pid>  	查看参数
+jstack -l 8216		查看死锁
+
+mat可以对比两个hprof文件

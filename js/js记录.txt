@@ -1,0 +1,96 @@
+组件可以在原生 HTML 元素中管理一小片区域的 HTML。从技术角度说，它就是一个带模板的指令。
+属性型指令会改变某个元素、组件或其它指令的外观或行为。 比如，内置的NgStyle指令可以同时修改元素的多个样式。
+结构型指令：NgIf NgFor NgSwitch
+	TemplateRef, ViewContainerRef
+	viewContainerRef.createComponent
+	viewContainerRef.clear
+	viewContainerRef.createEmbeddedView(templateRef);
+
+ng-template	ng-container
+
+管道：纯的与非纯的	 pure: false
+	@Pipe	PipeTransform transform()
+
+attribute 是由 HTML 定义的。property 是由 DOM (Document Object Model) 定义的。
+[src]=bind-src
+(click)=on-click
+不加方括号，表达式当做字符串
+事件绑定原理：<app-sizer [size]="fontSizePx" (sizeChange)="fontSizePx=$event"></app-sizer>  === <app-sizer [(size)]="fontSizePx"></app-sizer>
+			  
+ngModel原理：<input [ngModel]="currentHero.name" (ngModelChange)="currentHero.name=$event">	=== <input [(ngModel)]="currentHero.name">
+
+组件交互：
+	1.传参
+	2.set 拦截
+	3.实现ngOnChanges
+	4.事件
+	5.本地变量 父组件使用<app-countdown-timer #timer></app-countdown-timer>
+	6.ViewChild	用#标识
+	7.服务
+
+同步获取参数：let id = this.route.snapshot.paramMap.get('id');
+
+js new:
+	new Animal("cat") ={
+		var obj = {};
+		obj.__proto__ = Animal.prototype;
+		var result = Animal.call(obj,"cat");
+		return typeof result === 'object'? result : obj;
+	}
+	
+继承：https://www.cnblogs.com/humin/p/4556820.html
+function Animal (name) {
+  this.name = name;
+  this.sleep = function(){
+    console.log(this.name + '睡觉！');
+  }
+}
+Animal.prototype.eat = function(food) {
+  console.log(this.name + ' ：' + food);
+};
+	原型继承：
+		function Cat(){}
+		Cat.prototype = new Animal();
+		Cat.prototype.name = 'cat';
+		var cat = new Cat();
+		1.要想为子类新增属性和方法，必须要在new Animal()这样的语句之后执行，不能放到构造器中
+		2.无法实现多继承
+		3.来自原型对象的所有属性被所有实例共享（来自原型对象的引用属性是所有实例共享的）（详细请看附录代码： 示例1）
+		4.创建子类实例时，无法向父类构造函数传参
+	构造继承 ：
+		function Cat(name){
+		  Animal.call(this, name);
+		}
+		var cat = new Cat();
+		1.实例只是子类的实例 
+		2.只能继承父类的实例属性和方法，不能继承原型属性/方法 
+		3.无法实现函数复用，每个子类都有父类实例函数的副本，影响性能
+	实例继承:
+		function Cat(name){
+		  var instance = new Animal(name);
+		  return instance;
+		}
+		var cat = new Cat();
+		1.实例是父类的实例，不是子类的实例
+		2.不支持多继承
+	组合继承  
+		function Cat(name){
+		  Animal.call(this，name);
+		}
+		Cat.prototype = new Animal();
+		Cat.prototype.constructor = Cat;
+		var cat = new Cat();
+		1.调用了两次父类构造函数，生成了两份实例（子类实例将子类原型上的那份屏蔽了）
+	寄生组合继承：
+		function Cat(name){
+		  Animal.call(this);
+		  this.name = name || 'Tom';
+		}
+		(function(){
+		  var Super = function(){};
+		  Super.prototype = Animal.prototype;
+		  Cat.prototype = new Super();
+		})();
+		var cat = new Cat();
+有时间需要看的：
+ngFor实现原理

@@ -1,0 +1,23 @@
+控制再次启动从哪个位置拉取消息
+auto.offset.reset=latest/earlist/none  none的情况没找到偏移量报错
+enable.auto.commmit=true默认
+auto.commit.interval.ms=5000默认 
+还可以异步提交，支持异步回调
+
+consumer:
+	offset控制：
+		auto.offset.reset、enable.auto.commit、auto.commit.interval.ms
+producer:
+	acks=1/0/all或-1  1写道本地日志 0不等待确认 -1isr副本同步完成
+	request.timeout.ms=30000 默认  超过会重试
+	retries=214748647 默认  重试次数
+幂等 exactly once   producer端
+	props.put("retries", 3);  // 重试
+	props.put("request.timeout.ms", 1);  // 超时时间
+	props.put("enable.idempotence", true);  // 幂等
+	props.put("max.in.flight.requests.per.connection", 1);  // 同时未ack的数量，1能保证消息有序
+PID和序列号与消息捆绑在一起，然后发送给Broker。由于序列号从零开始并且单调递增，因此，仅当消息的序列号比该PID/TopicPartition对中最后提交的消息正好大1时，Broker才会接收该消息，如果不是这种情况，则broker认定时生产者重试发送该消息
+	
+事务	开启事务默认开启了幂等
+	props.put("transactional.id", "transactional.id-" + UUID.randomUUID().toString());
+		

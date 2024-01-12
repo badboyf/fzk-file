@@ -1,0 +1,7 @@
+./mqadmin consumerConnection -g <group-name> -n 127.0.0.1:9876
+ 
+sh bin/mqadmin topicList 			显示所有topic
+如果出现org.apache.rocketmq.remoting.exception.RemotingConnectException: connect to <null> failed
+export NAMESRV_ADDR=localhost:9876
+
+sh mqadmin deleteTopic –n 10.45.47.168:9876 –c DefaultCluster –t ZTEExample		删除topic

@@ -1,0 +1,12 @@
+<div class="m-20">
+  <ion-list>
+    <ion-item>
+      <ion-input #nameInput [(ngModel)]="name" placeholder="{{placeHolder}}"></ion-input>
+    </ion-item>
+    <div text-right>
+      <ion-button (click)="dismiss('')" size="default">取消</ion-button>
+      <ion-button (click)="add()" *ngIf="type==='create'" size="default" class="ml-20">新增</ion-button>
+      <ion-button (click)="update()" *ngIf="type==='update'" size="default" class="ml-20">修改</ion-button>
+    </div>
+  </ion-list>
+</div>

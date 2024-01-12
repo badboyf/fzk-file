@@ -1,0 +1,12 @@
+var a = {};
+console.log(a.prototype);  //undefined
+console.log(a.__proto__);  //Object {}
+
+var b = function(){}
+console.log(b.prototype);  //b {}
+console.log(b.__proto__);  //function() {}
+
+var A = function(){}
+var a = new A();
+a.__proto__ === A.prototype // ture
+a.__proto__ === a.constructor.prototype // ture

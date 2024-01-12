@@ -1,0 +1,30 @@
+mac
+标题  command+1/2/3/4/5/6/-/+
+搜索  command + f
+左侧现实文件/大纲/  ctl + command + 1/2/3
+显示/隐藏侧边栏：⇧⌘L (shift + command + L)
+新建  command + t
+新窗口新建  ctl + n
+
+表格：⌥⌘T (option + command + T)
+代码块：⌥⌘C (option + command + C)
+公式块：⌥⌘B (option + command + B)
+引用：⌥⌘Q (option + command + Q)
+有序列表：⌥⌘O (option + command + O)
+无序列表：⌥⌘U (option + command + U)
+任务列表：⌥⌘X (option + command + X)
+链接引用：⌥⌘L (option + command + L)
+脚注：⌥⌘R (option + command + R)
+水平分割线：⇧⌘- (shift + command + -)
+加粗：⌘B (command + B)
+斜体：⌘I (command + I)
+下划线：⌘U (command + U)
+删除线：⌃~ (control + ~)
+注释：⌃- (control + -)
+超链接:⌘K (command + K)
+图像：⌃⌘I (control + command + U)
+源码模式：⌘ /(command + /)
+
+有序  数字+.+space
+无序  -+.+space
+

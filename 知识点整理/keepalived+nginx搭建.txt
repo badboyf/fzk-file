@@ -1,0 +1,105 @@
+https://www.jianshu.com/p/6a8f38b8076d
+https://www.cnblogs.com/yanjieli/p/10682064.html
+
+lb1
+docker run -it --name=lb1 --privileged=true -p 9000:80  openresty/openresty /bin/bash
+lb2
+docker run -it --name=lb2 --privileged=true -p 9001:80  openresty/openresty /bin/bash
+n1
+docker run -it --name=n1 --privileged=true -p 9002:80  openresty/openresty /bin/bash
+n2
+docker run -it --name=n2 --privileged=true -p 9003:80  openresty/openresty /bin/bash
+
+lb1/lb2
+/usr/local/openresty/nginx/conf/nginx.conf
+    upstream backend {
+        server 172.17.0.4:80 weight=1 max_fails=3 fail_timeout=20s;
+        server 172.17.0.5:80 weight=1 max_fails=3 fail_timeout=20s;
+    }
+    server {
+        listen       80;
+        server_name  localhost;
+        location / {
+            proxy_pass http://backend;
+            proxy_set_header Host $host:$proxy_port;
+            proxy_set_header X-Forwarded-For $remote_addr;
+        }
+
+        location /lua {
+            default_type text/html;
+            content_by_lua '
+                ngx.say("<p>Hello, lua1 !</p>")
+            ';
+         }
+    }
+apt-get update
+apt-get install vim
+apt-get install keepalived
+
+lb1   master
+/etc/keepalived/keepalived.conf
+    global_defs {
+       notification_email {
+        a@qq.com
+       }
+       smtp_server 192.168.200.1
+       smtp_connect_timeout 30
+       router_id LVS_DEVEL
+    }
+
+    vrrp_instance VI_1 {
+        state MASTER   #注意
+        interface eth0 #注意
+        virtual_router_id 2
+        priority 150   #注意 比Backup大
+        advert_int 1
+        authentication {
+            auth_type PASS
+            auth_pass 1111
+        }
+        virtual_ipaddress {
+           172.17.0.100 #虚拟IP，访问它做lb
+        }
+    }
+
+lb2  backup
+/etc/keepalived/keepalived.conf
+    global_defs {
+       notification_email {
+        a@qq.com
+       }
+       smtp_server 192.168.200.1
+       smtp_connect_timeout 30
+       router_id LVS_DEVEL
+    }
+
+    vrrp_instance VI_1 {
+        state BACKUP   #注意
+        interface eth0 #注意
+        virtual_router_id 2
+        priority 100
+        advert_int 1
+        authentication {
+            auth_type PASS
+            auth_pass 1111
+        }
+        virtual_ipaddress {
+           172.17.0.100 #虚拟IP
+        }
+    }
+curl 172.17.0.100
+
+n1 n2
+/usr/local/openresty/nginx/conf/nginx.conf
+    server {
+        listen       80;
+        server_name  localhost;
+
+        location / {
+            default_type text/html;
+            content_by_lua '
+                ngx.say("<p>172.17.0.4</p>")
+            ';
+        }
+    }
+

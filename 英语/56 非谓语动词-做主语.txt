@@ -1,0 +1,55 @@
+========================================================
+非谓语动词
+	不定式： to do
+	动名词： doing
+	分词：	doing 现在分词
+			done  过去分词
+什么时候用： 并列句，从句，非谓语动词的情况
+做什么成分：不能做谓语，其他的都可以做
+					主	宾	表	补	定	状	同位
+不定时to do			1	1	1	1	1	1	1
+动名词doing			1	1	1	1	1		1
+分词doing/done				1	1	1	1	
+
+不定式与动名词做主语的区别
+	不定时做主语时表示具体动作
+	动名词作主语时经常表示抽象动词
+	i like playing习惯性
+	i like to play具体的每一次
+不定时做主语
+	take sb to do sth
+	做公车去学校会花费我们一个小时		
+		To go to school by bus will take us one hour
+		it will take us one hour to go to school by bus
+	去见他让我很激动	
+		to see him excited me
+		it excited me to see him
+	学好英语需要耐心
+		to learn english well needs patience
+		it needs patience to learn english well
+	帮助需要帮助的人是我们的职责
+		to help those who need help is our duty
+		it is our duty to help those who need help
+	it is + adj + for sb to do sth
+	十点之前完成作业对我很简单
+		to finish the homework by 10 is easy for me		
+		it is easy for me to finish the homework
+	修饰人的特质it is + adj + of sb to do sth
+	他真笨问这个问题	
+		to ask this question is stupid of him	
+		it is stupid of him to ask this question
+动名词做主语
+	学习能改变你的未来	studing can change your future
+	跑步对你的健康有好处
+	补做作业会阻止你进步
+	学英语没那么难
+	他整晚的工作导致他感冒了
+		his working for the whole night caused him cold 前可加形容词性物主代词
+		that he worked for he whole night caused him cold 主语从句
+	no use, no good, no fun, a shame, a waste of time/money, useless, dangerous	用doing
+	学英语没用	it's no good learning english
+	玩火很危险
+		
+	to learn english is not that hard (for me)
+	learning english is not that hard	两个区别也没那么大，to do特指，这句话是学英语对我没那么难，doing表示一般来说学英语没那么难
+	

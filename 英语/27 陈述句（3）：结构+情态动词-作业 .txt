@@ -1,0 +1,99 @@
+情态动词
+1	能力	我会说3门语言	                    I can speak three languages			
+2	推测	他肯定在家	                    he must be at home			
+3		你应该好好学习	                    you should/are supposed to study hard			
+4	推测	我明天可能去北京	                I could/may/might go to BJ tommorow			
+5	第八点	你可以进来	                you can/could/may come in			
+6		我不敢吃太多	                    I daren't/don't dare to eat too much			
+7	能力	我找不到我的手机了	                I can't find my phone			
+8	命令	你一定要听老师话	                you must/have to listen to your teacher			
+9	过去	你不应该相信他的	                you should have believed him			
+10	推测	他可能在家	                    he could/may/might be at home			
+11	第八点	你不能在这抽烟	                you can't/couldn't/may not smoke here			
+12		他不敢告诉他的妈妈	                he daren't/doesn't dare to tell his mom			
+13	第八点	我不能告诉你	                I can't/couldn't tell you			
+14	推测	你肯定在骗我	                    you must be kidding me			
+15		你应该试试	                    you should/are supposed to try			
+16	推测	他可能是个老师	                    he could/may/might be a teacher			
+17	第八点	你不能那么做	                you can't/couldn't/may not do that			
+18	能力	我听不到你在说什么	                I can't hear you			
+19	可能不	他明天可能不回来了	            he may not/might not come back tommorow			
+20	第八点	你不能走	                    you can't/couldn't/may not leave			
+21	能力	我能完成作业	                    I can finish my homework			
+22		你一定要小心	                    you must be careful			
+23		你应该勇敢点	                    you should/are supposed to be brave			
+24	推测	我可能会买辆车	                    I could/may/might buy a car			
+25	第八点	你可以在这休息会	            you can/could/may have a rest here			
+26	能力	我能做到	                        I can do it			
+27	推测	你肯定错了	                    you must be wrong			
+28		你应该自信些	                    you should/are supposed to be confident			
+29	推测	你不可能30了	                    you can't/couldn't be thirty			
+30	能力	我能解决这个问题	                I can solve the problem			
+31		我不敢看恐怖电影	                I daren't/don't dare to watch scary movies			
+32		你应该买个新手机	                you should/are supposed to buy a new phone			
+33	第八点	你可以拿走这个	                you can/could/may take this			
+34	能力	我能帮你	I can help you			
+35		我明儿得早起	                    I need to/have to/must get up early tommorow			
+36	推测	我可能会迟到	                    I could/may/might be late 			
+37	能力	我不能向你保证	                    I can't promise you/give you my word			
+38	推测	我可能会需要你的帮助	                I could/may/might need your help			
+39		我不敢睁眼	                    I daren't/don't dare to open my eyes			
+40	能力	我睁不开眼	                    I can't open my eyes			
+41	命令	你一定要相信我	                    you must/have to believe me			
+42	能力	我明天能来	                    I can come here tommorow			
+43	能力	我明天来不了	                    I can't come tommorow			
+44	能力	我帮不了你	                    I can't help you			
+45	能力	我吃不了这么多	                    I can't eat so much			
+46	能力	我回不来	                        I can't get back			
+47	能力	我睡不着	                        I can't fall asleep			
+48	能力	我做不到	                        I can't do it			
+49	能力	我看不到	                        I can't see it			
+情态动词过去时						
+序号		中文	英文			
+1		你昨天就该告诉我的	                    you should have told me yesterday			
+2		你的手机可能已经被偷了	                your phone may/might have been stolen			
+3		我本来可以按时到的	                    I could have got there on time			
+4		我本来会告诉你的	                    I would have told you			
+5		他一定已经听说过这事了	                he must have heard of the thing			
+6		你原本不需要向他道歉的	                you needn't have apologized to him			
+7		我本来不会买这个手机的	                I would have bought this phone			
+8		他会已经回来了吗	                    can he have gome back			
+9		你当时应该买那辆车的	                    you should have bought that car			
+10		他现在可能已经知道这件事了	            he may/might have known the thing			
+11		我本来可以做完作业的	                    I could have finished my homework			
+12		你的手机一定已经被偷了	                your phone must have been stolen			
+13		他本来不会死的	                        he wouldn't have died			
+14		他不可能看到我了	                    he couldn't have seen me			
+15		我本来会帮你的	                        I would have helped you			
+16		你不需要买这么多东西的	                you needn't have bought so many things			
+17		他应该已经到北京了	                    he may/might have got to BJ			
+18		他可能已经回来了	                    he may/might have come back			
+19		他本来可以来的	                        he could have come			
+20		他会去哪了呢	                        where can he have gone			
+21		他本来不会卖这套房子的	                he wouldn't have bought the house			
+22		你不可能去过北京	                    he can't have been to BJ			
+23		他本来会原谅你的 	                    he would have forgiven you			
+24		这个问题本来能被解决的	                the problem could have been solved			
+25		你不需要经过他同意的	                    you needn't have asked for his permission			
+26		你不应该责怪他的	                    you shouldn't have blamed him			
+27		他可能已经睡了	                        he may/might have gone to bed			
+28		我本来可以赶上飞机的	                    I could have caught the plane			
+29		我肯定在哪见过你	                    I must have seen you somewhere			
+30		我本来不会来的	                        I wouldn't have come			
+31		他会吃了什么呢	                        what can he have eaten			
+32		我应该听你的的	                        I should have listened to you 			
+33		他可能已经死了	                        he may/might have died			
+34		你本来可以取得更高的进步的	            you could have made more progress			
+35		他不可能告诉你了	                    he can' have told you			
+36		他会已经原谅我了吗	                    can he have forgiven me 			
+37		我应该在那见过你	                    I should have seen you somewhere			
+38		你本来该3点就到的	                    you should have got here at 3			
+39		他可能已经到北京了	                    he may/might have got to BJ			
+40		我本来不会去北京的	                    I wouldn't have gone to BJ			
+41		你不需要问这么多的	                    you needn't have asked so much			
+42		他一定把这事告诉警察了	                he must have told the police the thing			
+43		你不应该给他打电话的	                    you shouldn't have called him			
+44		他不可能被开除了	                    he can't have been fired			
+45		他会去了哪家医院呢	                    which hospital can he have gone to			
+46		我本来完成不了作业的	                    I couldn't have finished my homework			
+

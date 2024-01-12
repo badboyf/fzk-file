@@ -1,0 +1,20 @@
+design-patten
+
+适配器：
+	WebMvcConfigurerAdapter
+	
+工厂：
+	BeanFactory
+
+代理：
+	
+模板方法：
+	AbstractApplicationContext： 
+		obtainFreshBeanFactory()方法中有调用一个refreshBeanFactory()，抽象的
+		postProcessBeanFactory(beanFactory) 空实现
+		onRefresh() 空实现
+	Collections.sort()
+	
+外观模式：
+	slf4j：
+		定义Logger接口还有ILoggerFactory

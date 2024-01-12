@@ -1,0 +1,83 @@
+序号	中文	主	谓	间宾	直宾
+1	他给了我一次机会	        he	gave	me	a chance
+2	他给我讲了个故事	        he	told	me	a story
+3	他借给了我100块钱	        he	lent	me	100 yuan
+4	他给我写了一封信	        he	wrote	me	a letter
+5	他给我发了张照片	        he	sent	me	a picture
+6	他给我们带了些吃的	        he	broght	us	sth to eat
+7	他给我提供了一份工作	    he	offered	me	a job
+8	他给我读了一篇文章	        he	read	me	an article
+9	他给我看了他的新车	        he	showed	me	his new car
+10	他给我看了他的票	        he	showed	me	his ticket
+11	他给我指了路	            he	showed	me	the way
+12	他给我保证了	            he	gave	me	his word
+
+1	他教我们英语	            he	teaches	us	English
+2	他教训了他一顿	            he	taught	him	a lesson
+3	他付了我很多钱	            he	piad	me	a lot of money
+4	他扔给我一本书	            he	threw	me	a book
+5	他问了我一个问题	        he	asked	me	a question
+
+6	他把车卖给了他朋友	        he	sold	his friend	the car
+7	他把钱还给我了	he	        returned	me	the money
+8	他把那本书递给了我	        he	passed	me	that book
+9	他把那辆车送给了我	        he	gave	me	that car
+
+1	他给我留了很多钱	        he	left	me	a lot of money
+2	他什么都没给我留	        he	left	me 	nothing
+                            he	didn't leave	me	anything
+3	他给我买了辆车	            he	bought	me	a car
+4	他给我弄到了票	            he	got	me	a ticket
+5	他给我做了晚饭	            he	made	me	dinner
+7	他给我点了一只烤鸭	        he	ordered	me	a duck
+8	他给我唱了首歌	            he	sang	me	a song
+	他给我放了首歌	            he	played	me	a song
+9	他给我省了很多钱	        he	saved	me	a lot of money
+10	他给我画了一幅画	        he	drew	me	a picture
+11	他给我叫了辆出租车	        he	called	me	a taxi
+12	他祝你好运	            he	wished	you	good luck
+13	他为我做了很多事	        he	did	me	a lot of things
+14	他给我惹了很多麻烦	        he	made	me	a lot of trouble
+15	他帮了我个忙	            he	did	me	a favour
+
+主	谓	宾	宾补
+1	他把房间涂成了蓝色	        he	painted	the room	blue
+2	他把头发染成了黄色	        he	dyed	his hair	yellow
+3	他把所有东西都准备好了		he	got	everything	ready
+4	我希望你健康	            I	wish	you	healthy
+5	你要把我逼疯了	            you	are driving	me	crazy
+
+1	我发现英语很困难	        I	found	English	difficult
+2	他发现房子很脏	            he	found	the room	dirty
+3	我发现这本书很有趣	        I	found	the book	interesting
+
+1	他让我生气	            he	made	me	angry
+2	他让这问题变得更困难了	    he	made	the problem	harder
+3	这方法让英语变得简单了	    the way	made	English	easy
+4	我说的够清楚了吗	        do I make myself clear			
+	（我让我自己变清楚了吗）				
+
+1	他保持们关着	            he	kept	the door	closed
+2	你应该保持房间干净	        you	should keep	the room	clean
+3	呆在一起能让我们保持温暖	    staying togather	can keep	us	warm
+4	戒烟能让你保持健康	        quitting smoking	can keep	you	healthy
+
+      leave 表不管他了（出门遛狗）    keep 表示还管着（旁边看着门不关上）
+1	他没关门（使门处于关着的状态）	he	left	the door	open
+          表过去的一个动作      he didn't close the door
+          表在旁边还管他       he kept the door open
+2	他没关灯	                he	left	the light	on
+3	他没关电视	            he	left	the TV	on
+
+1	你让我成了坏人	            you	made	me	a bad person
+2	你使我们成为了一家人	        you	made	us	a family
+3	他把学习养成了习惯	        he	made	studying	a habit
+4	邓小平让台湾成为了中国的一部分	DXP	made	TaiWan	a part of china
+
+1	我觉得这是个好主意	        I	think	this	a good idea
+2	我认为他是个好老师	        I	consider	him	a good teacher
+3	我发现他是个聪明的小孩	    I	found	him	a smart kid
+4	他们给这个小孩起名叫         tom	they	named	the kid	Tom
+5	你可以叫我                tom	you	can call	me	Tom
+6	老板任命我为经理	        the boss	appointed	me	manager
+7	他们选举奥巴马为总统	they	elected	Aobama	president

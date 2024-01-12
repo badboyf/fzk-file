@@ -1,0 +1,34 @@
+http1.0/1.1/1.2
+http1.0：
+连接无法复用和head of line blocking
+访问一个包含有许多图像的网页文件的整个过程包含了多次请求和响应，每次请求和响应都需要建立一个单独的连接，每次连接只是传输一个文档和图像，上一次和下一次请求完全分离。即使图像文件都很小，但是客户端和服务器端每次建立和关闭连接却是一个相对比较费时的过程，并且会严重影响客户机和服务器的性能。
+
+http:1.1
+request和reponse头中都有一个connection的头，表示对于长链接如何进行处理。http1.1默认长连接，如果不想需要在header中指明connection的值为close
+header增加Host,实现了在一台WEB服务器上可以在同一个IP地址和端口号上使用不同的主机名来创建多个虚拟WEB站点。
+HTTP 1.1还提供了与身份认证、状态管理和Cache缓存等机制相关的请求头和响应头。HTTP/1.0不支持文件断点续传
+HTTP/1.1相较于 HTTP/1.0 协议的区别主要体现在：
+	1 缓存处理
+	2 带宽优化及网络连接的使用
+	3 错误通知的管理
+	4 消息在网络中的发送
+	5 互联网地址的维护
+	6 安全性及完整性
+在移动app上：
+	方案一：基于tcp的长链接
+	方案二：http long-polling（推送）
+	方案三：http streaming
+	方案四：web socket
+
+http:2.2
+多路复用 (Multiplexing)
+	二进制分帧：HTTP/2在 应用层(HTTP/2)和传输层(TCP or UDP)之间增加一个二进制分帧层
+	建立一个tcp连接，每个域一个流，
+首部压缩（Header Compression）
+	SPDY采用DEFLATE 算法，http2用HPACK
+服务端推送（Server Push）
+
+tcp慢启动
+
+讲解：https://www.jianshu.com/p/52d86558ca57
+常问问题：https://www.oschina.net/translate/http2-faq

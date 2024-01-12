@@ -1,0 +1,7 @@
+Help->Register...
+Registered Name: https://zhile.io License Key: 48891cf209c6d32bf4
+
+Proxy -> Proxy Settings -> Enable transparent HTTP proxying
+Proxy -> SSLProxying Settings -> Enable SSL Proxying  add *:443
+Help -> SSL Proxying -> Install Charles Root Certificate on a Remote Device or a Remote Browser
+   先手机设置代理，成功后用手机浏览器访问chls.pro/ssl安装证书

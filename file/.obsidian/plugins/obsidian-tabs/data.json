@@ -1,0 +1,11 @@
+{
+  "tabEnabled": true,
+  "rowOverflow": true,
+  "horizontalToVertical": true,
+  "hideButtons": false,
+  "smallTitle": true,
+  "compactTitle": false,
+  "tabNumbering": true,
+  "tabUnderline": true,
+  "headerHeight": 29
+}

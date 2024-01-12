@@ -1,0 +1,180 @@
+1	他想让你现在就过来	                    he wants you to come right now
+2	我需要你帮我把电视打开	                I need you to turn on the TV for me
+3	我想让你开心	                        I want you to be happy
+4	我需要你勇敢些	                        I need you to be brave
+5	我不需要你的帮助	                    I don't need your help
+6	我不想让他知道这件事	                    I don't want him to know the thing
+7	我需要帮助	                        I need help
+8	我需要你的帮助	                        I need your help
+9	我需要你帮我一下	                    I need you to help me
+10	我不想让你担心	                        I don't want you to be worried
+11	我需要你帮我把它卖了	                    I need you to sell it for me
+12	我不想让你难过	                        I don't want you to be sad
+13	你需要（得）勇敢点	                    you need to be brave
+14	你需要（得）自信些	                    you need to be confident
+15	我不需要你的钱	                        I don't need your money
+16	我想让你告诉他	                        I want you to tell him
+17	我想成为一名老师	                    I want to be a teacher
+18	他不想再见你了	                        he doesn't want to see you any more
+19	我想让你跟我诚实点	                    I want you to be honest with me
+20	我需要你3点来接我	                    I need you to pick me up at three
+21	我需要洗澡	                        I need a shower/to take a shower
+22	我需要休息	                        I need a rest/to have a rest
+23	我需要时间	                        I need time
+24	我需要个人隐私	                        I need privacy
+need/have to	                        	
+25	我明儿得早起	                        I need to/have to get up early tommorow
+26	我得做作业了	                        I need to/have to do my homework
+27	我得走了	                            I need to/have to go
+28	你必须得听我的	                        you need to/have to listen to me
+29	你不得不把它卖了换钱	                    you need to/have to sell it for money
+                            
+30	你不用担心	                        you don't need to be worried
+31	什么东西都不用买	                    you don't need to/have to buy anything
+32	你不用过来	                        you don't need to/have to come
+33	你不用解释	                        you don't need to/have to explain
+34	你不用害怕	                        you don't need to be afraid
+35	你不用这么做	                        you don't need to/have to do this
+36	我明儿不用早起	                        I don't need to/have to get up early tommorow
+had better (not) do sth		
+37	你最好别告诉他这件事	                    you'd better not tell him the thing
+38	你最好等会给他打电话	                    you'd better call him later
+39	你明天最好别迟到	                    you'd better not be late tommorow
+40	你最好早点起	                        you'd better get up early
+41	你最好聪明点	                        you'd better be smart
+have sth to do		                    
+42	我有很多工作要做	                    I have a lot of work to do
+43	我有很多时间和你玩	                    I have much time to play with you
+44	我有个飞机要赶	                        I have a plane to catch
+45	我有个会议要出席（attend）	            I have a meeting to attend
+46	我有事要告诉你	                        I have something to tell you
+47	我有问题要问	                        I have some questions to ask you
+48	我有机会去北京	                        I have a chance to go to beijing
+49	我没钱给你	                        I don't have money to give you
+50	我没时间陪孩子（with）	                I don't have time to be with my kids
+51	我没时间做作业                         I don't have time to do my homework
+52	我没时间听你说	                        I don't have time to listen to you
+祈使句肯定		
+53	试一下	                            try/have a try
+54	请看	                                look/have a look
+55	开心点	                            be happy
+56	休息一下	                            have a rest/break/nap
+57	饶了我吧	                            give me a break
+58	永远要准时                            be punctual/on time
+59	快点	                                be quick、hurry up
+60	请告诉我	                            tell me,please
+61	开门	                                open the door
+62	走开	                                go away
+63	永远要乐观	                        always be optimistic
+64	睡觉前一定要检查门	                    check the door before you sleep
+65	把你手拿开	                        take/get your hand off
+66	把这东西拿走	                        take/get this thing away
+67	做你自己	                            be yourself
+68	张嘴/闭嘴	                            open/close your mouth、shut up
+69	给我打电话	                        call me
+70	多穿点衣服	                        put on more clothes
+71	安静点	                            be quiet
+72	一定要善良	                        always be kind
+祈使句否定		
+73	别打扰我	                            don't bother/disturb me
+74	别难过	                            don't be sad
+75	永远不要再这么做了	                    never do that again
+76	别说话了	                            stop talking
+77	别告诉他	                            don't tell him
+78	别管它/他	                            leave it/him alone
+79	别走/离开	                            don't go/leave
+80	别逼我	                            don't push me
+81	永远不要跟陌生人说话	                    never talk to strangers
+82	别害羞	                            don't be shy
+83	别把我丢在这啊	                        don't leave me here
+84	永远别在背后说别人坏话	                never speak ill of others behind them
+85	别相信他	                            don't believe/trust him
+86	别担心	                            don't be worried
+87	我开玩笑的，别那么认真	                I'm kidding,don't be so serious
+88	永远别迟到	                            never be late
+89	别害怕	                            dont't be afraid
+90	别开门	                            don't open the door
+91	别被骗了	                            don't be fooled
+92	别被抢了	                            don't be robbed
+祈使句let肯定		
+93	让我们走吧	                        let us go
+94	让他出去	                            let him out
+95	让我进去	                            let me in
+96	让门开着	                            let the door open
+97	让他们过去	                        let them through
+98	让门开着	                            let the door be open
+99	让电视开着	                        let the TV on
+100	让我来帮你吧	                        let me hlep you
+101	让我们做朋友吧	                        let't be friends
+102	让我下来/把它放下	                    let me/it down
+103	放手吧                               let it go
+祈使句let否定		
+104	别让他进来	                            don't let him in
+105	别让我做	                            let me not do it
+106	别让她跟我一起去	                    don't let her go with me
+107	别让他们吃饭了	                        let them not eat
+108	别让他坐下	                            don't let him sit down
+let us与let's		                    
+109	别让我们告诉他真相	                    don't let us tell him the truth
+110	我们别告诉他真相了	                    let's not tell him the truth
+111	别让我们做作业了	                    don't let us do the homework
+112	让我们别做作业了	                    let's not do the homework
+祈使句之不定代词		
+113	都别动	                            nobody move/everybody don't move
+114	来个人告诉我	                        someone tell me
+115	都进来	                            everyone come in
+116	都站起来	                            everybody stand up
+117	来人叫救护车	                        somebody call an ambulance
+祈使句之禁止		
+118	禁止拍照	                            no photos
+119	禁止抽烟	                            no smoking
+120	禁止乱扔	                            no littering
+121	禁止踩踏草坪	                        keep off the grass
+祈使句之省略		
+122	一杯咖啡，谢谢	                        a cup of coffee please
+123	再一分钟	                            on more minute
+124	再来一个	                            another on
+祈使句之反义疑问		
+125	别告诉他，行吗	                        don't tell him,will you
+126	告诉我，行吗	                        tell me,will you/won't you
+127	认真点，行吗	                        be serious,will you/won't you
+128	让他走吧，行吗	                        let him go,will you/won't you
+129	让我们出去吧，行吗	                    let us out,will you/won't you
+130	我们出去吧，行吗	                    let's go out,shall we
+there be句型		
+131	屋里有多少人	                        how many people are there in the room
+132	桌上有多少书	                        how many books are there on the desk
+133	中国有多少人	                        how many people are there in china
+134	杯子里有多少水	                        how much water is there in the cup
+135	冰箱里有多少食物（freezer）	            how much fook is there in the freezer
+136	你家有几口人	                        how many people are there in your family
+137	书上有多少单词	                        how many words are there in the book
+138	床上有多少钱	                        how much money is there on the bed
+139	这两者之间有不同吗（difference）	        are there any differences between these two
+140	这次会有不同吗	                        is there going to be any differences this time
+		
+141	屋里应该有10人	                        there should be ten people in the room
+142	桌上肯定有很多书	                    there must be a lot of books on the desk
+143	中国可能有很多人	                    there could/may/might be a lot of people in china
+144	杯子里将会有很多水	                    there will be much water in the cup
+145	冰箱里应该有很多食物	                    there should be a lot of food in the freezer
+146	你家肯定有很多人	                    there must be lots of people in your family
+147	书上可能有20个单词	                    there could/may/might be 20 words in the book
+148	床上将会有很多钱	                    there is going to be much money on the bed
+149	这两者之间应该有很多不同	                there should be many differences between these two
+150	这次会有不同	                        there is going to be differences this time
+what...for		
+151	这是干嘛的	                        what is this for
+152	这电脑是干嘛的	                        what is this computer for
+153	你买电脑干嘛	                        what did you buy the computer for
+154	你给我打电话干嘛	                    what did you call me for
+155	你干嘛笑	                            what are you smiling/laughing for
+156	你这么说是要干嘛	                    what did you say this for
+157	你干嘛告诉她	                        what did you tell her for
+how come+陈述句		                    
+158	你怎么会在这	                        how come you are here/how are you here
+159	你怎么会知道	                        how come you knew it
+160	你怎么会不喜欢他	                    how come you don't like him
+161	你怎么会不知道	                        how come you don't know it
+162	你怎么会输了	                        how come you lost
+    

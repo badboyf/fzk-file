@@ -1,0 +1,159 @@
+044 从句-使动词===========================================================================
+使动词 : 及物动词，每个使动词都可以变成形容词
+move:	the movie moved me		i am moved			the movie is moving
+tire:	driving tires me		i am tired 			driving is tiring
+excite:	the thing excited me	i am excited		the thing is so exciting
+
+satisfy		interest	embarrass	disappoint	relax	bore	inspire鼓励
+excie,thrill使兴奋		worry,concern使担心
+puzzle,confuse使迷惑		shock,surprise,amaze惊讶
+frighten,terrify,horrify,scare吓					impress印象深刻		
+frustrate沮丧			disgust恶心
+depress,distress郁闷		tire,exhaust使累			please,delight使高兴
+annoy,upset恼火			amuse,entertain逗乐
+
+worry,worring,worrisom
+impress,impressing,impressive
+please,pleasing,pleasant
+worrisom impressive pleasant都可以修饰令人和物，有细微差别，水平高的时候在查
+
+045  从句-主语从句===========================================================================
+主谓宾表补同定状 语
+	谓语(动词没法是从句)，补语(表地点，心情等没法是从句)不能是从句
+	he make me happy 	happy是补语
+主语从句		名词性从句
+宾语从句		名词性从句
+表语从句		名词性从句
+同位语从句
+定于从句
+状语从句
+
+已经还没和过，一般完成时
+
+名词性从句共同点
+1从句要用陈述语气
+2连词分三类
+	从句是陈述句时：	that
+	从句是一般疑问句时	wether/if	主语从句(句首)只用wether，wether可连or not，if不可以；wether可连to do，if不可以；连接介词后也不能用if，如：deponds on wether...
+	从句是特殊疑问句时	who what whose which when where why how
+祝语从句
+跟主语有关的句子结构
+	主谓
+	主谓宾
+	主谓间宾直宾
+	主谓宾宾补
+	主系表
+主语从句后面可以加的词性
+	动词：	使动词 make
+	be + 	n/a/adv/介短/done
+	the movie moved me		使动词
+	the movie made me moved	主谓宾宾补
+	he satisfied me			
+	he make me satisfied
+	he make me angry		只能用make，形容词不是使动词变过来的没法用使动词
+sure主语是人/for sure主语是物/certain主语是人或物都可以
+what i am worried about is his future	i am worried主系表句子完整,what名词，worried不及物，名词前加介词
+what he said is true	主系表,主是what he said
+
+046  从句-宾语从句===========================================================
+跟宾语有关的句子结构
+	主谓宾
+	主谓间宾直宾
+	主谓宾宾补
+	主系表 + 从句（宾语从句） (下方括号中的约束)
+宾语从句可放在
+	动词后
+	动词 + 名词后
+	主系表后 (主语一般是人，表语是表达人感情，心情的形容词)
+		i am happy that you can come 	主系表 + 宾语从句
+	还可以补充一点主谓宾宾补，情况很少：i think that he can come a good thing，注意没有is
+
+宾语从句的时态： 主过从过,如果主是现在或将来，从句该是什么就是什么
+i knew that he went to BJ (he goes to beijing)
+i knew that he had gone to BJ (he has gone to beijing)
+i knew that he would go to BJ (he will go to BJ)
+i knew that he was watching TV (he is watching TV)
+i knew that he had been watching TV (he has been watching TV)
+
+he told me that 主谓间宾直宾
+Did he say that he would come tomorrow	主谓
+why didn't you tell him you were a teacher 主谓宾
+i am angry that you didn't tell me 	主系表，表语表示情绪
+are you angry that he didn't you	他没告诉你你生气吗
+
+否定前移
+我觉得他是个幽默的人	i think that he is a humous person
+我觉得他不是个幽默的人	
+否定前移的词，think，believe
+
+疑问词前移
+你觉得他会去哪了呢		do you think where you went -> where do you think he went
+你觉得这个房子多大呢	how big do you think the house is
+
+一般用过去时
+我没想到你会来			i didn't expect that you would came
+knew, doubt, worried, thought
+
+if/wether	都是三种宾语从句
+i don't know wether he is a teacher	动词后面
+i am not sure wether he will come 	主系表后
+he asked me if i could help him 	动词加名词后，主谓间宾直宾
+
+疑问词 + to do 有条件
+	1从句和主句主语是一样的
+	2还未发生
+i don't know how to tell him the thing
+we don't know where to go
+
+主谓宾宾补
+i think that he can come a good thing(注意不加is)	-> i think it a good thing he can come
+
+47从句-表语从句==================================================================
+跟表语有关的句子结构
+主系表
+
+表语从句可放在
+	名词做主语	the watch is what i lost yesterday
+	指示代词作主语： 翻译(when，where，why，how)		
+		this is why he left
+		that is how we met
+	从句作主语：
+
+question问题/problem毛病
+
+i mean that he is 	宾语从句
+what i mean is that 主语从句 + 表语从句
+
+重点是我觉得他告诉我们的不是真的   表语从句中有个宾语从句，宾语从句中有个主语从句
+我知道的是他们需要我们的帮助	
+	what i need is they need our help 表语从句
+	i know that he need our help 宾语从句
+
+让我惊讶的是他通过了考试			what surprise me is he passed the exam主语从家加表语从句
+让我高噶的是他完全没明白我在说什么	
+让我害怕的是我觉得他会离开我
+让我满意的是他在工作中表现的不错
+
+重要的是我们不知道对方是谁		what is important is we don't know who they are/who we are against 主语从句，表语从句里有个宾语从句
+奇怪的是他什么都没说就走了		what is strange is that 
+必要的是我们明天之前必须到北京
+可笑的是他连我的名字都不知道
+确定的是他已经知道这件事了
+
+what 句子做成分
+	作主语
+		带动词（大多是使动词）
+			what confused/surprisec/moved me
+		不带动词
+			what is strange/important/true
+	不做主语
+		带动词
+			what i know、	what he said
+		不带动词（必加介词）
+			what i am worried about		what不做主语
+			what i am angry with
+
+what i am curious abount is whether they will help us like they said
+	i am curious成分完整，what 需加介词。 if不能做宾语从句，所以用whether
+what we need to be sure of/about is ...
+

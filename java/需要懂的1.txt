@@ -1,0 +1,392 @@
+可靠事件Reliable event
+幂等 idempotent
+补偿 compensate
+耦合 coupling
+解耦 decoupling
+独享锁	Exclusive Lock
+互斥锁	mutex lock
+悲观锁	Pessimistic Lock
+吞吐量	throughput
+括号	brackets
+-	 dash
+
+
+1.如何保证代码线程安全，哪个关键字，能修饰什么
+	类：所欲实例共享一个锁
+	方法：对象自己的锁
+	静态方法：所有实例
+	代码块：对象的锁
+	
+	线程状态：NEW、RUNNABLE、BLOCKED、WAITING、TIMED_WAITING、TERMINATED
+2.文本文件读字符串
+	
+3.设计模式 说说你常用的
+	Proxy：	jkd，cglib
+	Decrerator：io，FilterInputStream
+	Adatper：	ByteArrayInputStream，StringBufferInputStream，InputStreamReader
+	Template: 	Comparator
+	
+4.用过哪些数据库 mysql groupby where order by 顺序
+	group by: where针对行，having针对group by的结果
+	SELECT DEPT, EDLEVEL, MAX( SALARY ) AS MAXIMUM
+		FROM staff
+		WHERE HIREDATE > '2010-01-01'
+		GROUP BY DEPT, EDLEVEL
+		HAVING COUNT( * ) >2
+		ORDER BY DEPT, EDLEVEL
+*5.事务有哪些特性
+	原子性（Atomicity）、一致性（Consistency）、隔离性（Isolation）、持久性（Durability）。
+	1 、原子性 
+	事务是数据库的逻辑工作单位，事务中包含的各操作要么都做，要么都不做 
+	2 、一致性 
+	事 务执行的结果必须是使数据库从一个一致性状态变到另一个一致性状态。因此当数据库只包含成功事务提交的结果时，就说数据库处于一致性状态。如果数据库系统 运行中发生故障，有些事务尚未完成就被迫中断，这些未完成事务对数据库所做的修改有一部分已写入物理数据库，这时数据库就处于一种不正确的状态，或者说是 不一致的状态。 
+	3 、隔离性 
+	一个事务的执行不能其它事务干扰。即一个事务内部的操作及使用的数据对其它并发事务是隔离的，并发执行的各个事务之间不能互相干扰。 
+	4 、永久性 
+	也称永久性，指一个事务一旦提交，它对数据库中的数据的改变就应该是永久性的。接下来的其它操作或故障不应该对其执行结果有任何影响
+	
+	分布式事务：
+	Strong consistency/Final consistency
+	传统2pc：准备阶段和提交阶段
+		（1）阶段2，事务协调者挂了（2）阶段2，参与者出错
+		单点问题：同步阻塞：数据不一致性：
+	实现最终一致性有三种模式：可靠事件模式、业务补偿模式、TCC模式。
+		可靠事件模式Reliable event:发送事件，保证幂等idempotent。可靠事件模式在于保证可靠事件投递和避免重复消费
+		补偿compensate模式：业务异常\技术异常
+		TCC模式（Try-Confirm-Cancel）由一个主业务服务和若干个从业务服务组成，主业务服务发起并完成整个业务活动，TCC模式要求从服务提供三个接口：Try、Confirm、Cancel。
+		
+*6.数据库事务隔离级别
+	脏读（dirty read）
+	不可重复读（unrepeatable read）
+	幻读（phantom problem）
+	一般的数据库，都包括以下四种隔离级别：
+		读未提交（Read Uncommitted）
+		读提交（Read Committed）
+		可重复读（Repeated Read）
+		串行化（Serializable）
+		
+*7.事务的传播属性
+	Propagation ：　　key属性确定代理应该给哪个方法增加事务行为。这样的属性最重要的部份是传播行为。有以下选项可供使用：
+	PROPAGATION_REQUIRED--支持当前事务，如果当前没有事务，就新建一个事务。这是最常见的选择。
+	PROPAGATION_SUPPORTS--支持当前事务，如果当前没有事务，就以非事务方式执行。
+	PROPAGATION_MANDATORY--支持当前事务，如果当前没有事务，就抛出异常。
+	PROPAGATION_REQUIRES_NEW--新建事务，如果当前存在事务，把当前事务挂起。
+	PROPAGATION_NOT_SUPPORTED--以非事务方式执行操作，如果当前存在事务，就把当前事务挂起。
+	PROPAGATION_NEVER--以非事务方式执行，如果当前存在事务，则抛出异常。
+	PROPAGATION_NESTED
+8.mybatis做一个spring项目的过程，如果建项目 配置文件
+9.spring mvc 处理httprequest的过程
+	过滤器，监听器，拦截器
+	ServletComponentScan	WebMvcConfigurerAdapter
+	filter.doFilter
+	Servelet.doService
+	dispatcher
+	HandlerInterceptor.preHandle
+	controller方法
+	HandlerInterceptor.postHandle
+	HandlerInterceptor.afterCompletion
+	filter.destroy
+10.springboot和spring mvc的区别
+
+		
+13.Volitel关键字的作用
+	两大核心：JMM内存模型（主内存和工作内存）以及happens-before；
+		1. 如果一个操作happens-before另一个操作，那么第一个操作的执行结果将对第二个操作可见，而且第一个操作的执行顺序排在第二个操作之前。 
+		2. 两个操作之间存在happens-before关系，并不意味着一定要按照happens-before原则制定的顺序来执行。如果重排序之后的执行结果与按照happens-before关系来执行的结果一致，那么这种重排序并不非法。
+	三条性质：原子性，可见性，有序性
+	volatile是通过在Java编译时，添加字节码来实现内存屏障（barrier）功能。
+14.aotmic 原子类型的原理
+	简单来说AtomicInteger的实现原理就是通过一个volatile的变量value以及Unsafe类提供的CAS操作来完成的。
+15 copyonwrite arraylist
+	CopyOnWrite容器即写时复制的容器。
+	CopyOnWriteArrayList和CopyOnWriteArraySet。
+16.controller和restcontroller的区别
+	1.使用@Controller 注解，
+		在对应的方法上，视图解析器可以解析return 的jsp,html页面，并且跳转到相应页面
+		若返回json等内容到页面，则需要加@ResponseBody注解
+	 2.@RestController注解
+		相当于@Controller+@ResponseBody两个注解的结合，返回json数据不需要在方法前面加@ResponseBody注解了，但使用@RestController这个注解，就不能返回jsp,html页面，视图解析器无法解析jsp,html页面
+17.如何设置springmvc response的contentType
+	springmvc  RequestMappingHandlerAdapter#invokeHandlerMethod 通过ServletInvocableHandlerMethod#invokeAndHandle调用目标方法，并处理返回值。
+	1.@RequestMapping(value = "/upload",produces="application/json;charset=UTF-8") 
+	2.response.setContentType("application/json");
+18.常用的httpstatus 
+	100 Continue 101 Switching Protocols 102 Processing
+	200 OK 201 Created 202 Accepted 203 Non-Authoritative Information 204 No Content 205 Reset Content 206 Partial Content 207 Multi-Status
+	300 Multiple Choices 	301 Moved Permanently	302 Move temporarily	303 See Other	304 Not Modified
+	305 Use Proxy	306 Switch Proxy	307 Temporary Redirect
+	400 Bad Request 	401 Unauthorized	402 Payment Required	403 Forbidden	404 Not Found	405 Method Not Allowed
+	406 Not Acceptable	407 Proxy Authentication Required	408 Request Timeout 	409 Conflict	410 Gone
+	411 Length Required	412 Precondition Failed	413 Request Entity Too Large	414 Request-URI Too Long	415 Unsupported Media Type
+
+	500 Internal Server Error	501 Not Implemented	502 Bad Gateway	503 Service Unavailable	504 Gateway Timeout
+
+19.java动态代理 jdk如何实现动态代理，用到了哪个类
+	InvocationHandler invoke(Object target, Method method, Object[] args) 
+		method.invoke(target, args);
+	Proxy.newProxyInstance(ClassLoader, Interface, InvocationHandler);
+20.cglib对类的动态代理
+	asm  字节码
+	MethodInterceptor intercept(Object obj, Method method, Object[] args, MethodProxy proxy) 
+		proxy.invokeSuper(obj, args);
+	
+	Enhancer enhancer = new Enhancer();
+	enhancer.setSuperclass(HelloService.class);
+	enhancer.setCallback(new MyMethodInterceptor());
+	HelloService proxy= (HelloService)enhancer.create();
+21.如何设置httpstatus的自定义的code
+	 1.@ResponseStatus(code=HttpStatus.INTERNAL_SERVER_ERROR,reason="server error")
+	 2.response.setStatus(500);
+	 3.ResponseEntity
+22.跨域问题如何处理
+	1.httpResponse.addHeader("Access-Control-Allow-Origin", "*");
+	2.配置nginx proxy_pass
+23.同源策略 域名 ip 端口
+	同一域名，不同端口
+	同一域名，不同协议
+	域名和域名对应ip
+	主域相同，子域不同
+	同一域名，不同二级域名（同上）
+	不同域名
+24.httpbasic的原理
+	Authorization: Basic xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+25.slf 和 log4j的关系
+	①首先系统包含slf4j-api作为日志接入的接口。compile时slf4j-api中public final class LoggerFactor类中private final static void bind()方法会寻找具体的日志实现类绑定，主要通过StaticLoggerBinder.getSingleton()的语句调用。
+	②slf4j-log4j12是链接slf4j-api和log4j中间的适配器。它实现了slf4j-apiz中StaticLoggerBinder接口，从而使得在编译时绑定的是slf4j-log4j12的getSingleton()方法。
+	③log4j是具体的日志系统。通过slf4j-log4j12初始化Log4j，达到最终日志的输出。
+26.maven如何标示一个dependency artifact groupid version
+27.maven的pom继承依赖 dependencyManagement
+28.spring factory bean 举例说几个
+	MongoRepositoryFactoryBean
+	ElasticsearchRepositoryFactoryBean
+	ProxyFactoryBean
+30.tomcat的参数配置
+	minProcessors：最小空闲连接线程数，用于提高系统处理性能，默认值为 10
+	maxProcessors：最大连接线程数，即：并发处理的最大请求数，默认值为 75
+	acceptCount：允许的最大连接数，应大于等于 maxProcessors ，默认值为 100
+	enableLookups：是否反查域名，取值为： true 或 false 。为了提高处理能力，应设置为 false
+	connectionTimeout：网络连接超时，单位：毫秒。设置为 0 表示永不超时，这样设置有隐患的。通常可设置为 30000 毫秒。
+	其中和最大连接数相关的参数为maxProcessors 和 acceptCount 。如果要加大并发连接数，应同时加大这两个参数。
+	web server允许的最大连接数还受制于操作系统的内核参数设置，通常 Windows 是 2000 个左右， Linux 是 1000 个左右。 
+
+	maxThreads          客户请求最大线程数
+	minSpareThreads     Tomcat初始化时创建的 socket 线程数
+	maxSpareThreads     Tomcat连接器的最大空闲 socket 线程数
+	enableLookups       若设为true, 则支持域名解析，可把 ip 地址解析为主机名
+	redirectPort        在需要基于安全通道的场合，把客户请求转发到基于SSL 的 redirectPort 端口
+	acceptAccount       maxConnections满了后排队最大数，满了之后客户请求会被拒绝（不能小于maxSpareThreads  ）
+	connectionTimeout   连接超时
+	minProcessors       服务器创建时的最小处理线程数
+	maxProcessors       服务器同时最大处理线程数
+	URIEncoding    	    URL统一编码
+	
+	server.tomcat:
+		accept-count: 1000
+		max-threads: 500
+		min-spare-threads: 200
+		uri-encoding: UTF-8
+	三次握手，四次挥手
+31.乐观锁 悲观锁，读多写少，读少写多 都用什么锁，列举几种常用的java锁
+	乐观锁:总是假设最好的情况，每次去拿数据的时候都认为别人不会修改，所以不会上锁，但是在更新的时候会判断一下在此期间别人有没有去更新这个数据，可以使用版本号机制和CAS算法实现。
+	悲观锁:总是假设最坏的情况
+	读多写少:ReadWriteLock适用于读多写少的并发情况
+	
+	Condition
+	  Condition condition = lock.newCondition();
+	  Condition notEmpty = lock.newCondition();
+	  Condition notFull = lock.newCondition();
+
+	
+	ReentrantReadWriteLock	
+	ReadWriteLock			共享锁
+	ReentrantLock  			互斥锁
+	Lock
+	公平锁/非公平锁	FairSync/NonfairSync	throughput
+	可重入锁		
+	独享锁/共享锁	Exclusive Lock/Shared lock
+	互斥锁/读写锁	mutex lock/read write lock
+	乐观锁/悲观锁	Optimistic lock/Pessimistic Lock
+	分段锁			Sectional lock
+	偏向锁/轻量级锁/重量级锁
+	自旋锁			Spin lock
+	AQS
+32.Linux的常用命令 scp find-name , 在文件里面查询关键字
+	- dash   . dot
+	find   path   -option   [   -print ]   [ -exec   -ok   command ]   {} \
+	find . -name "*.c" -o -name "*.java"	-o 是或者的意思;-a 是而且的意思;-not 是相反的意思  
+	find . -type f
+	
+	grep [option] pattern file
+	-i ：忽略大小写 
+	-c ：打印匹配的行数 
+	-l ：从多个文件中查找包含匹配项 
+	-v ：查找不包含匹配项的行 
+	-n：打印包含匹配项的行和行标 
+	grep -i pattern files ：不区分大小写地搜索。默认情况区分大小写，
+	grep -l pattern files ：只列出匹配的文件名，
+	grep -L pattern files ：列出不匹配的文件名，
+	grep pattern1 files | grep pattern2 ：显示既匹配 pattern1 又匹配 pattern2 的行。
+	grep ‘test’ d*			显示所有以d开头的文件中包含 test的行。
+	
+33.如何在linux里面打印java的线程状况
+	top 
+		p : 通过指定监控进程ID来仅仅监控某个进程的状态。
+		-H: Threads-mode operation
+	jstack [进程] | grep -A 10 [线程的16进制] 
+34.用过哪些消息中间件，rabbitMQ发消息，都设计哪些参数，exchange topic brocker
+	rabbitMQ:AMQP的默认实现
+	rocketmq:没实现jms
+	RocketMQ是一个分布式消息中间件，并支持事务消息、顺序消息、批量消息、定时消息、消息回溯等
+	Producer	
+	Producer Group
+	Consumer
+	Consumer Group
+	Topic
+	Message
+	Tag
+	Broker			每个Broker都会和NameServer建立一个长连接保持心跳。一个Topic分布在多个Broker上，一个Broker可以配置多个Topic。由于消息分布在各个Broker上，一旦某个Broker宕机，则该Broker上的消息读写都会受到影响。所以需要HA机制，RocketMQ的实现方式是master/slave，salve定时从master同步数据，如果master宕机，则slave提供消费服务，但是不能写入消息。一旦某个broker master宕机，生产者和消费者多久才能发现？受限于rocketmq的网络连接机制，默认情况下，最多需要30秒，但这个时间可由应用设定参数来缩短时间。这个时间段内，发往该broker的消息都是失败的，而且该broker的消息无法消费，因为此时消费者不知道该broker已经挂掉。消费者得到master宕机通知后，转向slave消费，但是slave不能保证master的消息100%都同步过来了，因此会有少量的消息丢失。但是消息最终不会丢的，一旦master恢复，未同步过去的消息会被消费掉。
+	NameServer		NameServer用于管理所有Broker节点信息，接收Broker的注册/注销请求，此外还记录了Topic与Broker、Queue的对应关系，Broker主备信息。BrokerId为0代表是MasterBroker，否则BrokerId大于0的表示为SlaveBroker，Master和Slave组成一个Broker，具有相同的brokerName。Broker在启动的时候会去NameServer进行注册，会维护Broker的存活状态，Broker每次发送心跳过来的时候都会把Topic信息带上。NamesrvStartUp为启动类、NamesrvController为控制类、RouteInfoManager存放了Topic队列信息以及地址列表等一系列重要数据结构并提供了对应的数据变更接口、DefaultRequestProcessor负责处理所broker发过来的所有网络消息。各NameServer之间是相互独立且没有通信的，通过给Broker的namesrvAddr配置多个NameServer地址，同时向多个NameServer注册信息来实现NameServer集群。因为NameServer读写压力比较小，所以稳定性较高。相应的生产者/消费者中的namesrvAddr也是配置多个。
+35.正则表达式 pattern
+	Pattern p=Pattern.compile("\\d+"); 
+	Pattern.matches("\\d+","2223");
+	
+36.你的系统如何与第三方系统对接，有哪些对接方式，协议层如何设计
+	RPC（远程过程调用）
+	文件传输（共享）
+	数据库共享数据方式
+	消息队列
+	
+	7 应用层 6 表示层 5 会话层 4 传输层 3 网络层 2 数据链路层 1 物理层 
+37.什么时候用rest什么时候用rabbitMQ ，同步 异步 实时性，系统解耦
+38.docker K8S ，devops，知道的说，不会就不用说
+	CMD 存在多个，只有最后一个执行。如果run时指定了命令，会被替代。
+	CMD ["executable","param1","param2"] #(exec  执行形式，这是比较常见的一种形式)
+	CMD ["param1","param2"] #(在指定了ENTRYPOINT 指令后，用CMD指定具体的参数)
+	CMD command param1 param2 #(shell形式)
+
+	ENTRYPOINT ["executable", "param1", "param2"]	exec
+	ENTRYPOINT command param1 param2				shell 
+	
+	docker create -v /dbdata --name dbstore training/webapp  /bin/true
+	docker run -d -P --name web3 --volumes-from dbstore training/webapp python app.py
+
+	start/stop/restart	kill    rm
+	exec    ps    inspect    top    attach    events    logs    wait    port
+	cp    diff    login    pull    push    search
+	create		docker create  --name <name>  <imgage>
+	commit		docker commit <container> <imgage_name>
+	images    rmi    tag    build    history
+	save		docker save -o xxx.tar <image_name>
+	load		docker load -i xxx.tar
+	import		docker import xxx.tar image_name
+	export		docker export -o xxx.tar postgres
+
+*12.线程池怎么创建，有哪些类型
+	1.new ExtendThread()			ExtendThread.run
+	2.new Thread(runnable)		runnable.run
+	3.new ExtendThread(runnable)	ExtendThread.run
+	
+	4.
+	Callable<Integer> callable = new ImplementCallble();
+	FutureTask<Integer> future = new FutureTask<Integer>(callable);
+	Thread thread = new Thread(future);
+	thread.start();
+	Integer res = future.get();
+	
+	Executor ExecutorService AbstractExecutorService ThreadPoolExecutor
+	    1、corePoolSize：核心线程数
+			* 核心线程会一直存活，及时没有任务需要执行
+			* 当线程数小于核心线程数时，即使有线程空闲，线程池也会优先创建新线程处理
+			* 设置allowCoreThreadTimeout=true（默认false）时，核心线程会超时关闭
+		2、queueCapacity：任务队列容量（阻塞队列）
+			* 当核心线程数达到最大时，新任务会放在队列中排队等待执行
+		3、maxPoolSize：最大线程数
+			* 当线程数>=corePoolSize，且任务队列已满时。线程池会创建新线程来处理任务
+			* 当线程数=maxPoolSize，且任务队列已满时，线程池会拒绝处理任务而抛出异常
+		4、 keepAliveTime：线程空闲时间
+			* 当线程空闲时间达到keepAliveTime时，线程会退出，直到线程数量=corePoolSize
+			* 如果allowCoreThreadTimeout=true，则会直到线程数量=0
+		5、allowCoreThreadTimeout：允许核心线程超时
+		6、rejectedExecutionHandler：任务拒绝处理器
+			* 两种情况会拒绝处理任务：
+				- 当线程数已经达到maxPoolSize，切队列已满，会拒绝新任务
+				- 当线程池被调用shutdown()后，会等待线程池里的任务执行完毕，再shutdown。如果在调用shutdown()和线程池真正shutdown之间提交任务，会拒绝新任务
+			* 线程池会调用rejectedExecutionHandler来处理这个任务。如果没有设置默认是AbortPolicy，会抛出异常
+			* ThreadPoolExecutor类有几个内部实现类来处理这类情况：
+				- AbortPolicy 丢弃任务，抛运行时异常
+				- CallerRunsPolicy 执行任务
+				- DiscardPolicy 忽视，什么都不会发生
+				- DiscardOldestPolicy 从队列中踢出最先进入队列（最后一个执行）的任务
+			* 实现RejectedExecutionHandler接口，可自定义处理器
+	四种创建方式：
+		newCachedThreadPool SynchronousQueue  创建一个可缓存线程池，如果线程池长度超过处理需要，可灵活回收空闲线程，若无可回收，则新建线程。
+		newFixedThreadPool LinkedBlockingQueue 创建一个定长线程池，可控制线程最大并发数，超出的线程会在队列中等待，表示同一时刻只能有这么大的并发数
+		newScheduledThreadPool DelayedWorkQueue 创建一个定时线程池，支持定时及周期性任务执行。
+		newSingleThreadExecutor LinkedBlockingQueue 创建一个单线程化的线程池，它只会用唯一的工作线程来执行任务，保证所有任务按照指定顺序(FIFO, LIFO, 优先级)执行。
+
+		ArrayBlockingQueue	LinkedBlockingQueue	SynchronousQueue
+		SynchronousQueue没有容量，是无缓冲等待队列，是一个不存储元素的阻塞队列，会直接将任务交给消费者，必须等队列中的添加元素被消费后才能继续添加新的元素
+		
+		boolean add(E e);//成功true, 失败false。如果是往限定了长度的队列中设置值，推荐使用offer()方法。
+		boolean offer(E e);//成功true, 失败false. e的值不能为空，否则抛出空指针异常。
+		void put(E e) throws InterruptedException;//如果队列中没有多余的空间，该方法会一直阻塞，直到队列中有多余的空间。
+		boolean offer(E e, long timeout, TimeUnit unit)throws InterruptedException;//将给定元素在给定的时间内设置到队列中，如果设置成功返回true, 否则返回false.
+		E take() throws InterruptedException;//从队列中获取值，如果队列中没有值，线程会一直阻塞，直到队列中有值，并且该方法取得了该值。
+		E poll(long timeout, TimeUnit unit)throws InterruptedException;//在给定的时间里，从队列中获取值，时间到了直接调用普通的poll方法，为null则直接返回null。
+		int remainingCapacity();//获取队列中剩余的空间。
+		boolean remove(Object o);//从队列中移除指定的值。
+		public boolean contains(Object o);//判断队列中是否拥有该值。
+		
+11.springboot如何使用redis
+	Redis的的是完全开源免费的，遵守(Compliance with)BSD协议，是一个高性能的键值数据库。是当前最热门的的的NoSql数据库之一，也被人们称为数据结构服务器。
+	redis cluster在设计的时候，就考虑到了去中心化，去中间件
+	redis cluster集群使用数据分片(sharding)而非一致性哈希(consistency hashing)来实现
+	集群：主从、哨兵(sentinel)，redis cluster。
+	rdb(一定时间快照)和aof(记录命令)
+	Redis 复制分为同步（sync）和命令传播（command propagate）两个操作：
+		同步操作用于将从服务器的数据库状态更新至主服务器当前所处的数据库状态；
+		命令传播操作则用于在主服务器的数据库状态被修改，导致主从服务器的数据库状态出现不一致时，让主从服务器的数据库重新回到一致状态。
+	PSYNC 具有完整重同步（full resynchronization）和部分重同步（partial resynchronization）两种模式
+		完整重同步用于初次复制：通过让主服务器创建并发送RDB文件，以及向从服务器发送保存在缓冲区里面的写命令来进行同步；
+		部分重同步用于断线后重复制：当从服务器在断线后重新连接主服务器时，主服务器可以将从服务器连接断开期间执行的写命令发送给从服务器
+		部分重同步的实现：
+			主服务器的复制偏移量（replication offset）和从服务器的复制偏移量；
+			主服务器的复制积压缓冲区（replication backlog）；
+			服务器的运行ID（run ID）。
+		复制偏移量
+			执行复制的双方——主服务器和从服务器会分别维护一个复制偏移量：
+			主服务器每次向从服务器传播N个字节的数据时，就将自己的复制偏移量的值加上N；
+			从服务器每次收到主服务器传播来的N个字节的数据时，就将自己的复制偏移量的值加上N；
+		复制积压缓冲区是由主服务器维护的一个固定长度（fixed-size）先进先出（FIFO）队列，默认大小为1MB。
+		当从服务器重新连上主服务器时，从服务器将自己的复制偏移量offset发送给主服务器，主服务器会来决定对从服务器执行何种同步操作：
+*29.redis 如何设置缓存过期时间，为什么redis快，内存 NIO
+	1.自定义RedisCacheManager，自定义缓存策略
+	2.RedisTemplate.opsForHash().put(H,Hk,Hv");//存值
+	  RedisTemplate.expire(H, 10, TimeUnit.SECONDS); //设置超时时间10秒 第三个参数控制时间单位，详情查看TimeUnit
+	3.stringRedisTemplate.opsForValue().set("test", "100",60*10,TimeUnit.SECONDS);//向redis里存入数据和设置缓存时间 
+
+	为什么redis快
+	1、完全基于内存，绝大部分请求是纯粹的内存操作，非常快速。数据存在内存中，类似于HashMap，HashMap的优势就是查找和操作的时间复杂度都是O(1)；
+	2、数据结构简单，对数据操作也简单，Redis中的数据结构是专门进行设计的；
+	3、采用单线程，避免了不必要的上下文切换和竞争条件，也不存在多进程或者多线程导致的切换而消耗 CPU，不用去考虑各种锁的问题，不存在加锁释放锁操作，没有因为可能出现死锁而导致的性能消耗；
+	4、使用多路I/O复用模型，非阻塞IO；
+	5、使用底层模型(underlying model)不同，它们之间底层实现方式以及与客户端之间通信的应用协议不一样，Redis直接自己构建了VM 机制 ，因为一般的系统调用系统函数的话，会浪费一定的时间去移动和请求；
+	针对多路 I/O 复用模型进行简单的探讨：
+	（1）多路 I/O 复用模型
+	多路I/O复用模型是利用 select、poll、epoll 可以同时监察多个流的 I/O 事件的能力，在空闲的时候，会把当前线程阻塞掉，当有一个或多个流有 I/O 事件时，就从阻塞态中唤醒，于是程序就会轮询一遍所有的流（epoll 是只轮询那些真正发出了事件的流），并且只依次顺序的处理就绪的流，这种做法就避免了大量的无用操作。
+	这里“多路”指的是多个网络连接，“复用”指的是复用同一个线程。采用多路 I/O 复用技术可以让单个线程高效的处理多个连接请求（尽量减少网络 IO 的时间消耗），且 Redis 在内存中操作数据的速度非常快，也就是说内存内的操作不会成为影响Redis性能的瓶颈，主要由以上几点造就了 Redis 具有很高的吞吐量。
+
+	穿透     在客户端和数据库中间增加一个缓存层，如果这个缓存层中保存的都是数据库命中数据，如果服务层并没有返回数据保存到缓存中，而客户端一直在访问这个数据，则每次都要直接访问数据库，在流量小时没有问题，如果流量非常大或有恶意攻击，就会利用这个漏洞，使服务端的压力增大，严重会导致系统崩溃。
+	雪崩     雪崩是设置缓存失效的时间相同，造成大量的数据在短时间内同时失效，这样访问数据库的压力也会陡增。压力这么大，就像是发生了雪崩一样。
+	热Key
+	
+	redis数据淘汰策略
+		volatile-lru 从已设置过期时间的数据集中挑选最近最少使用的数据淘汰
+		volatile-ttl 从已设置过期时间的数据集中挑选将要过期的数据淘汰
+		volatile-random 从已设置过期时间的数据集中任意选择数据淘汰
+		allkeys-lru 从所有数据集中挑选最近最少使用的数据淘汰
+		allkeys-random 从所有数据集中任意选择数据进行淘汰
+		noeviction 禁止驱逐数据
+
+java各种锁实现原理
+redis事务

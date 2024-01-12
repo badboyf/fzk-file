@@ -1,0 +1,43 @@
+Kafka 客户端是如何找到 leader 分区的
+https://blog.csdn.net/b6ecl1k7BS8O/article/details/80164679
+
+Kafka最全面试题整理|划重点要考   
+朱小厮
+https://blog.csdn.net/u013256816/article/details/88550812
+
+kafka中的ISR、AR又代表什么？ISR伸缩又是什么？
+ISR、AR、HW、LEO、LSO、LW
+https://blog.csdn.net/weixin_43975220/article/details/93190906
+
+4.序列化-分区器-拦截器
+Serializer、Deserializer、Partitioner、Interceptor
+properties.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName())
+properties.put(ProducerConfig.PARTITIONER_CLASS_CONFIG, DemoPartitioner.class.getName());
+properties.put(ProducerConfig.INTERCEPTOR_CLASSES_CONFIG, ProducerInterceptorPrefix.class.getName()+","+ProducerInterceptorPrefixPlus.class.getName());
+https://www.cnblogs.com/cxxjohnson/p/8921661.html
+
+Kafka中的分区分配（面试点）
+https://blog.csdn.net/weixin_43823423/article/details/93469866
+
+Kafka水位(high watermark)与leader epoch的讨论
+https://www.cnblogs.com/huxi2b/p/7453543.html
+
+10. kafka消费者如何分配分区
+https://www.jianshu.com/p/91277c38fda6
+
+Kafka0.8.2.1删除topic逻辑
+https://www.cnblogs.com/huxi2b/p/4842695.html
+
+为什么Kafka速度那么快
+https://www.cnblogs.com/binyue/p/10308754.html
+
+Kafka常见面试题
+https://blog.csdn.net/qq_28900249/article/details/90346599
+
+kafka leader选举机制原理
+https://blog.csdn.net/yanshu2012/article/details/54894629
+
+Kafka水位(high watermark)与leader epoch的讨论       挺细致
+https://www.cnblogs.com/huxi2b/p/7453543.html
+
+

@@ -1,0 +1,10 @@
+<ul>
+  <li *ngFor="let node of trees">
+      <div>
+          <a (click)="clickNode($event, node)" [ngClass]="{active: node.id === operateNode.select?.id}">{{node.name}}</a>
+      </div>
+      <app-tree-level [trees]="node.child" [operateNode]="operateNode" (selectNode)="subLevleClick($event)" *ngIf="node.child !== null">
+
+      </app-tree-level>
+  </li>
+</ul>

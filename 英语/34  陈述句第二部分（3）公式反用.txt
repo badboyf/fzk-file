@@ -1,0 +1,45 @@
+公式反用
+1，举一反三
+he went upstairs
+he died upstairs
+he ran upstairs
+he sleeps upstairs
+he is drank upstairs
+i didn't see him upstairs
+he is waiting upstairs
+he is upstairs
+
+he went abroad
+he is going to drive abroad
+he flew abroad
+he is learning abroad
+he saw him abroad
+he is lost abroad
+he was killed abroad
+he is working abroad
+he is abroad
+
+及物动词、不及物动词(名词前加介词)
+he went to beijing 
+	he went abroad  go不及物，abroad是副词,只要结构对中文意思对，句子就是对的
+	he flew abroad
+	he saw him abroad
+	he is lost abroad
+	he is working abroad
+he lives in beijing
+i am thinking about this thing
+he is looking at you
+he is listening to the music
+i am talking to you about him
+he got home late
+
+2, 词性判断
+he lives X X   			live 可及物可不及物，住的意思不及物，只能是副词或介词短语
+	he lives near here	介词短语(near介词,here名词)。如果是介词短语，两个词一个都不能去掉，意思是否改变来判断是否能去掉
+	he lives here		here副词
+	he came here late	两个副词。去掉每一个都成立
+i don't know about X	句子完整， about X为介词短语，X为名词
+he is angry X X			句子完整，只能是副词或介词短语，副词可能是两个副词
+he X on the street		结构不完成，X只能是个动词，on the street 做状语
+i left beijing X him 	结构完整，只能是个副词
+he is looking X			结构完整，副词做状语
